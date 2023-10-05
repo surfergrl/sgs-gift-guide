@@ -10,23 +10,24 @@ This is the documentation for my web application **Surfergirl's Seaglass Jewelle
 
 It has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
 
-Table of Contents (all to be hyperlinked)
+#### Table of Contents (all to be hyperlinked)
+
 - Project Development & Planning
 - Project Goals
--         Research
-          User Stories
--         Content
+- Research
+- User Stories
+- Content
 - Design, Layout & Structure
--     Colours
--     Technologies Used
--     Features
--     Current Website
--     JavaScript Functionality
--     Testing & Bugs
--     Deployment
--     Credits
+- Colours
+- Technologies Used
+- Features
+- Current Website
+- JavaScript Functionality
+- Testing & Bugs
+- Deployment
+- Credits
 
-**Technologies Used**
+#### Technologies Used
 
 - [HTML](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
@@ -81,24 +82,18 @@ I looked at various jewellery sites to see how they use interactivity to encoura
 ### Pandora
 ![pandora.png](/assets/images/pandora.png)
 
-https://uk.pandora.net/en/gifts/featured-gifting/the-perfect-gift-finder-landing/#navigation
+Has [The Perfect Gift Finder](https://uk.pandora.net/en/gifts/featured-gifting/the-perfect-gift-finder-landing/#navigation) which looks to be an interactive tool, but at the time of testing it did not work.
 
-Has 'The Perfect Gift Finder' which looks to be an interactive tool, but at the time of testing it did not work.
-
-It also has GiftMe - Customised by Me allows customer to build the ideal gift for a BFF. I found this had very limited functionality; a user chooses from earrings/bracelets/rings and it takes you to the section on the page where they are. I would like something much more interactive and personalised.
-
-https://uk.pandora.net/en/discover/stories/pandora-me-for-every-me/build-me/?useParentCtaStyle=true&defaultButtonStyle=ci-button-text-black-pink-underlined&customClass=ci-m52-explore-module-btn&customSize=small&trackingData=icid=e:pme:plp:explore:BUILDME&parentCtaStyle=ci-button-filled-white#icid=e:pme:plp:explore:BUILDME
+It also has [GiftMe - Customised by Me](https://uk.pandora.net/en/discover/stories/pandora-me-for-every-me/build-me/?useParentCtaStyle=true&defaultButtonStyle=ci-button-text-black-pink-underlined&customClass=ci-m52-explore-module-btn&customSize=small&trackingData=icid=e:pme:plp:explore:BUILDME&parentCtaStyle=ci-button-filled-white#icid=e:pme:plp:explore:BUILDME) which allows customer to build the ideal gift for a BFF. I found this had very limited functionality; a user chooses from earrings/bracelets/rings and it takes you to the section on the page where they are. I would like something much more interactive and personalised.
 
 ### Cartier:
 ![cartier.png](/assets/images/cartier.png)
-Offers a Gifts page with links to category pages:
+Offers a [Gifts](https://www.cartier.com/en-gb/collections/gifts) page with links to category pages:
 
 - The Most Iconic Cartier Gifts
 - Gifts for Her, Gifts for Him
 - Little Luxuries
 - Pesonalised
-
-https://www.cartier.com/en-gb/collections/gifts
 
 As an immeditely recognisable luxury brand, they provide easy ways to get to the most iconic items such as the Love bracelet and the bestselling fragrance set.
 
@@ -110,9 +105,9 @@ I like the idea of offering a cheaper option (here £100+) as well as the main i
 
 ![clog2.png](/assets/images/clog2.png)
 
-Clogau Gold is made with rare Welsh gold and is the choice for royal wedding rings. The Compose page https://www.clogau.co.uk/pages/compose allows a prospective bride/groom to move through various options to build their perfect ring. It doesn't have a back button.
+Clogau Gold is made with rare Welsh gold and is the choice for royal wedding rings.The [Compose](https://www.clogau.co.uk/pages/compose) page  allows a prospective bride/groom to move through various options to build their perfect ring. 
 
-Notes:
+*Notes:*
 
 - Classy interface
 - Choose your metal, style, diamond clarity, diamond size, ring size.
@@ -197,7 +192,7 @@ I want deployment to be
 
 ## Current Website 
 
-The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled by the ocean.) The site is built on WordPress with WooCommerce.
+The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled smooth and opaque by the ocean.) The site is built on WordPress with WooCommerce.
 
 The site is basic at present and includes:
 
@@ -208,7 +203,9 @@ The site is basic at present and includes:
 - Item pages - images, price, description, Add to Cart button, reviews section
 
 The shop offers products in broad categories - bracelets, earrings, necklaces/pendants, rings, keyrings and anklets. A customer who comes to the site with little or no knowledge of the brand might struggle to choose something, particularly if they are looking for a gift. The gift guide aims to present compelling options to suit a wide range of customers.
+
 ---
+
 ### Desired Features - rated 1-5 in order of importance
 
 - Move through a short series of questions about preferences, based on the jewellery available on the site. 1
@@ -237,23 +234,30 @@ These options need to conform to the principles of UX in all five different plan
 ---
 
 ## Design, layout, colours
+
 ### Content - elements to include
 
 **Headline** - Surfergirl's Seaglass Gift Guide
 
 **Tag-line** - This is a short explanation of what the app does: 'Find the perfect piece of silver and seaglass jewellery for you or a loved one.'
 
-**Categories** 
+**Categories**
+
 to match the products on the SGS site.
-![shop-menu.png](:/c0b98dce325bd20488835469a2f6b472)
+
+![shop-menu.png](/assets/images/shop-menu.png)
+
 Categories:
+
 - Bracelets
 - Rings
 - Earrings
 - Keyrings
 - Pendants
 - Anklets
+
 ---
+
 ### Wireframes
 
 I first sketched the basic layout for the landing page, questions screens and results page in Evernote's Sketch feature, then mocked these up using Balsamiq.
@@ -265,16 +269,27 @@ I then used [Figma](https://www.figma.com/) to develop the structure, skeleton, 
 The app is contained on one page. This page will have the main site navigation as usual for the site.
 
 Three divs appear depending on where you are in the guide.
+
 ---
-#### Welcome 
+
+#### Welcome
+
 Landing page with title, image and tagline and 'Start gift guide' button.
 
 Background image: sunset waves copyright surfergrl.
+
 Image: stall with various products
+
 Start gift guide: starfish button (or similar via MiniNote)
+
 Logo
+
+![SGS logo](/assets/images/SGS-logo.png)
+
 ---
+
 #### Questions - Five questions with between 3-5 options each. A back button to allow changes.
+
 Questions - Five questions with between 3-5 options each.
 
 Start again button - starfish
@@ -292,7 +307,9 @@ The quiz will consist of five questions:
 - His, hers or both?
 
 Note that size is not relevant here as all are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
+
 ---
+
 #### Results:
 
 Two products are shown with an 'add to cart' button and links to the main item page for more info.
@@ -321,28 +338,31 @@ Standard products - many of the items on the SGS store are one-off pieces due to
 - Silver tone seashore charms bracelet £10 $
 - Cuff copper Carreg Bica coordinates (bespoke option) $ £10
 
-*Earrings*
+Earrings
 
 - Threader $$ £15
 - Wire-wrapped seaglass drops $ £15
 - Spiral hoops $ £15
 
-*Rings*
+Rings
 
 - Wrap silver $$
 - Cuff silver Cariad $$
 - Aluminium stamped with waves £ £5-7
 - Silver wave ring $ £20
 
-*Anklets*
+Anklets
+
 - Silver charm $$ £20
 - Silver tone bead charm $ £10
 
-*Keyrings*
+Keyrings
+
 - Mermaid $ £6.50
 - 'Shell in your pocket' slogan $ £6.50
 
-**For each result: **
+For each result:
+
 - Two product suggestions
 - Price
 - Picture
@@ -350,18 +370,21 @@ Standard products - many of the items on the SGS store are one-off pieces due to
 - Link to main item page (how then do they get back to their results?)
 - Add to Cart button - an option to quickly add to cart without seeing full item info page e.g.:
 
-![julz-addtocart.png](:/d9b15eecf87c635fa3737a295e0fab24)
+![julz-addtocart.png](/assets/images/julz-addtocart.png)
 
 - Share/save button
 - Start again button (starfish)
 
-
 404 error page
+
 'Start over' link to begin again.
+
 ---
+
 ### Colours
 
 The Surfergirl's Seaglass brand uses ocean-themed colours - whites, blues, greens plus sunset and sandy colours feature heavily. The app will reflect this.
+
 ---
 
 Bubblegum Blue and Mermaid Lagoon palettes
@@ -369,6 +392,7 @@ Bubblegum Blue and Mermaid Lagoon palettes
 Surface plane
 
 Colours needed for:
+
 - Titles
 - subtitles
 - Body text - black
@@ -378,12 +402,13 @@ Colours needed for gift guide specifically: same colours but add in some contras
 
 ![bubblegum-blue.png](/assets/images/bubblegum-blue.png)
 
-
 ![mermaid-lagoon-palette.png](/assets/images/mermaid-lagoon-palette.png)
+
 ---
+
 ### Fonts
 
-**Legibility, accessibility, contrast**
+#### Legibility, accessibility, contrast
 
 - Tools
 - Github
@@ -412,7 +437,7 @@ From [canva.com/colours](http://canva.com/colours)
 Remember that while selecting fonts, it's essential to ensure readability and consistency throughout your website. You can pair a script font for headings with a clean sans-serif or serif font for body text to maintain a balance between style and readability. Also, consider the overall design and color scheme of your website to ensure that the fonts complement the beach theme effectively.
 
 ---
-**Credits**
+## Credits
  https://github.com/emmahewson/mp2_travel_quiz ReadMe guidance
 
 ---
