@@ -1,6 +1,6 @@
 # Surfergirl's Seaglass Gift Guide
 
-[image with project on all screen sizes] 
+image with project on all screen sizes
 
 By Kat Dawes
 
@@ -32,9 +32,12 @@ Table of Contents (all to be hyperlinked)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449) (which allows for embedding web apps using i-frames)
+  
 ___
 
 ## Project Development and Planning
+
+---
 
 ### Project Details & Goals
 
@@ -50,8 +53,13 @@ ___
   - Increase revenue
 - Required skills: JavaScript, HTML, CSS. Other skills: image manipulation, WordPress, GitHub.
 
+---
+
 ### User journey:
+
 flow chart
+
+---
 
 ### User Stories
 
@@ -62,15 +70,16 @@ The user stories are based on previous market research in the field. People who 
 - Bride searching for bridesmaid gifts
 - Christmas shopper in a hurry with limited idea of what someone might want
 - Undecided purchaser who has seen items but isn't sure what they want
+---
 
 ## Research
 
-### Market Review 
+### Market Review
 
 I looked at various jewellery sites to see how they use interactivity to encourage browers to buy. I was interested in how the options were presented, the user journey through them and the choices available to save/download/share results. I looked at the overall design in terms of ease of use and attractiveness.
 
 ### Pandora
-![pandora.png](:/127cd1fca54c9454fe2a681afe015088)
+![pandora.png](/assets/images/pandora.png)
 
 https://uk.pandora.net/en/gifts/featured-gifting/the-perfect-gift-finder-landing/#navigation
 
@@ -81,7 +90,7 @@ It also has GiftMe - Customised by Me allows customer to build the ideal gift fo
 https://uk.pandora.net/en/discover/stories/pandora-me-for-every-me/build-me/?useParentCtaStyle=true&defaultButtonStyle=ci-button-text-black-pink-underlined&customClass=ci-m52-explore-module-btn&customSize=small&trackingData=icid=e:pme:plp:explore:BUILDME&parentCtaStyle=ci-button-filled-white#icid=e:pme:plp:explore:BUILDME
 
 ### Cartier:
-![cartier.png](:/c2529079bdfdfa802e724a4bf843271b)
+![cartier.png](/assets/images/cartier.png)
 Offers a Gifts page with links to category pages:
 
 - The Most Iconic Cartier Gifts
@@ -97,7 +106,9 @@ I like the idea of offering a cheaper option (here £100+) as well as the main i
 
 ### Clogau Gold
 
-![clog.png](:/ebc0aa440c5860bd51ef1866f65a57bf)![clog2.png](:/f2efbed777185a44669f067984b0712d)
+![clog.png](/assets/images/clog.png)
+
+![clog2.png](/assets/images/clog2.png)
 
 Clogau Gold is made with rare Welsh gold and is the choice for royal wedding rings. The Compose page https://www.clogau.co.uk/pages/compose allows a prospective bride/groom to move through various options to build their perfect ring. It doesn't have a back button.
 
@@ -123,7 +134,7 @@ Offers categories to explore:
 - Graduates
 
 ### Thomas Sabo 
-![thomas-sabo.png](:/69ad2a89a095c119157db9e6f13928ea)
+![thomas-sabo.png](/assets/images/thomas-sabo.png)
  https://www.thomassabo.com/GB/en_GB/charms-creator
 **Charm Club**
 - Attractive interface
@@ -135,7 +146,7 @@ Offers categories to explore:
 - Option to share/download creation
 - Choose charms - includes filter options:
 
-![sabo-charmchoice.png](:/08be4b7e50595019d3a9ae611b12d275)
+![sabo-charmchoice.png](/assets/images/sabo-charmchoice.png)
 (Target group = choice of For Him or For Her.)
 
 ### Market research general notes:
@@ -149,7 +160,7 @@ Offers categories to explore:
 
 In conclusion, I cannot find a jewellery website which does what I am planning to do, but there are some elements that I can use to plan my functionality.
 
-Specifically I want:
+*Specifically, I want:*
 
 - Attractive interface and landing page to entice users (title, subtitle, image, explanation of purpose)
 - Clear purpose to the tool
@@ -162,6 +173,8 @@ I also looked at interactive gift guides for other products.
 https://blog.dot.vu/holiday-gift-guide-examples/ A digital tool that guides your audience toward the products that  would make a perfect gift will increase orders and, thus, sales.
 
 Nonetheless, the success of your gift guide depends on its features,  design, responsiveness, and, of course, product suggestions. The more  accurate and user-friendly you make your holiday gift guide, the more  revenue you generate.
+
+---
 
 ## Deployment
 
@@ -179,6 +192,8 @@ I want deployment to be
 - Easily accessible for the user
 - Easy to update when necessary
 - Fits in with WordPress without too much extra code or workarounds which might compromise UX
+  
+---
 
 ## Current Website 
 
@@ -193,7 +208,7 @@ The site is basic at present and includes:
 - Item pages - images, price, description, Add to Cart button, reviews section
 
 The shop offers products in broad categories - bracelets, earrings, necklaces/pendants, rings, keyrings and anklets. A customer who comes to the site with little or no knowledge of the brand might struggle to choose something, particularly if they are looking for a gift. The gift guide aims to present compelling options to suit a wide range of customers.
-
+---
 ### Desired Features - rated 1-5 in order of importance
 
 - Move through a short series of questions about preferences, based on the jewellery available on the site. 1
@@ -205,17 +220,19 @@ The shop offers products in broad categories - bracelets, earrings, necklaces/pe
 - Results can be instantly added to the basket. 1
 - Results can be emailed/downloaded/saved to wish list (if WooCommerce provides this option?). 4
 - Option provided to request more information or bespoke pieces. 2
+  
+---
 
-### Further Developments
+### Further Developments 
 
 - Options for how to size a ring or what length of necklace do I want. 48
 - Although the app will present an ideal option, I don't want this to stop people seeing other items, so I want an 'other ideas' section below the main result with some add-on options or alternatives. 4
 - I would like to design a similar tool in the future to allow people to cchoose their options for personalised items e.g. stamped inscriptions, engraving and specific charms and colours of seaglass. For now if they end up with this option, it will send them to a contact form on the site so they can enquire personally. 5
-- A 'customers also bought' strip below the guide's results, with some more ideas.  5
+- A 'customers also bought' strip below the guide's results, with some more ideas. 5
 
 These options need to conform to the principles of UX in all five different planes.
 
-![Screenshot 2023-03-15 at 18.15.45.png](:/cd4be09a9ea9e9b2cdc120d0e71e578f)
+![Usability](/assets/images/princip-UX.png)
 
 ---
 
@@ -236,7 +253,7 @@ Categories:
 - Keyrings
 - Pendants
 - Anklets
-
+---
 ### Wireframes
 
 I first sketched the basic layout for the landing page, questions screens and results page in Evernote's Sketch feature, then mocked these up using Balsamiq.
@@ -248,14 +265,15 @@ I then used [Figma](https://www.figma.com/) to develop the structure, skeleton, 
 The app is contained on one page. This page will have the main site navigation as usual for the site.
 
 Three divs appear depending on where you are in the guide.
-
-#### Welcome - Landing page with title, image and tagline and 'Start gift guide' button.
+---
+#### Welcome 
+Landing page with title, image and tagline and 'Start gift guide' button.
 
 Background image: sunset waves copyright surfergrl.
 Image: stall with various products
 Start gift guide: starfish button (or similar via MiniNote)
 Logo
-
+---
 #### Questions - Five questions with between 3-5 options each. A back button to allow changes.
 Questions - Five questions with between 3-5 options each.
 
@@ -274,7 +292,7 @@ The quiz will consist of five questions:
 - His, hers or both?
 
 Note that size is not relevant here as all are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
-
+---
 #### Results:
 
 Two products are shown with an 'add to cart' button and links to the main item page for more info.
@@ -286,9 +304,7 @@ I will present two options in the results. I am not including enough product var
 
 Standard products - many of the items on the SGS store are one-off pieces due to the unique nature of seaglass. I have therefore chosen to only present established pieces from the main collections in the results.
 
-**==
-==**
-Pendants:
+*Pendants:*
 
 - Carreg Bica pendant $$$ £30
 - Anchor and seaglass pendant $$ £25
@@ -297,7 +313,7 @@ Pendants:
 - Cariad bar $$$ £45
 - Half & Half necklace $$$ £35?
 
-Bracelets:
+*Bracelets:*
 
 - Cariad bracelet $$$ £45
 - Silver-plated Charm bracelet with seashore charms (contact for bespoke) $ £15
@@ -305,31 +321,28 @@ Bracelets:
 - Silver tone seashore charms bracelet £10 $
 - Cuff copper Carreg Bica coordinates (bespoke option) $ £10
 
-Earrings
+*Earrings*
 
 - Threader $$ £15
 - Wire-wrapped seaglass drops $ £15
 - Spiral hoops $ £15
 
-Rings
+*Rings*
 
 - Wrap silver $$
 - Cuff silver Cariad $$
 - Aluminium stamped with waves £ £5-7
 - Silver wave ring $ £20
 
-Anklets
-
+*Anklets*
 - Silver charm $$ £20
 - Silver tone bead charm $ £10
 
-Keyrings
-
+*Keyrings*
 - Mermaid $ £6.50
 - 'Shell in your pocket' slogan $ £6.50
 
 **For each result: **
-
 - Two product suggestions
 - Price
 - Picture
@@ -345,46 +358,44 @@ Keyrings
 
 404 error page
 'Start over' link to begin again.
-
-**Colours**
+---
+### Colours
 
 The Surfergirl's Seaglass brand uses ocean-themed colours - whites, blues, greens plus sunset and sandy colours feature heavily. The app will reflect this.
+---
 
-**Fonts**
-Legibility, accessibility, contrast
-
-Tools
-Github
-Figma
-Balsamiq
-GoogleFonts
-FontAwesome?
-1. [ezGIF](https://ezgif.com/)
-
-- Creating GIFs for the README
-
-1. [Techsini Mockup](https://techsini.com/multi-mockup/)
-
-- Creating the mockup images for the README
-
-1. [Favicon.io](https://favicon.io/favicon-converter/)
-
-- Used to create and add the favicon to the browser tab
-
-From [canva.com/colours](http://canva.com/colours)
 Bubblegum Blue and Mermaid Lagoon palettes
+
 Surface plane
+
 Colours needed for:
-Titles
-subtitles
-Body text - black
-Backgrounds
+- Titles
+- subtitles
+- Body text - black
+- Backgrounds
 
 Colours needed for gift guide specifically: same colours but add in some contrasting and highlighting.
 
-![bubblegum-blue.png](:/84f115798cae78cf602399548ed82e88)![mermaid-lagoon-palette.png](:/70bc66f40d954de483408d812896553f)
+![bubblegum-blue.png](/assets/images/bubblegum-blue.png)
 
-**Fonts**
+
+![mermaid-lagoon-palette.png](/assets/images/mermaid-lagoon-palette.png)
+---
+### Fonts
+
+**Legibility, accessibility, contrast**
+
+- Tools
+- Github
+- Figma
+- Balsamiq
+- GoogleFonts
+- FontAwesome?
+- [ezGIF](https://ezgif.com/) - Creating GIFs for the README
+- [Techsini Mockup](https://techsini.com/multi-mockup/) - Creating the mockup images for the README
+- [Favicon.io](https://favicon.io/favicon-converter/) - Used to create and add the favicon to the browser tab
+
+From [canva.com/colours](http://canva.com/colours)
 
 1. [Six Hands Rough](https://www.onlinewebfonts.com/download/f6db36f5c636e2adf912702a4ad751ec) font for headings
 
@@ -400,11 +411,8 @@ Colours needed for gift guide specifically: same colours but add in some contras
 
 Remember that while selecting fonts, it's essential to ensure readability and consistency throughout your website. You can pair a script font for headings with a clean sans-serif or serif font for body text to maintain a balance between style and readability. Also, consider the overall design and color scheme of your website to ensure that the fonts complement the beach theme effectively.
 
-
-
-
-
+---
 **Credits**
  https://github.com/emmahewson/mp2_travel_quiz ReadMe guidance
 
- 
+---
