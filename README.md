@@ -4,7 +4,7 @@
 
 By Kat Dawes
 
---- 
+---
 
 This is the documentation for my web application **Surfergirl's Seaglass Jewellery Gift Guide**.
 
@@ -32,10 +32,11 @@ Table of Contents (all to be hyperlinked)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449) (which allows for embedding web apps using i-frames)
+___
 
-**Project Development and Planning**
+## Project Development and Planning
 
-**Project Details & Goals**
+### Project Details & Goals
 
 - Title: Surfergirl's Seaglass Jewellery Gift Guide.
 - Purpose: To provide a quiz-type interface to guide the customer to the perfect piece of jewellery.
@@ -49,10 +50,10 @@ Table of Contents (all to be hyperlinked)
   - Increase revenue
 - Required skills: JavaScript, HTML, CSS. Other skills: image manipulation, WordPress, GitHub.
 
-**User journey:**
+### User journey:
 flow chart
 
-**User Stories**
+### User Stories
 
 The user stories are based on previous market research in the field. People who came to the Gallery shop locally or to craft markets and were not sure what to buy were often one of these type of customer:
 
@@ -62,13 +63,13 @@ The user stories are based on previous market research in the field. People who 
 - Christmas shopper in a hurry with limited idea of what someone might want
 - Undecided purchaser who has seen items but isn't sure what they want
 
-**Research **
+## Research
 
-**Market Review **
+### Market Review 
 
 I looked at various jewellery sites to see how they use interactivity to encourage browers to buy. I was interested in how the options were presented, the user journey through them and the choices available to save/download/share results. I looked at the overall design in terms of ease of use and attractiveness.
 
-**Pandora**
+### Pandora
 ![pandora.png](:/127cd1fca54c9454fe2a681afe015088)
 
 https://uk.pandora.net/en/gifts/featured-gifting/the-perfect-gift-finder-landing/#navigation
@@ -79,7 +80,7 @@ It also has GiftMe - Customised by Me allows customer to build the ideal gift fo
 
 https://uk.pandora.net/en/discover/stories/pandora-me-for-every-me/build-me/?useParentCtaStyle=true&defaultButtonStyle=ci-button-text-black-pink-underlined&customClass=ci-m52-explore-module-btn&customSize=small&trackingData=icid=e:pme:plp:explore:BUILDME&parentCtaStyle=ci-button-filled-white#icid=e:pme:plp:explore:BUILDME
 
-**Cartier**:
+### Cartier:
 ![cartier.png](:/c2529079bdfdfa802e724a4bf843271b)
 Offers a Gifts page with links to category pages:
 
@@ -94,7 +95,7 @@ As an immeditely recognisable luxury brand, they provide easy ways to get to the
 
 I like the idea of offering a cheaper option (here £100+) as well as the main items (£7,000 bracelets etc.) and will use this in my design.
 
-**Clogau Gold**
+### Clogau Gold
 
 ![clog.png](:/ebc0aa440c5860bd51ef1866f65a57bf)![clog2.png](:/f2efbed777185a44669f067984b0712d)
 
@@ -109,7 +110,7 @@ Notes:
 - Option to view the finished design.
 - No way to move backwards through the choices.
 
-**Tiffany **
+### Tiffany
 Doesn't offer anything interactive.
 Offers categories to explore:
 
@@ -121,11 +122,10 @@ Offers categories to explore:
 - Personalised
 - Graduates
 
-**Thomas Sabo**
+### Thomas Sabo 
 ![thomas-sabo.png](:/69ad2a89a095c119157db9e6f13928ea)
  https://www.thomassabo.com/GB/en_GB/charms-creator
 **Charm Club**
-
 - Attractive interface
 - Clear about its purpose
 - Choose a Style
@@ -138,7 +138,7 @@ Offers categories to explore:
 ![sabo-charmchoice.png](:/08be4b7e50595019d3a9ae611b12d275)
 (Target group = choice of For Him or For Her.)
 
-**Market research general notes:**
+### Market research general notes:
 
 - Gift Guides were often just pages of products in no particular order
 - Often little or no guidance to help customers
@@ -163,7 +163,7 @@ https://blog.dot.vu/holiday-gift-guide-examples/ A digital tool that guides your
 
 Nonetheless, the success of your gift guide depends on its features,  design, responsiveness, and, of course, product suggestions. The more  accurate and user-friendly you make your holiday gift guide, the more  revenue you generate.
 
-**Deployment**
+## Deployment
 
 The gift guide will be live on the [Surfergrl.co.uk](http://Surfergrl.co.uk) website
 
@@ -180,7 +180,7 @@ I want deployment to be
 - Easy to update when necessary
 - Fits in with WordPress without too much extra code or workarounds which might compromise UX
 
-**Current Website **
+## Current Website 
 
 The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled by the ocean.) The site is built on WordPress with WooCommerce.
 
@@ -192,9 +192,9 @@ The site is basic at present and includes:
 - Shop page - categories, featured products, image gallery, basic Ts&Cs
 - Item pages - images, price, description, Add to Cart button, reviews section
 
-The shop offers products in broad categories - bracelets, earrings, necklaces/pendants, rings, keyrings and anklets. A customer who comes to the site with little or no knowledge of the brand might struggle to choose something, particularly if they are looking for a gift. The gift guide aims to present compelling options to suit a wide range of customers.
+The shop offers products in broad categories - bracelets, earrings, necklaces/pendants, rings, keyrings and anklets. A customer who comes to the site with little or no knowledge of the brand might struggle to choose something, particularly if they are looking for a gift. The gift guide aims to present compelling options to suit a wide range of customers.
 
-**Desired Features - rated 1-5 in order of importance **
+### Desired Features - rated 1-5 in order of importance
 
 - Move through a short series of questions about preferences, based on the jewellery available on the site. 1
 - Provide a range of options to suit different styles, budgets, size and theme/charm choice. 1
@@ -206,7 +206,7 @@ The shop offers products in broad categories - bracelets, earrings, necklaces/pe
 - Results can be emailed/downloaded/saved to wish list (if WooCommerce provides this option?). 4
 - Option provided to request more information or bespoke pieces. 2
 
-**Further Developments**
+### Further Developments
 
 - Options for how to size a ring or what length of necklace do I want. 48
 - Although the app will present an ideal option, I don't want this to stop people seeing other items, so I want an 'other ideas' section below the main result with some add-on options or alternatives. 4
@@ -217,21 +217,19 @@ These options need to conform to the principles of UX in all five different plan
 
 ![Screenshot 2023-03-15 at 18.15.45.png](:/cd4be09a9ea9e9b2cdc120d0e71e578f)
 
-**
-**
+---
 
-**Design, layout, colours**
-**
-**
-**Content - elements to include**
-**Headline**- Surfergirl's Seaglass Gift Guide
+## Design, layout, colours
+### Content - elements to include
 
-**Tag line**- This is a short explanation of what the app does: 'Find the perfect piece of silver and seaglass jewellery for you or a loved one.'
+**Headline** - Surfergirl's Seaglass Gift Guide
 
-**Categories**to match the products on the SGS site.
+**Tag-line** - This is a short explanation of what the app does: 'Find the perfect piece of silver and seaglass jewellery for you or a loved one.'
+
+**Categories** 
+to match the products on the SGS site.
 ![shop-menu.png](:/c0b98dce325bd20488835469a2f6b472)
 Categories:
-
 - Bracelets
 - Rings
 - Earrings
@@ -239,33 +237,31 @@ Categories:
 - Pendants
 - Anklets
 
-**Wireframes**
+### Wireframes
 
 I first sketched the basic layout for the landing page, questions screens and results page in Evernote's Sketch feature, then mocked these up using Balsamiq.
 
 I then used [Figma](https://www.figma.com/) to develop the structure, skeleton, layout, style and feel of the site. This was I could decide on all the colours, fonts and layouts before beginning to write the code. I began with a design to work on mobile devices including the new Galaxy Z Flip phone, then scaled up for tablets and desktop. Keeping the design clean and simple was a priority both for UX and responsiveness.
 
-**Structure** 
+### Structure
 
 The app is contained on one page. This page will have the main site navigation as usual for the site.
 
 Three divs appear depending on where you are in the guide.
 
-**Welcome** - Landing page with title, image and tagline and 'Start gift guide' button.
+#### Welcome - Landing page with title, image and tagline and 'Start gift guide' button.
 
 Background image: sunset waves copyright surfergrl.
 Image: stall with various products
 Start gift guide: starfish button (or similar via MiniNote)
 Logo
 
-**Questions** - Five questions with between 3-5 options each. A back button to allow changes.
+#### Questions - Five questions with between 3-5 options each. A back button to allow changes.
 Questions - Five questions with between 3-5 options each.
 
 Start again button - starfish
 Back button - beach shack sign
 Next button - beach shack sign style
-
-**Questions**
 
 I think it will be important to give a 'not sure' option, e.g. if the user doesn't know what style a giftee might prefer. The app will then discount this section, i.e. in this case it would present an option from any of the styles.
 
@@ -279,10 +275,12 @@ The quiz will consist of five questions:
 
 Note that size is not relevant here as all are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
 
-**Results** - Two products are shown with an 'add to cart' button and links to the main item page for more info.
+#### Results:
+
+Two products are shown with an 'add to cart' button and links to the main item page for more info.
 Results - Two products are shown with an 'add to cart' button and links to the main item page for more info.
 
-**Results Options:**
+#### Results Options:
 
 I will present two options in the results. I am not including enough product variety to offer more, and some categories only have two options.
 
