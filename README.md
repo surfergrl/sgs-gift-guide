@@ -10,7 +10,7 @@ This is the documentation for my web application **Surfergirl's Seaglass Jewelle
 
 It has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
 
-#### Table of Contents (all to be hyperlinked)
+#### Table of Contents
 
 - Project Development & Planning
 - Project Goals
