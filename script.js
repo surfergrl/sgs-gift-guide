@@ -1,52 +1,77 @@
+//Change intro div to first question
+function firstQuestion() {
+    let content = document.getElementById('contentBox');
+    let html = `
+     <h4>First Question</h4>
+        <p>What category of jewellery would you like to see?</p>
+        <ul>
+            <li>Bracelets</li>
+            <li>Ring</li>
+            <li>Anklets</li>
+            <li>Keyrings</li>
+            <li>Necklaces</li>
+            <li>Earrings</li>
+        </ul>
+    <button onclick="start()">Next</button>    
+    <button onclick="start()">Restart</button>
+    `;
+    content.innerHTML = html;
+}
+
+
+//Change first question div to second question 
+
+
+
 // Define an array of items with their properties
 var jewelleryItems = [
     {
         name: "Carreg Bica pendant",
-        category: "Pendants"
+        category: "Pendants",
         price: 35,
         hers: "Unisex",
-        budget: "med"
-        style: "Llangrannog"
+        budget: "med",
+        style: "Llangrannog",
     },
     {
         name: "Anchor and seaglass pendant",
-        category: "Pendants"
+        category: "Pendants",
         price: 25,
         hers: "Unisex",
-        budget: "med"
-        style: "Classic"
+        budget: "med",
+        style: "Classic",
     },
     {
         name: "Carreg Bica pendant",
-        category: "Pendants"
+        category: "Pendants",
         price: 35,
         hers: "Unisex",
-        budget: "med"
-        style: "Llangrannog"
+        budget: "med",
+        style: "Llangrannog",
     },
     {
         name: "Carreg Bica pendant",
-        category: "Pendants"
+        category: "Pendants",
         price: 35,
         hers: "Unisex",
-        budget: "med"
-        style: "Llangrannog"
+        budget: "med",
+        style: "Llangrannog",
     },
     {
         name: "Carreg Bica pendant",
-        category: "Pendants"
+        category: "Pendants",
         price: 35,
         hers: "Unisex",
-        budget: "med"
-        style: "Llangrannog"
+        budget: "med",
+        style: "Llangrannog",
     },
     {
         name: "Carreg Bica pendant",
-        category: "Pendants"
+        category: "Pendants",
         price: 35,
         hers: "Unisex",
-        budget: "med"
-        style: "Llangrannog"
+        budget: "med",
+        style: "Llangrannog",
     },
 
 ];
