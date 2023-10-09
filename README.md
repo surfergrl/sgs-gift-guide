@@ -260,7 +260,7 @@ Categories:
 
 ### Wireframes
 
-I first sketched the basic layout for the landing page, questions screens and results page in Evernote's Sketch feature, then mocked these up using Balsamiq.
+I first sketched the basic layout for the landing page, questions screens and results page in Evernote's Sketch feature.
 
 I then used [Figma](https://www.figma.com/) to develop the structure, skeleton, layout, style and feel of the site. This was I could decide on all the colours, fonts and layouts before beginning to write the code. I began with a design to work on mobile devices including the new Galaxy Z Flip phone, then scaled up for tablets and desktop. Keeping the design clean and simple was a priority both for UX and responsiveness.
 
@@ -268,7 +268,7 @@ I then used [Figma](https://www.figma.com/) to develop the structure, skeleton, 
 
 The app is contained on one page. This page will have the main site navigation as usual for the site.
 
-Three divs appear depending on where you are in the guide.
+Seven divs appear depending on where you are in the guide (one for each of five questions, one intro page and one results page).
 
 ---
 
@@ -276,11 +276,9 @@ Three divs appear depending on where you are in the guide.
 
 Landing page with title, image and tagline and 'Start gift guide' button.
 
-Background image: sunset waves copyright surfergrl.
+Background image: 
 
-Image: stall with various products
-
-Start gift guide: starfish button (or similar via MiniNote)
+Start gift guide: button
 
 Logo
 
