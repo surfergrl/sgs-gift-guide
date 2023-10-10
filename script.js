@@ -1,27 +1,51 @@
 //Change intro div to first question
 function firstQuestion() {
-    let content = document.getElementById('contentBox');
-    let html = `
-     <h4>First Question</h4>
-        <p>What category of jewellery would you like to see?</p>
-        <ul>
-            <li>Bracelets</li>
-            <li>Ring</li>
-            <li>Anklets</li>
-            <li>Keyrings</li>
-            <li>Necklaces</li>
-            <li>Earrings</li>
-        </ul>
-    <button onclick="start()">Next</button>    
-    <button onclick="start()">Restart</button>
-    `;
-    content.innerHTML = html;
-}
+    //     let content = document.getElementById('contentBox');
+    //     let html = `
+    //      <h4>First Question</h4>
+    //         <p>What category of jewellery would you like to see?</p>
+    //         <ul>
+    //             <li>Bracelets</li>
+    //             <li>Ring</li>
+    //             <li>Anklets</li>
+    //             <li>Keyrings</li>
+    //             <li>Necklaces</li>
+    //             <li>Earrings</li>
+    //         </ul>
+    //     <button onclick="start()">Next</button>    
+    //     <button onclick="start()">Restart</button>
+    //     `;
+    //     content.innerHTML = html;
+    // }
 
 
-//Change first question div to second question 
+    //Change first question div to second question 
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+    } 
 
+  let formData = {
+        category: form.querySelector(".question1.select").value,
+        gender: form.querySelector(".question2.select").value,
+        design: form.querySelector(".question3.select").value,
+        quality: form.querySelector(".question4.select").value,
+        occasion: form.querySelector(".question5.select").value,
+    };
 
+    filterIems(formData);
+});
+
+function filterItems(formData) {
+    const filtered = jewelleryItems.filter("jewellery" Llangrannog 
+        (v) => 
+        v.category === FormData.category && 
+        v.gender === formData.gender &&
+        v.budget === formData.budget &&
+        v.occasion === formData.occasion &&
+        v.quality === formData.quality 
+        ); 
+    console.log(filtered);
+} 
 
 // Define an array of items with their properties
 var jewelleryItems = [
@@ -78,7 +102,7 @@ var jewelleryItems = [
 
 // Function to ask a question and return the user's answer
 function askQuestion(question) {
-    return prompt(question);
+    return alert(question);
 }
 
 // Function to filter items based on user preferences
