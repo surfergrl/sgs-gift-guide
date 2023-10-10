@@ -2,25 +2,72 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Find the perfect piece of silver and seaglass jewellery for you or a loved one."/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Find the perfect piece of silver and seaglass jewellery for you or a loved one."
+    />
     <title>Surfergirl's Seaglass Jewellery Gift Guide</title>
   </head>
   <body>
-    
-//background image and logo
-<div id="background-div">
+    //background image and logo
+    <div id="background-div">
       <img src="assets/images/bg-blue-geo.jpg" />
-      <img src="assets/images/SGS-logo.png" width="40px" height="50px"/>
-</div>
-
+      <img src="assets/images/SGS-logo.png" width="40px" height="50px" />
+    </div>
+    <!-- 
+//div for the quiz itself 
 <div id="contentBox"></div>
     <h3>SGS Gift Guide</h3>
     <h2> Find the perfect piece of silver and seaglass jewellery for you or a loved one. </h2>
     <button onclick="start()">Start</button>
     <button onclick="start()">Restart</button>
-</div>
+</div> -->
+
+    //form code
+    <form id="questionForm">
+      <div class="category">
+        <select>
+          <option value="Pendants">Pendants</option>
+          <option value="Earrings">Earrings</option>
+          <option value="Necklaces">Necklaces</option>
+          <option value="Rings">Rings</option>
+        </select>
+      </div>
+      <div class="budget">
+        <select>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div class="theme">
+        <select>
+          <option value="Llangrannog">Llangrannog</option>
+          <option value="Cariad">Cariad</option>
+          <option value="Waves">Waves</option>
+          <option value="Seaglass">Seaglass</option>
+        </select>
+      </div>
+      <div class="style">
+        <select>
+          <option value="Quirky">Quirky</option>
+          <option value="Classic">Classic</option>
+          <option value="Delicate">Delicate</option>
+          <option value="Chunky">Chunky</option>
+        </select>
+      </div>
+      <div class="gender">
+        <select>
+          <option value="Hers">Hers</option>
+          <option value="His">His</option>
+          <option value="Unisex">Unisex</option>
+        </select>
+      </div>
+      <button type="Submit">Submit</button>
+    </form>
+
     <script src="script.js"></script>
   </body>
 </html>

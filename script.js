@@ -1,5 +1,4 @@
 //Change intro div to first question
-function firstQuestion() {
     //     let content = document.getElementById('contentBox');
     //     let html = `
     //      <h4>First Question</h4>
@@ -17,9 +16,10 @@ function firstQuestion() {
     //     `;
     //     content.innerHTML = html;
     // }
-
-
     //Change first question div to second question 
+
+//form logic 
+function firstQuestion() {
     form.addEventListener("submit", (event) => {
         event.preventDefault();
     } 
