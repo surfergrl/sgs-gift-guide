@@ -65,7 +65,9 @@ function firstQuestion() {
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         let formData = {
+            name: form.querySelector(".name").value,
             category: form.querySelector(".category").value,
+            price: form.querySelector(".price").value,
             gender: form.querySelector(".gender").value,
             theme: form.querySelector(".theme").value,
             style: form.querySelector(".style").value,
@@ -77,7 +79,9 @@ function firstQuestion() {
 //filter items from the form 
 function filterItems(formData) {
     const filtered = jewelleryItems.filter((v) =>
+        v.name === formData.name &&
         v.category === formData.category &&
+        v.price === formData.price &&
         v.gender === formData.gender &&
         v.budget === formData.budget &&
         v.style === formData.style &&
@@ -97,12 +101,15 @@ form.addEventListener("submit", (event) => {
 
     // Get the form data
     let formData = {
+        name: form.querySelector(".name").value,
         category: form.querySelector(".category").value,
+        price: form.querySelector(".price").value,
         gender: form.querySelector(".gender").value,
         theme: form.querySelector(".theme").value,
         style: form.querySelector(".style").value,
         budget: form.querySelector(".budget").value,
     };
+    console.log(formData);
 
     // Call the filterItems function with the formData
     const filteredItems = filterItems(formData);
