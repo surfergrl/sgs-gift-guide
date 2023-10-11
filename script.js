@@ -73,9 +73,11 @@ function firstQuestion() {
             style: form.querySelector(".style").value,
             budget: form.querySelector(".budget").value,
         };
-        filterItems(formData);
+        // filterItems(formData);
+        console.log(formData);
     });
 }
+
 //filter items from the form 
 function filterItems(formData) {
     const filtered = jewelleryItems.filter((v) =>
@@ -101,8 +103,8 @@ form.addEventListener("submit", (event) => {
 
     // Get the form data
     let formData = {
-        name: form.querySelector(".name").value,
-        category: form.querySelector(".category").value,
+        name: document.querySelector('#questionForm').name.value,
+        category: document.querySelector('form').category.value,
         price: form.querySelector(".price").value,
         gender: form.querySelector(".gender").value,
         theme: form.querySelector(".theme").value,
