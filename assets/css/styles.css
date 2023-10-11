@@ -1,19 +1,39 @@
-/* font - Six Hands Rough */
-
 body {
     background-image: url("/assets/images/bg-blue-geo.jpg");
     background-color: #bdc1d7;
+    max-width: 1300px;
 }
 
 /* headings  */
 h1 {
     font-family: "Six Hands Web Rough";
+    font-size: 50px;
 }
 
 h2 {
     font-family: "Six Hands Web Rough";
+    font-size: larger;
 }
 
-h3 {}
+h3 {
+    font-family: "Six Hands Web Rough";
+    font-size: large;
+}
 
-h4 {}
+h4 {
+    font-family: "Six Hands Web Rough";
+    font-size: medium;
+}
+
+legend {
+    font-family: 'Six Hands Rough', cursive;
+}
+
+div.results {
+    font-family: 'Six Hands Rough', cursive;
+}
+
+fieldset {
+    position: relative;
+    max-width="600px";
+}

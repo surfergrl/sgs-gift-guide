@@ -33,11 +33,11 @@
 <br>
 <!-- form code -->
     <form id="questionForm">
-        <fieldset width="400px">
+        <fieldset>
             <legend>Gift Guide</legend>
       <div class="category">
         <h4>What category of jewellery do you want to see?</h4>
-        <select>
+        <select id="category" name="category">
           <option value="Pendants">Pendants</option>
           <option value="Earrings">Earrings</option>
           <option value="Necklaces">Necklaces</option>
@@ -46,7 +46,7 @@
       </div>
       <div class="budget">
         <h4>What is your budget?</h4> 
-        <select>
+        <select id="budget" name="budget">
           <option value="Low">Lower (£5-15)</option>
           <option value="Medium">Medium (£15-20)</option>
           <option value="High">Higher (£25+)</option>
@@ -54,7 +54,7 @@
       </div>
       <div class="theme">
         <h4>Which theme interests you?</h4>
-        <select>
+        <select id="theme" name="theme">
           <option value="Llangrannog">Llangrannog village</option>
           <option value="Cariad">Cariad (Love)</option>
           <option value="Waves">Waves</option>
@@ -63,7 +63,7 @@
       </div>
       <div class="style">
         <h4>What style of jewellery do you want to see?</h4>
-        <select>
+        <select id="style" name="style">
           <option value="Quirky">Quirky</option>
           <option value="Classic">Classic</option>
           <option value="Delicate">Delicate</option>
@@ -72,7 +72,7 @@
       </div>
       <div class="gender">
         <h4>Who are you looking for?</h4>
-        <select>
+        <select id="gender" name="gender">
           <option value="Hers">Her</option>
           <option value="His">Him</option>
           <option value="Unisex">Unisex</option>
@@ -86,7 +86,7 @@
 
 
     <div id="results">
-        <h3>Here are some suggestions</h3>
+        <h3>Results will appear here</h3>
 
     </div>
     
