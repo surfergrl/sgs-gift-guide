@@ -1,12 +1,18 @@
+/* font - Six Hands Rough */
+
 body {
     background-image: url("/assets/images/bg-blue-geo.jpg");
     background-color: #bdc1d7;
 }
 
 /* headings  */
-h1 {}
+h1 {
+    font-family: "Six Hands Web Rough";
+}
 
-h2 {}
+h2 {
+    font-family: "Six Hands Web Rough";
+}
 
 h3 {}
 

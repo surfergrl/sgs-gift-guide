@@ -1,3 +1,5 @@
+
+
 // Define an array of jewellery items with their properties
 var jewelleryItems = [
     {
@@ -81,64 +83,48 @@ function filterItems(formData) {
         v.style === formData.style &&
         v.theme === formData.theme
     );
-    console.log(filtered);
+    return filtered;
 }
 
 // Get the results element in index.html 
 const resultsElement = document.getElementById("results");
 
-//Clear any previous content 
-resultsElement.innerHTML = "";
+// Select your form element and add an event listener to handle form submissions
+const form = document.querySelector("#questionForm"); 
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); 
 
-// Call the filterItems function with the formData
-const filteredItems = filterItems(formData);
+    // Get the form data
+    let formData = {
+        category: form.querySelector(".category.select").value,
+        gender: form.querySelector(".gender.select").value,
+        theme: form.querySelector(".theme.select").value,
+        style: form.querySelector(".style.select").value,
+        budget: form.querySelector(".budget.select").value,
+    };
 
-// Create an unordered list to display the results
-const ul = document.createElement("ul");
+    // Call the filterItems function with the formData
+    const filteredItems = filterItems(formData);
 
-// Iterate through the filtered items and create list items
-filtered.forEach((item) => {
-    const li = document.createElement("li");
-    li.textContent = item.name; // customise this later
-    ul.appendChild(li);
+    // Clear any previous content
+    resultsElement.innerHTML = "";
+
+    // Create an unordered list to display the results
+    const ul = document.createElement("ul");
+
+    // Iterate through the filtered items and create list items
+    filteredItems.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item.name; // customize this as needed
+        ul.appendChild(li);
+    });
+
+    // Append the list to the results element
+    resultsElement.appendChild(ul);
 });
 
-// Append the list to the results element
-resultsElement.appendChild(ul);
 
 // Run code only after page has loaded 
 document.addEventListener("DOMContentLoaded", () => {
-    firstQuestion(); // Initialize the form logic
-});
-
-// previous messes 
-//Function to filter items based on user preferences
-// function filterjewelleryItems(preferences) {
-//     var filteredItems = [];
-//     for (var i = 0; i < jewelleryItems.length; i++) {
-//         var item = jewelleryItems[i];
-//         var match = true;
-//         for (var key in preferences) {
-//             if (preferences.hasOwnProperty(key) && item[key] !== preferences[key]) {
-//                 match = false;
-//                 break;
-//             }
-//         }
-//         if (match) {
-//             filteredItems.push(item);
-//         }
-//     }
-//     return filteredItems;
-// }
-
-    // // Function to display recommended jewelry items
-    // function displayRecommendedItems(items) {
-    //     if (items.length === 0) {
-    //         console.log("Sorry, we don't have any items matching your preferences.");
-    //     } else {
-    //         console.log("Here are some ideas:");
-    //         for (var i = 0; i < items.length; i++) {
-    //             console.log(items[i].name + " - £" + items[i].price);
-    //         }
-    //     }
-    // }
+    firstQuestion(); 
+}); 
