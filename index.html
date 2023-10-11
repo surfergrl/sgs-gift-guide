@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-<<<<<<< HEAD
     <!-- background image and logo -->
     <div id="background-div">
       <img
@@ -31,9 +30,11 @@
 </div>
 <br>
 <!-- form code -->
-
     <form id="questionForm">
+        <fieldset>
+            <legend>Gift Guide</legend>
       <div class="category">
+        <h4>What category of jewellery do you want to see?</h4>
         <select>
           <option value="Pendants">Pendants</option>
           <option value="Earrings">Earrings</option>
@@ -42,21 +43,24 @@
         </select>
       </div>
       <div class="budget">
+        <h4>What is your budget?</h4> 
         <select>
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
+          <option value="Low">Lower (£5-15)</option>
+          <option value="Medium">Medium (£15-20)</option>
+          <option value="High">Higher (£25+)</option>
         </select>
       </div>
       <div class="theme">
+        <h4>Which theme interests you?</h4>
         <select>
-          <option value="Llangrannog">Llangrannog</option>
-          <option value="Cariad">Cariad</option>
+          <option value="Llangrannog">Llangrannog village</option>
+          <option value="Cariad">Cariad (Love)</option>
           <option value="Waves">Waves</option>
           <option value="Seaglass">Seaglass</option>
         </select>
       </div>
       <div class="style">
+        <h4>What style of jewellery do you want to see?</h4>
         <select>
           <option value="Quirky">Quirky</option>
           <option value="Classic">Classic</option>
@@ -65,15 +69,17 @@
         </select>
       </div>
       <div class="gender">
+        <h4>Who are you looking for?</h4>
         <select>
-          <option value="Hers">Hers</option>
-          <option value="His">His</option>
+          <option value="Hers">Her</option>
+          <option value="His">Him</option>
           <option value="Unisex">Unisex</option>
         </select>
       </div>
       <button type="Submit">Submit</button>
+    <button type="reset">Reset</button>
+    </fieldset>
     </form>
-
     <script src="script.js"></script>
   </body>
 </html>
