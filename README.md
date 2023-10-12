@@ -21,8 +21,8 @@ It has been built using HTML5, CSS3 & JavaScript and is my second project for Co
 - Features
 - Current Website
 - JavaScript Functionality
-- Testing & Bugs
 - Deployment
+- Testing & Bugs
 - Credits
 
 #### Technologies Used
@@ -30,7 +30,7 @@ It has been built using HTML5, CSS3 & JavaScript and is my second project for Co
 - [HTML](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449) (which allows for embedding web apps using i-frames)
+- [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449) 
 
 ---
 
@@ -157,15 +157,11 @@ _Specifically, I want:_
 
 - Attractive interface and landing page to entice users (title, subtitle, image, explanation of purpose)
 - Clear purpose to the tool
-- Three or four questions
+- Four or five questions
 - Options to save/download/share
 - Ability to move backwards and forwards to change choices
 
-I also looked at interactive gift guides for other products.
-
-https://blog.dot.vu/holiday-gift-guide-examples/ A digital tool that guides your audience toward the products that  would make a perfect gift will increase orders and, thus, sales.
-
-Nonetheless, the success of your gift guide depends on its features,  design, responsiveness, and, of course, product suggestions. The more  accurate and user-friendly you make your holiday gift guide, the more  revenue you generate.
+I also looked at interactive gift guides for other products: https://blog.dot.vu/holiday-gift-guide-examples/ A digital tool that guides your audience toward the products that  would make a perfect gift will increase orders and, thus, sales.
 
 ---
 
@@ -185,6 +181,7 @@ I want deployment to be
 - Easily accessible for the user
 - Easy to update when necessary
 - Fits in with WordPress without too much extra code or workarounds which might compromise UX
+- An iFrame seems to be the only way to do this without having to edit WordPress templates or install plugins. 
 
 ---
 
@@ -258,9 +255,11 @@ Categories:
 
 ### Wireframes
 
-I first sketched the basic layout for the HTML page. 
+I first sketched (on paper) the basic layout for the HTL page with landing page, questions page and results page. In the end I decided to have these all on one pages and use divs to show the relevant part of the guide. 
 
 Keeping the design clean and simple was a priority both for UX and responsiveness.
+
+- insert scans of drawings 
 
 ### Structure
 
@@ -292,7 +291,7 @@ Logo
 
 ---
 
-#### Questions - Five questions with between 3-5 options each. A back button to allow changes.
+#### Questions - Five questions with between 3-5 options each. 
 
 Questions - Five questions with between 3-5 options each.
 
@@ -313,7 +312,7 @@ Note that size is not relevant here as all are one-size or adjustable. Items whi
 
 #### Results:
 
-PRoducts matching user preferences are shown with an 'add to cart' button and links to the main item page for more info.
+PRoducts matching user preferences are shown with a name, image, prices, 'add to cart' button and 'more info' link (which goes to the main item page with more photos etc.).
 
 #### Results Options:
 
@@ -426,9 +425,24 @@ Colour palettes from [canva.com/colours](http://canva.com/colours)
 
 ---
 
+# Bugs and issues
+
+The app does not (yet) work as planned. The scipt is not returning the initial results as expected. 
+
+The logic to pick a result (or two) to present to the user with name, price etc. has not been written. 
+
+The CSS styling is unfinished and the app does not look attractive. 
+
+As such, the ReadMe does not yet reflect the  app in its current form. 
+
+---
+
 ## Credits
 
 https://github.com/emmahewson/mp2_travel_quiz ReadMe guidance
-Menor Richard Wells 
+
+Mentor Richard Wells 
+
+CI tutors Oisin and Gemma 
 
 ---
