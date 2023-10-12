@@ -59,64 +59,48 @@ var jewelleryItems = [
 
 ];
 
-//Set up an event listener for 'questionForm' and handle form submissions
-// function firstQuestion() {
-//     const form = document.querySelector('#questionForm');
-//     form.addEventListener("submit", (event) => {
-//         event.preventDefault();
-//         let formData = {
-//             name: document.querySelector("form").name.value,
-//             category: document.querySelector("form").category.value,
-//             price: form.querySelector(".price").value,
-//             gender: form.querySelector(".gender").value,
-//             theme: form.querySelector(".theme").value,
-//             style: form.querySelector(".style").value,
-//             budget: form.querySelector(".budget").value,
-//         };
-//         // filterItems(formData);
-//         console.log(formData);
-//     });
-// }
+// Get the results element in index.html 
+const resultsElement = document.getElementById("results");
 
 // Select the form element and add an event listener to handle form submissions
 const form = document.querySelector("#questionForm");
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    // Get the form data
-    let formData = {
-        name: form.elements.name.value,
-        category: form.elements.category.value,
-        price: form.elements.price.value,
-        gender: form.elements.gender.value,
-        theme: form.elements.theme.value,
-        style: form.elements.style.value,
-        budget: form.elements.budget.value,
-    };
-    console.log(formData);
+// prevent page refresh 
+document.addEventListener("DOMContentLoaded", () => {
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    // Call the filterItems function with the formData
-    const filteredItems = filterItems(formData);
+        // Get the form data
+        let formData = {
+            name: form.elements.name.value,
+            category: form.elements.category.value,
+            price: form.elements.price.value,
+            gender: form.elements.gender.value,
+            theme: form.elements.theme.value,
+            style: form.elements.style.value,
+            budget: form.elements.budget.value,
+        };
+        console.log(form.elements.name); // Check if the name element is found
 
-    // Add results header below fieldset 
-    resultsElement.innerHTML = "Here are some suggestions";
+        // Call the filterItems function with the formData
+        const filteredItems = filterItems(formData);
 
-    // Create an unordered list to display the results
-    const ul = document.createElement("ul");
+        // Add results header below fieldset 
+        resultsElement.innerHTML = "Here are some suggestions";
 
-    // Iterate through the filtered items and create list items
-    filteredItems.forEach((item) => {
-        const li = document.createElement("li");
-        li.textContent = item.name; // customise this 
-        ul.appendChild(li);
+        // Create an unordered list to display the results
+        const ul = document.createElement("ul");
+
+        // Iterate through the filtered items and create list items
+        filteredItems.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item.name; // customise this 
+            ul.appendChild(li);
+        });
+
+        // Append the list to the results element
+        resultsElement.appendChild(ul);
     });
-
-    // Get the results element in index.html 
-    const resultsElement = document.getElementById("results");
-
-    // Append the list to the results element
-    resultsElement.appendChild(ul);
-    console.log(resultsElement.ul); //returning undefined?? 
 });
 
 //filter items from the form 
@@ -134,7 +118,3 @@ function filterItems(formData) {
     return filtered;
 }
 
-// Run code only after page has loaded 
-document.addEventListener("DOMContentLoaded", () => {
-    firstQuestion();
-}); 

@@ -7,22 +7,22 @@ body {
 /* headings  */
 h1 {
     font-family: "Six Hands Web Rough";
-    font-size: 50px;
+    font-size: 60px;
 }
 
 h2 {
     font-family: "Six Hands Web Rough";
-    font-size: larger;
+    font-size: 50px;
 }
 
 h3 {
     font-family: "Six Hands Web Rough";
-    font-size: large;
+    font-size: 45px;
 }
 
 h4 {
     font-family: "Six Hands Web Rough";
-    font-size: medium;
+    font-size: 40px;
 }
 
 legend {
@@ -34,6 +34,7 @@ div.results {
 }
 
 fieldset {
+    background-color: #bdc1d7;
     position: relative;
     max-width: 600px;
 }
