@@ -1,5 +1,3 @@
-
-
 // Define an array of jewellery items with their properties
 var jewelleryItems = [
     {
@@ -56,7 +54,6 @@ var jewelleryItems = [
         style: "Quirky",
         theme: "Waves",
     },
-
 ];
 
 // Get the results element in index.html 
@@ -77,9 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Get the form data
         let formData = {
-            // name: form.elements.name.value,
             category: form.elements.category.value,
-            // price: form.elements.price.value,
             gender: form.elements.gender.value,
             theme: form.elements.theme.value,
             style: form.elements.style.value,
@@ -101,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
             li.textContent = item.name; // customise this 
             ul.appendChild(li);
         });
-
         // Append the list to the results element
         resultsElement.appendChild(ul);
     });
@@ -110,9 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //filter items from the form 
 function filterItems(formData) {
     const filtered = jewelleryItems.filter((v) =>
-        // v.name === formData.name &&
         v.category === formData.category &&
-        // v.price === formData.price &&
         v.gender === formData.gender &&
         v.budget === formData.budget &&
         v.style === formData.style &&
@@ -120,4 +112,41 @@ function filterItems(formData) {
     );
     console.log(filtered);
 }
+
+// next sort the results of the choices so that a product is picked and displayed in the Results div. 
+
+// Define another array with the proper names, prices, images and add to cart link of each possible result. 
+
+// let jewelleryItemsDetails = [
+//     {
+//         name: "Carreg Bica pendant",
+//         price: 35,
+//         link: link 
+//         image: URL 
+//     },
+//     {
+//         name: "Anchor and seaglass pendant",
+//         price: 25,
+//         link: link 
+//         image: URL 
+//     },
+//     //and so on 
+// ];
+
+// // 
+// let result1 = "carregbica";
+// let result2 = "anchor"
+// let noresult = "Sorry, nothing matches."
+// // and so on 
+
+// if {
+//     category === "Pendants" && gender === "Unisex" && budget === "high" && style === "Classic" && theme === "Llangrannog";
+//     console.log(carregbica); 
+// } else if {
+//     //and so on for all the options. There is a more efficient way to do this. With a function.  
+// } else {
+//     console.log(noresult); 
+// }; 
+
+
 
