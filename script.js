@@ -65,24 +65,28 @@ const resultsElement = document.getElementById("results");
 // Select the form element and add an event listener to handle form submissions
 const form = document.querySelector("#questionForm");
 
+console.log(form);
+console.log(form.elements.category.value);
+
 // prevent page refresh 
 document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        // console.log(form.elements.name.value); // Check what form is returning
+
         // Get the form data
         let formData = {
-            name: form.elements.name.value,
+            // name: form.elements.name.value,
             category: form.elements.category.value,
-            price: form.elements.price.value,
+            // price: form.elements.price.value,
             gender: form.elements.gender.value,
             theme: form.elements.theme.value,
             style: form.elements.style.value,
             budget: form.elements.budget.value,
         };
-        console.log(form.elements.name); // Check if the name element is found
 
-        // Call the filterItems function with the formData
+        // Call the filteredItems function with the formData
         const filteredItems = filterItems(formData);
 
         // Add results header below fieldset 
@@ -106,15 +110,14 @@ document.addEventListener("DOMContentLoaded", () => {
 //filter items from the form 
 function filterItems(formData) {
     const filtered = jewelleryItems.filter((v) =>
-        v.name === formData.name &&
+        // v.name === formData.name &&
         v.category === formData.category &&
-        v.price === formData.price &&
+        // v.price === formData.price &&
         v.gender === formData.gender &&
         v.budget === formData.budget &&
         v.style === formData.style &&
         v.theme === formData.theme
     );
     console.log(filtered);
-    return filtered;
 }
 
