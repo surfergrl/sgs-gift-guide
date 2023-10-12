@@ -60,56 +60,38 @@ var jewelleryItems = [
 ];
 
 //Set up an event listener for 'questionForm' and handle form submissions
-function firstQuestion() {
-    const form = document.querySelector('#questionForm');
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        let formData = {
-            name: form.querySelector(".name").value,
-            category: form.querySelector(".category").value,
-            price: form.querySelector(".price").value,
-            gender: form.querySelector(".gender").value,
-            theme: form.querySelector(".theme").value,
-            style: form.querySelector(".style").value,
-            budget: form.querySelector(".budget").value,
-        };
-        // filterItems(formData);
-        console.log(formData);
-    });
-}
+// function firstQuestion() {
+//     const form = document.querySelector('#questionForm');
+//     form.addEventListener("submit", (event) => {
+//         event.preventDefault();
+//         let formData = {
+//             name: document.querySelector("form").name.value,
+//             category: document.querySelector("form").category.value,
+//             price: form.querySelector(".price").value,
+//             gender: form.querySelector(".gender").value,
+//             theme: form.querySelector(".theme").value,
+//             style: form.querySelector(".style").value,
+//             budget: form.querySelector(".budget").value,
+//         };
+//         // filterItems(formData);
+//         console.log(formData);
+//     });
+// }
 
-//filter items from the form 
-function filterItems(formData) {
-    const filtered = jewelleryItems.filter((v) =>
-        v.name === formData.name &&
-        v.category === formData.category &&
-        v.price === formData.price &&
-        v.gender === formData.gender &&
-        v.budget === formData.budget &&
-        v.style === formData.style &&
-        v.theme === formData.theme
-    );
-    console.log(filtered);
-    return filtered;
-}
-
-// Get the results element in index.html 
-const resultsElement = document.getElementById("results");
-
-// Select your form element and add an event listener to handle form submissions
+// Select the form element and add an event listener to handle form submissions
 const form = document.querySelector("#questionForm");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     // Get the form data
     let formData = {
-        name: document.querySelector('#questionForm').name.value,
-        category: document.querySelector('form').category.value,
-        price: form.querySelector(".price").value,
-        gender: form.querySelector(".gender").value,
-        theme: form.querySelector(".theme").value,
-        style: form.querySelector(".style").value,
-        budget: form.querySelector(".budget").value,
+        name: form.elements.name.value,
+        category: form.elements.category.value,
+        price: form.elements.price.value,
+        gender: form.elements.gender.value,
+        theme: form.elements.theme.value,
+        style: form.elements.style.value,
+        budget: form.elements.budget.value,
     };
     console.log(formData);
 
@@ -129,11 +111,28 @@ form.addEventListener("submit", (event) => {
         ul.appendChild(li);
     });
 
+    // Get the results element in index.html 
+    const resultsElement = document.getElementById("results");
+
     // Append the list to the results element
     resultsElement.appendChild(ul);
     console.log(resultsElement.ul); //returning undefined?? 
 });
 
+//filter items from the form 
+function filterItems(formData) {
+    const filtered = jewelleryItems.filter((v) =>
+        v.name === formData.name &&
+        v.category === formData.category &&
+        v.price === formData.price &&
+        v.gender === formData.gender &&
+        v.budget === formData.budget &&
+        v.style === formData.style &&
+        v.theme === formData.theme
+    );
+    console.log(filtered);
+    return filtered;
+}
 
 // Run code only after page has loaded 
 document.addEventListener("DOMContentLoaded", () => {
