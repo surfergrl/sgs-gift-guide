@@ -20,6 +20,12 @@ Repeat for all five questions
 Click Results button
 View results (two products and one category options)
 Click an option to be taken to that product page in the shop pages
-Or click Clear button to restart the quiz
 
+Or click Clear button to restart the quiz - future dev
 I would like an option to email the results to them with a discount code - future dev!
+
+Code structure
+
+Declare variables to reference the HTML elements - form, results, submit button
+Array of objects with question, answers and answer weights
+Show the quiz questions on the HTML page
