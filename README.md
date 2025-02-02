@@ -300,11 +300,11 @@ Reset button
 
 The quiz will consist of five questions with several answer options based on available products:
 
-- What type of jewellery does this person wear? Bracelets, rings, anklets, keyrings, necklaces, earrings.
-- What is the budget? Lower £5-20 Medium £20-35 Higher £35+
-- What theme appeals? - Llangrannog/Wales, Cariad/Love, waves, seaglass
-- What style might appeal to them? Quirky, classic, delicate, chunky
-- His, hers or both?
+1. What type of jewellery does this person wear? Bracelets, rings, anklets, keyrings, necklaces, earrings.
+2. What is the budget? Lower £5-20 Medium £20-35 Higher £35+
+3. What theme appeals? - Llangrannog/Wales, Cariad/Love, waves, seaglass
+4. What style might appeal to them? Quirky, classic, delicate, chunky
+5. His, hers or both?
 
 Note that size is not relevant here as most products are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
 
@@ -312,7 +312,7 @@ Note that size is not relevant here as most products are one-size or adjustable.
 
 #### Results:
 
-PRoducts matching user preferences are shown with a name, image, prices, 'add to cart' button and 'more info' link (which goes to the main item page with more photos etc.).
+Products matching user preferences are shown with a name, image, prices, 'add to cart' button and 'more info' link (which goes to the main item page with more photos etc.).
 
 #### Results Options:
 

@@ -1,6 +1,6 @@
 ###Structure and logic
 
-The gift guide structure will be a simple quiz, which asks questions then gives a suggestion of what might be a suitable gift to buy.
+The gift guide structure will be quiz-style. It asks questions then gives a suggestion suitable gift/s to buy.
 
 - HTML file for basic user interface
 - CSS file for appearance, matching main site
@@ -8,9 +8,15 @@ The gift guide structure will be a simple quiz, which asks questions then gives 
 
 Questions will have multiple choice answers
 Users pick one choice (for simplicity at this stage; future versions would allow multiple choices)
-Each choice has a weighting i.e. a number attached to it
-The script will add this up to provide a score
-The score will determine which product/category is shown in the Results div
+That choice narrows down the products to display
+Next choice narrows it further
+And so on for 5 questions
+Until one product is shown when the Results button is clicked
+
+If a question is not answered, the guide will still return a product.
+They can re-choose anytime and will get another product (will it work this way by default?)
+If they click the Results button again, another product will be shown that matches the criteria - probs future dev.
+In the future, the array will populate from the WooCommerce product catalogue, maintained in the main WordPress site.
 
 User path:
 Click Gift Guide link to navigate to page
@@ -18,7 +24,7 @@ Read title and introduction
 Read first question; pick an option
 Repeat for all five questions
 Click Results button
-View results (two products and one category options)
+View results
 Click an option to be taken to that product page in the shop pages
 
 Or click Clear button to restart the quiz - future dev

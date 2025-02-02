@@ -1,136 +1,156 @@
-// Reference the elements in the HTML file
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
+// Define an array of jewellery items with their properties
+var jewelleryItems = [
+  {
+    name: "Carreg Bica pendant",
+    category: "Pendants",
+    price: 35,
+    gender: "Unisex",
+    budget: "high",
+    style: "Classic",
+    theme: "Llangrannog",
+  },
+  {
+    name: "Anchor and seaglass pendant",
+    category: "Pendants",
+    price: 25,
+    gender: "Unisex",
+    budget: "med",
+    style: "Classic",
+    theme: "Mermaid",
+  },
+  {
+    name: "Silver Cariad (Love) Ring",
+    category: "Rings",
+    price: 35,
+    gender: "Unisex",
+    budget: "high",
+    style: "Cariad",
+    theme: "Cariad",
+  },
+  {
+    name: "Seaglass Charm Anklet",
+    category: "Anklets",
+    price: 20,
+    gender: "Unisex",
+    budget: "med",
+    style: "Delicate",
+    theme: "Seaglass",
+  },
+  {
+    name: "Charm Bracelet",
+    category: "Bracelets",
+    price: 15,
+    gender: "Hers",
+    budget: "med",
+    style: "Chunky",
+    theme: "Seaglass",
+  },
+  {
+    name: "Shell & Sand Keyring",
+    category: "Keyrings",
+    price: 6.5,
+    gender: "Unisex",
+    budget: "low",
+    style: "Quirky",
+    theme: "Waves",
+  },
+];
 
-// Create an array to store the questions in objects along with their weighting 
-const quizQuestions = [
-        {
-          question: "What type of jewellery does this person wear?",
-          options: {
-            a: { text: "Bracelets", weight: 1 },
-            b: { text: "Rings", weight: 2 },
-            c: { text: "Keyrings", weight: 3 },
-            d: { text: "Necklaces", weight: 4 },
-            e: { text: "Earrings", weight: 5 }
-          }
-        },
+// Get the results element in index.html
+const resultsElement = document.getElementById("results");
 
-    {
-        question: "What price range are you interested in?",
-        options: {
-            a: "£5-20",
-            b: "£20-35",
-            c: "£35+"
-        },
-        correctAnswer: "a"
-    },
+// Select the form element and add an event listener to handle form submissions
+const form = document.querySelector("#questionForm");
 
-    {
-        question: "What theme appeals to you/them?",
-        options: {
-            a: "Llangrannog & Wales",
-            b: "Cariad - Love",
-            c: "Waves",
-            d: "Seaglass"
-        },
-        correctAnswer: "a"
-    },
+console.log(form);
+console.log(form.elements.category.value);
 
-    {
-        question: "What type of jewellery does this person wear?",
-        options: {
-            a: "Quirky",
-            b: "Classic",
-            c: "Delicate",
-            d: "Chunky"
-        },
-        correctAnswer: "a"
-    },
+// prevent page refresh
+document.addEventListener("DOMContentLoaded", () => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    {
-        question: "Are you looking for his, hers or both?",
-        options: {
-            a: "His",
-            b: "Hers",
-            c: "Both",
-        },
-        correctAnswer: "a"
-    }
-]
+    // console.log(form.elements.name.value); // Check what form is returning
 
-// Code to show each quiz question on the page 
-function buildQuiz(){
-    // Store the output in here:
-    const output = [];
+    // Get the form data
+    let formData = {
+      category: form.elements.category.value,
+      gender: form.elements.gender.value,
+      theme: form.elements.theme.value,
+      style: form.elements.style.value,
+      budget: form.elements.budget.value,
+    };
 
-    // For each question (loop over)... 
-    myQuestions.forEach(
-        (currentQuestion, questionNumber) => {
+    // Call the filteredItems function with the formData
+    const filteredItems = filterItems(formData);
 
-            //Variable to store the list of poss options 
-            const options = [];
+    // Add results header below fieldset
+    resultsElement.innerHTML = "Here are some suggestions";
 
-            //For each option, denoted by letter a b c d or e 
-            for(letter in currentQuestion.options) {
-            //Add an html radio button 
-            `<label>
-                <input type="radio" name="question${questionNumber}" value="${letter}">
-                ${letter} :
-                ${currentQuestion.options[letter]}
-              </label>`
-            }
+    // Create an unordered list to display the results
+    const ul = document.createElement("ul");
 
-            // Add this question and its answers to the output
-            //Create two divs, one for question and one for the answer options 
-            output.push(
-            `<div class="question"> ${currentQuestion.question} </div>
-            <div class="options"> ${options.join('')} </div>`
-            );
-        }
-        // Combine  output list into one string of HTML and put it on the page
-        quizContainer.innerHTML = output.join('')
-    
-    );
-}
-quizContainer.innerHTML = output.join('');
-
-function showResults(){
-
-    // gather answer containers from our quiz
-    const answerContainers = quizContainer.querySelectorAll('.options');
-  
-    // keep track of user's answers
-    let numCorrect = 0;
-  
-    // for each question...
-    myQuestions.forEach( (currentQuestion, questionNumber) => {
-  
-      // find selected answer
-      const answerContainer = answerContainers[questionNumber];
-      const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-  
-      // if answer is correct
-      if(userAnswer === currentQuestion.correctAnswer){
-        // add to the number of correct answers
-        numCorrect++;
-  
-        // color the answers green
-        answerContainers[questionNumber].style.color = 'lightgreen';
-      }
-      // if answer is wrong or blank
-      else{
-        // color the answers red
-        answerContainers[questionNumber].style.color = 'red';
-      }
+    // Iterate through the filtered items and create list items
+    filteredItems.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item.name; // customise this
+      ul.appendChild(li);
     });
-  
-    // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-  }
+    // Append the list to the results element
+    resultsElement.appendChild(ul);
+  });
+});
 
-buildQuiz(); 
+//filter items from the form
+function filterItems(formData) {
+  const filtered = jewelleryItems.filter(
+    (v) =>
+      v.category === formData.category &&
+      v.gender === formData.gender &&
+      v.budget === formData.budget &&
+      v.style === formData.style &&
+      v.theme === formData.theme
+  );
+  console.log(filtered);
+}
 
-// Event listeners
-submitButton.addEventListener('click', showResults);
+// next sort the results of the choices so that a product is picked and displayed in the Results div.
+
+// Define another array with the proper names, prices, images and add to cart link of each possible result.
+
+// let jewelleryItemsDetails = [
+//     {
+//         name: "Carreg Bica pendant",
+//         price: 35,
+//         link: link
+//         image: URL
+//     },
+//     {
+//         name: "Anchor and seaglass pendant",
+//         price: 25,
+//         link: link
+//         image: URL
+//     },
+//     //and so on
+// ];
+
+// //
+// let result1 = "carregbica";
+// let result2 = "anchor"
+// let noresult = "Sorry, nothing matches."
+// // and so on
+
+// if {
+//     category === "Pendants" && gender === "Unisex" && budget === "high" && style === "Classic" && theme === "Llangrannog";
+//     console.log(carregbica);
+// } else if {
+//     //and so on for all the options. There is a more efficient way to do this. With a function.
+// } else {
+//     console.log(noresult);
+// };
+
+// Reset button clears results area
+function resetAnswer() {
+  var answerbox = document.getElementById("results");
+  answerbox.innerHTML = "Your result will show up here!";
+}

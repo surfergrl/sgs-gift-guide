@@ -31,19 +31,60 @@
     <h2> Select from the options below to see suggestions:</h2>
 </div>
 <br>
-<!-- Quiz questions and options appear here -->
+<!-- form code -->
+    <form id="questionForm" name="questionForm">
+        <fieldset>
+            <legend>Gift Guide</legend>
+      <div class="category">
+        <h2>What category of jewellery do you want to see?</h2>
+        <select id="category" name="category">
+          <option value="Pendants">Pendants</option>
+          <option value="Earrings">Earrings</option>
+          <option value="Necklaces">Necklaces</option>
+          <option value="Rings">Rings</option>
+        </select>
+      </div>
+      <div class="budget">
+        <h2>What is your budget?</h2> 
+        <select id="budget" name="budget">
+          <option value="Low">Lower (£5-15)</option>
+          <option value="Medium">Medium (£15-20)</option>
+          <option value="High">Higher (£25+)</option>
+        </select>
+      </div>
+      <div class="theme">
+        <h2>Which theme interests you?</h2>
+        <select id="theme" name="theme">
+          <option value="Llangrannog">Llangrannog village</option>
+          <option value="Cariad">Cariad (Love)</option>
+          <option value="Waves">Waves</option>
+          <option value="Seaglass">Seaglass</option>
+        </select>
+      </div>
+      <div class="style">
+        <h2>What style of jewellery do you want to see?</h2>
+        <select id="style" name="style">
+          <option value="Quirky">Quirky</option>
+          <option value="Classic">Classic</option>
+          <option value="Delicate">Delicate</option>
+          <option value="Chunky">Chunky</option>
+        </select>
+      </div>
+      <div class="gender">
+        <h2>Who are you looking for?</h2>
+        <select id="gender" name="gender">
+          <option value="Hers">Her</option>
+          <option value="His">Him</option>
+          <option value="Unisex">Unisex</option>
+        </select>
+      </div>
+      <br>
+      <button type="Submit">Submit</button>
+    <button type="reset">Reset</button>
+    </fieldset>
+    </form>
 
-<div id="quiz">
 
-
-</div>
-
-
-<button id="submit">Submit Quiz</button>
-
-
-
-<!-- Results section -->
     <div id="results">
         <h1>Results will appear here</h1>
 
