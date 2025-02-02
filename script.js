@@ -1,13 +1,33 @@
 // Define an array of jewellery items with their properties
+// Properties in arrays of their own as most products have multiple properties 
+// This cuts down on amount of items needed in order to have all combos work 
 var jewelleryItems = [
   {
-    name: "Carreg Bica pendant",
+    name: "Carreg Bica Pendant",
+    category: ["Pendants"],
+    price: 35,
+    gender: ["His", "Hers", "Unisex"],
+    budget: ["High", "Medium"],
+    style: ["Classic", "Quirky", "Delicate", "Chunky"],
+    theme: ["Llangrannog", "Seaglass"]
+  }  
+  {
+    name: "Cariad (Love) Cuff Bangle",
+    category: "Bracelets",
+    price: 65,
+    gender: "Unisex",
+    budget: "High",
+    style: "Cariad",
+    theme: "Cariad",
+  },
+  {
+    name: "Seaglass Pendant",
     category: "Pendants",
     price: 35,
     gender: "Unisex",
-    budget: "High",
-    style: "Classic",
-    theme: "Llangrannog",
+    budget: "Medium",
+    style: "Delicate",
+    theme: "Seaglass",
   },
   {
     name: "Anchor and seaglass pendant",
@@ -28,13 +48,13 @@ var jewelleryItems = [
     theme: "Cariad",
   },
   {
-    name: "Silver Spiral Earrings",
-    category: "Earrings",
+    name: "Wave Ring",
+    category: "Rings",
     price: 20,
     gender: "Unisex",
     budget: "Medium",
     style: "Delicate",
-    theme: "Seaglass",
+    theme: "Waves",
   },
   {
     name: "Charm Bracelet",
@@ -53,6 +73,15 @@ var jewelleryItems = [
     budget: "Low",
     style: "Quirky",
     theme: "Waves",
+  },
+  {
+    name: "Seaglass Keyring",
+    category: "Keyrings",
+    price: 6.5,
+    gender: "Unisex",
+    budget: "Low",
+    style: "Quirky",
+    theme: "Seaglass",
   },
 ];
 
