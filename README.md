@@ -30,7 +30,7 @@ It has been built using HTML5, CSS3 & JavaScript and is my second project for Co
 - [HTML](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449) 
+- [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449)
 
 ---
 
@@ -181,7 +181,7 @@ I want deployment to be
 - Easily accessible for the user
 - Easy to update when necessary
 - Fits in with WordPress without too much extra code or workarounds which might compromise UX
-- An iFrame seems to be the only way to do this without having to edit WordPress templates or install plugins. 
+- An iFrame seems to be the only way to do this without having to edit WordPress templates or install plugins.
 
 ---
 
@@ -255,11 +255,11 @@ Categories:
 
 ### Wireframes
 
-I first sketched (on paper) the basic layout for the HTL page with landing page, questions page and results page. In the end I decided to have these all on one pages and use divs to show the relevant part of the guide. 
+I first sketched (on paper) the basic layout for the HTML page with landing page, questions page and results page. In the end I decided to have these all on one pages and use divs to show the relevant part of the guide.
 
 Keeping the design clean and simple was a priority both for UX and responsiveness.
 
-- insert scans of drawings 
+- insert scans of drawings
 
 ### Structure
 
@@ -281,32 +281,32 @@ The app is contained on one page.
 
 #### Welcome
 
-Landing page with title, image and tagline. 
+Landing page with title, image and tagline.
 
 Background image: ![Geometric background](/assets/images/bg-blue-geo.jpg)
 
 Logo
 
-![SGS logo](/assets/images/SGS-logo.png) 
+![SGS logo](/assets/images/SGS-logo.png)
 
 ---
 
-#### Questions - Five questions with between 3-5 options each. 
+#### Questions - Five questions with between 3-5 options each.
 
 Questions - Five questions with between 3-5 options each.
 
 Submit button
 Reset button
 
-The quiz will consist of five questions:
+The quiz will consist of five questions with several answer options based on available products:
 
-- What category of jewellery do you want to see? (Bracelets, rings, anklets, keyrings, necklaces, earrings.)
-- What is your budget? Lower £5-15 Medium £15-20 Higher £25+
-- Theme - Llangrannog village, Cariad, waves, mermaids, seaglass
-- What style would you like to see? Quirky, classic, delicate, chunky
+- What type of jewellery does this person wear? Bracelets, rings, anklets, keyrings, necklaces, earrings.
+- What is the budget? Lower £5-20 Medium £20-35 Higher £35+
+- What theme appeals? - Llangrannog/Wales, Cariad/Love, waves, seaglass
+- What style might appeal to them? Quirky, classic, delicate, chunky
 - His, hers or both?
 
-Note that size is not relevant here as all are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
+Note that size is not relevant here as most products are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
 
 ---
 
@@ -364,7 +364,7 @@ _For each result:_
 - Price
 - Picture
 - Short description
-- Link to main item page 
+- Link to main item page
 - Add to Cart button - an option to quickly add to cart without seeing full item info page e.g.:
 
 ![julz-addtocart.png](/assets/images/julz-addtocart.png)
@@ -427,13 +427,13 @@ Colour palettes from [canva.com/colours](http://canva.com/colours)
 
 # Bugs and issues
 
-The app does not (yet) work as planned. The scipt is not returning the initial results as expected. 
+The app does not (yet) work as planned. The scipt is not returning the initial results as expected.
 
-The logic to pick a result (or two) to present to the user with name, price etc. has not been written. 
+The logic to pick a result (or two) to present to the user with name, price etc. has not been written.
 
-The CSS styling is unfinished and the app does not look attractive. 
+The CSS styling is unfinished and the app does not look attractive.
 
-As such, the ReadMe does not yet reflect the  app in its current form. 
+As such, the ReadMe does not yet reflect the app in its current form.
 
 ---
 
@@ -441,8 +441,8 @@ As such, the ReadMe does not yet reflect the  app in its current form.
 
 https://github.com/emmahewson/mp2_travel_quiz ReadMe guidance
 
-Mentor Richard Wells 
+Mentor Richard Wells
 
-CI tutors Oisin and Gemma 
+CI tutors Oisin and Gemma
 
 ---

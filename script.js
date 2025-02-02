@@ -1,152 +1,62 @@
-// Define an array of jewellery items with their properties
-var jewelleryItems = [
+// Reference the elements in the HTML file
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+
+// Create an array to store the questions in objects
+const quizQuestions = [
     {
-        name: "Carreg Bica pendant",
-        category: "Pendants",
-        price: 35,
-        gender: "Unisex",
-        budget: "high",
-        style: "Classic",
-        theme: "Llangrannog",
-    },
+        question: "What type of jewellery does this person wear?",
+        options: {
+            a: "Bracelets",
+            b: "Rings",
+            c: "Keyrings",
+            d: "Necklaces"
+            e: "Earrings"
+        },
+        correctAnswer: "a"
+    }
+
     {
-        name: "Anchor and seaglass pendant",
-        category: "Pendants",
-        price: 25,
-        gender: "Unisex",
-        budget: "med",
-        style: "Classic",
-        theme: "Mermaid",
-    },
+        question: "What price range are you interested in?",
+        options: {
+            a: "£5-20",
+            b: "£20-35",
+            c: "£35+"
+        },
+        correctAnswer: "a"
+    }
+
     {
-        name: "Silver Cariad (Love) Ring",
-        category: "Rings",
-        price: 35,
-        gender: "Unisex",
-        budget: "high",
-        style: "Cariad",
-        theme: "Cariad",
-    },
+        question: "What theme appeals to you/them?",
+        options: {
+            a: "Llangrannog & Wales",
+            b: "Cariad - Love",
+            c: "Waves",
+            d: "Seaglass"
+        },
+        correctAnswer: "a"
+    }
+
     {
-        name: "Seaglass Charm Anklet",
-        category: "Anklets",
-        price: 20,
-        gender: "Unisex",
-        budget: "med",
-        style: "Delicate",
-        theme: "Seaglass",
-    },
+        question: "What type of jewellery does this person wear?",
+        options: {
+            a: "Quirky",
+            b: "Classic",
+            c: "Delicate",
+            d: "Chunky"
+        },
+        correctAnswer: "a"
+    }
+
     {
-        name: "Charm Bracelet",
-        category: "Bracelets",
-        price: 15,
-        gender: "Hers",
-        budget: "med",
-        style: "Chunky",
-        theme: "Seaglass",
-    },
-    {
-        name: "Shell & Sand Keyring",
-        category: "Keyrings",
-        price: 6.50,
-        gender: "Unisex",
-        budget: "low",
-        style: "Quirky",
-        theme: "Waves",
-    },
-];
-
-// Get the results element in index.html 
-const resultsElement = document.getElementById("results");
-
-// Select the form element and add an event listener to handle form submissions
-const form = document.querySelector("#questionForm");
-
-console.log(form);
-console.log(form.elements.category.value);
-
-// prevent page refresh 
-document.addEventListener("DOMContentLoaded", () => {
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        // console.log(form.elements.name.value); // Check what form is returning
-
-        // Get the form data
-        let formData = {
-            category: form.elements.category.value,
-            gender: form.elements.gender.value,
-            theme: form.elements.theme.value,
-            style: form.elements.style.value,
-            budget: form.elements.budget.value,
-        };
-
-        // Call the filteredItems function with the formData
-        const filteredItems = filterItems(formData);
-
-        // Add results header below fieldset 
-        resultsElement.innerHTML = "Here are some suggestions";
-
-        // Create an unordered list to display the results
-        const ul = document.createElement("ul");
-
-        // Iterate through the filtered items and create list items
-        filteredItems.forEach((item) => {
-            const li = document.createElement("li");
-            li.textContent = item.name; // customise this 
-            ul.appendChild(li);
-        });
-        // Append the list to the results element
-        resultsElement.appendChild(ul);
-    });
-});
-
-//filter items from the form 
-function filterItems(formData) {
-    const filtered = jewelleryItems.filter((v) =>
-        v.category === formData.category &&
-        v.gender === formData.gender &&
-        v.budget === formData.budget &&
-        v.style === formData.style &&
-        v.theme === formData.theme
-    );
-    console.log(filtered);
-}
-
-// next sort the results of the choices so that a product is picked and displayed in the Results div. 
-
-// Define another array with the proper names, prices, images and add to cart link of each possible result. 
-
-// let jewelleryItemsDetails = [
-//     {
-//         name: "Carreg Bica pendant",
-//         price: 35,
-//         link: link 
-//         image: URL 
-//     },
-//     {
-//         name: "Anchor and seaglass pendant",
-//         price: 25,
-//         link: link 
-//         image: URL 
-//     },
-//     //and so on 
-// ];
-
-// // 
-// let result1 = "carregbica";
-// let result2 = "anchor"
-// let noresult = "Sorry, nothing matches."
-// // and so on 
-
-// if {
-//     category === "Pendants" && gender === "Unisex" && budget === "high" && style === "Classic" && theme === "Llangrannog";
-//     console.log(carregbica); 
-// } else if {
-//     //and so on for all the options. There is a more efficient way to do this. With a function.  
-// } else {
-//     console.log(noresult); 
-// }; 
-
-
+        question: "Are you looking for his, hers or both?",
+        options: {
+            a: "His",
+            b: "Hers",
+            c: "Both",
+        },
+        correctAnswer: "a"
+    }
+]
 
