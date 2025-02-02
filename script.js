@@ -1,6 +1,6 @@
 // Define an array of jewellery items with their properties
-// Properties in arrays of their own as most products have multiple properties 
-// This cuts down on amount of items needed in order to have all combos work 
+// Properties in arrays of their own as most products have multiple properties
+// This cuts down on amount of items needed in order to have most combos work
 var jewelleryItems = [
   {
     name: "Carreg Bica Pendant",
@@ -9,8 +9,10 @@ var jewelleryItems = [
     gender: ["His", "Hers", "Unisex"],
     budget: ["High", "Medium"],
     style: ["Classic", "Quirky", "Delicate", "Chunky"],
-    theme: ["Llangrannog", "Seaglass"]
-  }  
+    theme: ["Llangrannog", "Seaglass"],
+    image: "assets/images/CB-green.jpg",
+    link: "https://surfergrl.co.uk/product/silver-carreg-bica-and-green-llangrannog-seaglass-pendant-36",
+  },
   {
     name: "Cariad (Love) Cuff Bangle",
     category: "Bracelets",
@@ -108,10 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
       budget: form.elements.budget.value,
     };
 
-    // Debugging logs
-    console.log(form);
-    console.log(form.elements.category.value);
-    console.log("Jewellery Items:", jewelleryItems);
+    // // Debugging logs
+    // console.log(form);
+    // console.log(form.elements.category.value);
+    // console.log("Jewellery Items:", jewelleryItems);
 
     // Call the filterItems function with the formData
     const filteredItems = filterItems(formData);
@@ -124,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filteredItems.forEach((item) => {
       const li = document.createElement("li");
-      li.textContent = item.name;
+      (li.textContent = item.name), item.price;
       ul.appendChild(li);
     });
 
@@ -146,7 +148,9 @@ function filterItems(formData) {
   return filtered;
 }
 
-// next sort the results of the choices so that a product is picked and displayed in the Results div.
+// If there are no items matching the results, display a message
+
+// Then pick two products at random to show
 
 // Define another array with the proper names, prices, images and add to cart link of each possible result.
 
