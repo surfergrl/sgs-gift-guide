@@ -1,6 +1,8 @@
 // Define an array of jewellery items with their properties
 // Properties in arrays of their own as most products have multiple properties
-// This cuts down on amount of items needed in order to have most combos work
+// This cuts down on amount of objects needed in array order to have most combos work
+// Eventually this info will be pulled from the existing WooCommerce database
+// This array wants to go in its own script file to keep things tidy and not so long
 var jewelleryItems = [
   {
     name: "Carreg Bica Pendant",
@@ -15,75 +17,87 @@ var jewelleryItems = [
   },
   {
     name: "Cariad (Love) Cuff Bangle",
-    category: "Bracelets",
+    category: ["Bracelets"],
     price: 65,
-    gender: "Unisex",
-    budget: "High",
-    style: "Cariad",
-    theme: "Cariad",
+    gender: ["Unisex", "Hers"],
+    budget: ["High", "Medium"],
+    style: ["Cariad", "Delicate"],
+    theme: ["Cariad", "Seaglass", "Mermaid", "Waves"],
   },
   {
     name: "Seaglass Pendant",
-    category: "Pendants",
+    category: ["Pendants"],
     price: 35,
-    gender: "Unisex",
-    budget: "Medium",
-    style: "Delicate",
-    theme: "Seaglass",
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Low", "Medium"],
+    style: ["Delicate", "Classic", "Quirky"],
+    theme: ["Seaglass"],
   },
   {
     name: "Anchor and seaglass pendant",
-    category: "Pendants",
+    category: ["Pendants"],
     price: 25,
-    gender: "Unisex",
-    budget: "Medium",
-    style: "Classic",
-    theme: "Mermaid",
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Medium"],
+    style: ["Classic", "Delicate"],
+    theme: ["Mermaid", "Waves"],
   },
   {
     name: "Silver Cariad (Love) Ring",
-    category: "Rings",
+    category: ["Rings"],
     price: 35,
-    gender: "Unisex",
-    budget: "High",
-    style: "Cariad",
-    theme: "Cariad",
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Medium", "High"],
+    style: ["Cariad", "Chunky"],
+    theme: ["Cariad"],
   },
   {
     name: "Wave Ring",
-    category: "Rings",
+    category: ["Rings"],
     price: 20,
-    gender: "Unisex",
-    budget: "Medium",
-    style: "Delicate",
-    theme: "Waves",
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Medium"],
+    style: ["Delicate", "Classic", "Quirky"],
+    theme: ["Waves", "Mermaid"],
   },
   {
     name: "Charm Bracelet",
-    category: "Bracelets",
+    category: ["Bracelets"],
     price: 15,
-    gender: "Hers",
-    budget: "Medium",
-    style: "Chunky",
-    theme: "Seaglass",
+    gender: ["Hers"],
+    budget: ["Medium"],
+    style: ["Chunky", "Quirky"],
+    theme: ["Seaglass", "Mermaid"],
   },
   {
     name: "Shell & Sand Keyring",
-    category: "Keyrings",
+    category: ["Keyrings"],
     price: 6.5,
-    gender: "Unisex",
-    budget: "Low",
-    style: "Quirky",
-    theme: "Waves",
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Low"],
+    style: ["Quirky"],
+    theme: ["Waves", "Seaglass"],
   },
   {
     name: "Seaglass Keyring",
-    category: "Keyrings",
+    category: ["Keyrings"],
     price: 6.5,
-    gender: "Unisex",
-    budget: "Low",
-    style: "Quirky",
-    theme: "Seaglass",
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Low"],
+    style: ["Quirky"],
+    theme: ["Seaglass"],
+  },
+  // Catch-all product for if the chosen combo does not return a result
+  // Temp fix!
+  // This needs to be done via an if statement later, not sneaky like this
+  {
+    name: "Catch All Product",
+    category: ["Keyrings", "Bracelets", "Rings", "Pendants"],
+    price: 6.5,
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Low", "High", "Medium"],
+    style: ["Quirky", "Chunky", "Classic", "Delicate"],
+    theme: ["Seaglass", "Llangrannog", "Waves", "Cariad"],
   },
 ];
 
@@ -111,9 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // // Debugging logs
-    // console.log(form);
-    // console.log(form.elements.category.value);
-    // console.log("Jewellery Items:", jewelleryItems);
+    console.log(form);
+    console.log(form.elements.category.value);
+    console.log("Jewellery Items:", jewelleryItems);
 
     // Call the filterItems function with the formData
     const filteredItems = filterItems(formData);
@@ -126,7 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filteredItems.forEach((item) => {
       const li = document.createElement("li");
-      (li.textContent = item.name), item.price;
+      // Display name, price, link and image info from JewelleryItems array
+      li.innerHTML = `
+        <strong>${item.name}</strong> - Price: ${item.price}<br>
+        <a href="${item.link}">Buy Now</a><br>
+        <img src="${item.image}" alt="${item.name}" />
+      `;
       ul.appendChild(li);
     });
 
@@ -138,11 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function filterItems(formData) {
   const filtered = jewelleryItems.filter(
     (v) =>
-      v.category === formData.category &&
-      v.gender === formData.gender &&
-      v.budget === formData.budget &&
-      v.style === formData.style &&
-      v.theme === formData.theme
+      v.category.includes(formData.category) &&
+      v.gender.includes(formData.gender) &&
+      v.budget.includes(formData.budget) &&
+      v.style.includes(formData.style) &&
+      v.theme.includes(formData.theme)
   );
   console.log(filtered);
   return filtered;
