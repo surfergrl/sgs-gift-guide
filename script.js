@@ -56,21 +56,29 @@ var jewelleryItems = [
   },
 ];
 
-// Get the results element in index.html
-const resultsElement = document.getElementById("results");
-
-// Select the form element and add an event listener to handle form submissions
-const form = document.querySelector("#questionForm");
-
-console.log(form);
-console.log(form.elements.category.value);
-
-// prevent page refresh
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
+    // prevent page refresh
     event.preventDefault();
 
-    // console.log(form.elements.name.value); // Check what form is returning
+  // Check required elements are available - debugging step 
+  const resultsElement = document.getElementById("results");
+  const form = document.querySelector("#questionForm");
+
+  // Check if form is found
+  if (!form) {
+    console.error("Form with id 'questionForm' not found!");
+    return;
+  }
+
+  // Reset button sets results area back to original message 
+  function resetAnswer() {
+    resultsElement.innerHTML = "Your result will show up here!";
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
     // Get the form data
     let formData = {
@@ -80,6 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
       style: form.elements.style.value,
       budget: form.elements.budget.value,
     };
+
+    // Check what form is returning - for debugging
+    console.log(form);
+    console.log(form.elements.category.value);
 
     // Call the filteredItems function with the formData
     const filteredItems = filterItems(formData);
@@ -101,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//filter items from the form
+//filter items from the form (placement in script is okay as JS hoists)
 function filterItems(formData) {
   const filtered = jewelleryItems.filter(
     (v) =>
@@ -112,6 +124,7 @@ function filterItems(formData) {
       v.theme === formData.theme
   );
   console.log(filtered);
+  return filtered; //return the filtered array
 }
 
 // next sort the results of the choices so that a product is picked and displayed in the Results div.
@@ -148,9 +161,3 @@ function filterItems(formData) {
 // } else {
 //     console.log(noresult);
 // };
-
-// Reset button clears results area
-function resetAnswer() {
-  var answerbox = document.getElementById("results");
-  answerbox.innerHTML = "Your result will show up here!";
-}

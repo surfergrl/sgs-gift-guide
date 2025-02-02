@@ -1,5 +1,13 @@
 ###Structure and logic
 
+// Define an array of jewellery items with their properties
+
+Declare variables to reference the HTML elements - form, results, submit button
+Array of objects with question, answers and answer weights
+Show the quiz questions on the HTML page
+
+---
+
 The gift guide structure will be quiz-style. It asks questions then gives a suggestion suitable gift/s to buy.
 
 - HTML file for basic user interface
@@ -26,12 +34,4 @@ Repeat for all five questions
 Click Results button
 View results
 Click an option to be taken to that product page in the shop pages
-
-Or click Clear button to restart the quiz - future dev
-I would like an option to email the results to them with a discount code - future dev!
-
-Code structure
-
-Declare variables to reference the HTML elements - form, results, submit button
-Array of objects with question, answers and answer weights
-Show the quiz questions on the HTML page
+Click Reset button to restart the quiz
