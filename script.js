@@ -5,7 +5,7 @@ var jewelleryItems = [
     category: "Pendants",
     price: 35,
     gender: "Unisex",
-    budget: "high",
+    budget: "High",
     style: "Classic",
     theme: "Llangrannog",
   },
@@ -14,7 +14,7 @@ var jewelleryItems = [
     category: "Pendants",
     price: 25,
     gender: "Unisex",
-    budget: "med",
+    budget: "Medium",
     style: "Classic",
     theme: "Mermaid",
   },
@@ -23,16 +23,16 @@ var jewelleryItems = [
     category: "Rings",
     price: 35,
     gender: "Unisex",
-    budget: "high",
+    budget: "High",
     style: "Cariad",
     theme: "Cariad",
   },
   {
-    name: "Seaglass Charm Anklet",
-    category: "Anklets",
+    name: "Silver Spiral Earrings",
+    category: "Earrings",
     price: 20,
     gender: "Unisex",
-    budget: "med",
+    budget: "Medium",
     style: "Delicate",
     theme: "Seaglass",
   },
@@ -41,7 +41,7 @@ var jewelleryItems = [
     category: "Bracelets",
     price: 15,
     gender: "Hers",
-    budget: "med",
+    budget: "Medium",
     style: "Chunky",
     theme: "Seaglass",
   },
@@ -50,7 +50,7 @@ var jewelleryItems = [
     category: "Keyrings",
     price: 6.5,
     gender: "Unisex",
-    budget: "low",
+    budget: "Low",
     style: "Quirky",
     theme: "Waves",
   },
@@ -58,21 +58,11 @@ var jewelleryItems = [
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  form.addEventListener("submit", (event) => {
-    // prevent page refresh
-    event.preventDefault();
-
-  // Check required elements are available - debugging step 
+  // Now that the DOM is loaded, these elements should be available
   const resultsElement = document.getElementById("results");
   const form = document.querySelector("#questionForm");
 
-  // Check if form is found
-  if (!form) {
-    console.error("Form with id 'questionForm' not found!");
-    return;
-  }
-
-  // Reset button sets results area back to original message 
+  // Reset button clears results area (if needed later)
   function resetAnswer() {
     resultsElement.innerHTML = "Your result will show up here!";
   }
@@ -89,31 +79,31 @@ document.addEventListener("DOMContentLoaded", () => {
       budget: form.elements.budget.value,
     };
 
-    // Check what form is returning - for debugging
+    // Debugging logs
     console.log(form);
     console.log(form.elements.category.value);
+    console.log("Jewellery Items:", jewelleryItems);
 
-    // Call the filteredItems function with the formData
+    // Call the filterItems function with the formData
     const filteredItems = filterItems(formData);
 
-    // Add results header below fieldset
+    // Update results in the DOM
     resultsElement.innerHTML = "Here are some suggestions";
 
     // Create an unordered list to display the results
     const ul = document.createElement("ul");
 
-    // Iterate through the filtered items and create list items
     filteredItems.forEach((item) => {
       const li = document.createElement("li");
-      li.textContent = item.name; // customise this
+      li.textContent = item.name;
       ul.appendChild(li);
     });
-    // Append the list to the results element
+
     resultsElement.appendChild(ul);
   });
 });
 
-//filter items from the form (placement in script is okay as JS hoists)
+// filter items from the form (hoisting means this declaration is okay here)
 function filterItems(formData) {
   const filtered = jewelleryItems.filter(
     (v) =>
@@ -124,7 +114,7 @@ function filterItems(formData) {
       v.theme === formData.theme
   );
   console.log(filtered);
-  return filtered; //return the filtered array
+  return filtered;
 }
 
 // next sort the results of the choices so that a product is picked and displayed in the Results div.

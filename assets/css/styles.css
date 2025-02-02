@@ -33,6 +33,10 @@ div.results {
     font-family: 'Six Hands Rough', cursive;
 }
 
+div.resultsElement {
+    font-family: 'Six Hands Rough', cursive;
+}
+
 fieldset {
     background-color: #bdc1d7;
     position: relative;
