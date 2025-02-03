@@ -27,22 +27,32 @@ h4 {
 
 /* Styles for results including image sizes */
 
-ul li img {
+.product-name {
+    font-family: "Six Hands Web Rough";
+    font-size: 45px;
+}
+
+.product-price .product-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.product-image {
     max-width: 200px;
     height: auto;
     display: block;
     margin: 10px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-  }
+    border-radius: 50px;
+}
 
-div.results {
+
+/* div.results {
     font-family: 'Six Hands Rough', cursive;
 }
 
 div.resultsElement {
     font-family: 'Six Hands Rough', cursive;
-}
+} */
 
 /* Styling the form */
 legend {

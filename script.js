@@ -138,19 +138,53 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create an unordered list to display the results
     const ul = document.createElement("ul");
 
+    // Create elements for the list so they can be styled individually
     filteredItems.forEach((item) => {
+      // Create the list item container
       const li = document.createElement("li");
-      // Display name, price, link and image info from JewelleryItems array
-      li.innerHTML = `
-        <strong>${item.name}</strong> - Price: ${item.price}<br>
-        <a href="${item.link}">Buy Now</a><br>
-        <img src="${item.image}" alt="${item.name}" />
-      `;
+
+      // Create and configure a strong element for the product name
+      const nameEl = document.createElement("strong");
+      nameEl.textContent = item.name;
+      nameEl.classList.add("product-name"); // Add a class for styling
+
+      // Create a span element for the price
+      const priceEl = document.createElement("span");
+      priceEl.textContent = ` - Price: £ ${item.price}`;
+      priceEl.classList.add("product-price");
+
+      // Create a line break element
+      const br1 = document.createElement("br");
+
+      // Create the link element
+      const linkEl = document.createElement("a");
+      linkEl.href = item.link;
+      linkEl.textContent = "See More";
+      linkEl.classList.add("product-link");
+
+      // Create another line break element
+      const br2 = document.createElement("br");
+
+      // Create the image element
+      const imgEl = document.createElement("img");
+      imgEl.src = item.image;
+      imgEl.alt = item.name;
+      imgEl.classList.add("product-image");
+
+      // Append all the elements to the list item
+      li.appendChild(nameEl);
+      li.appendChild(priceEl);
+      li.appendChild(br1);
+      li.appendChild(linkEl);
+      li.appendChild(br2);
+      li.appendChild(imgEl);
+
+      // Finally, append the list item to the unordered list
       ul.appendChild(li);
     });
-
-    resultsElement.appendChild(ul);
   });
+
+  resultsElement.appendChild(ul);
 });
 
 // Filter items from the form (hoisting means this declaration is okay here)
@@ -167,40 +201,3 @@ function filterItems(formData) {
   console.log(filtered);
   return filtered;
 }
-
-// If there are no items matching the results, display a message
-
-// Then pick two products at random to show
-
-// Define another array with the proper names, prices, images and add to cart link of each possible result.
-
-// let jewelleryItemsDetails = [
-//     {
-//         name: "Carreg Bica pendant",
-//         price: 35,
-//         link: link
-//         image: URL
-//     },
-//     {
-//         name: "Anchor and seaglass pendant",
-//         price: 25,
-//         link: link
-//         image: URL
-//     },
-//     //and so on
-// ];
-
-// //
-// let result1 = "carregbica";
-// let result2 = "anchor"
-// let noresult = "Sorry, nothing matches."
-// // and so on
-
-// if {
-//     category === "Pendants" && gender === "Unisex" && budget === "high" && style === "Classic" && theme === "Llangrannog";
-//     console.log(carregbica);
-// } else if {
-//     //and so on for all the options. There is a more efficient way to do this. With a function.
-// } else {
-//     console.log(noresult);
-// };
