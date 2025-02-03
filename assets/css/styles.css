@@ -1,10 +1,10 @@
 body {
     background-image: url("/assets/images/bg-blue-geo.jpg");
-    background-color: #bdc1d7;
+    background-color: white;
     max-width: 1300px;
 }
 
-/* headings  */
+/* Headings  */
 h1 {
     font-family: "Six Hands Web Rough";
     font-size: 50px;
@@ -25,15 +25,27 @@ h4 {
     font-size: 35px;
 }
 
-legend {
-    font-family: 'Six Hands Rough', cursive;
-}
+/* Styles for results including image sizes */
+
+ul li img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+  }
 
 div.results {
     font-family: 'Six Hands Rough', cursive;
 }
 
 div.resultsElement {
+    font-family: 'Six Hands Rough', cursive;
+}
+
+/* Styling the form */
+legend {
     font-family: 'Six Hands Rough', cursive;
 }
 

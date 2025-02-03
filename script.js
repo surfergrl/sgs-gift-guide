@@ -153,9 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// filter items from the form (hoisting means this declaration is okay here)
+// Filter items from the form (hoisting means this declaration is okay here)
 function filterItems(formData) {
   const filtered = jewelleryItems.filter(
+    // Using .includes for v.category and formData.category instead of strict equality ensures accurate filtering
     (v) =>
       v.category.includes(formData.category) &&
       v.gender.includes(formData.gender) &&
