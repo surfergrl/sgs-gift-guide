@@ -7,40 +7,49 @@ var jewelleryItems = [
   {
     name: "Carreg Bica Pendant",
     category: ["Pendants"],
-    price: 35,
+    price: 36,
     gender: ["His", "Hers", "Unisex"],
     budget: ["High", "Medium"],
-    style: ["Classic", "Quirky", "Delicate", "Chunky"],
+    style: ["Classic", "Quirky", "Delicate"],
     theme: ["Llangrannog", "Seaglass"],
-    image: "assets/images/CB-green.jpg",
-    link: "https://surfergrl.co.uk/product/silver-carreg-bica-and-green-llangrannog-seaglass-pendant-36",
+    image: "https://surfergrl.co.uk/wp-content/uploads/2020/12/CB-green.jpg",
+    link: "https://surfergrl.co.uk/carreg-bica-collection",
   },
   {
     name: "Cariad (Love) Cuff Bangle",
     category: ["Bracelets"],
-    price: 65,
+    price: 50,
     gender: ["Unisex", "Hers"],
     budget: ["High", "Medium"],
-    style: ["Cariad", "Delicate"],
-    theme: ["Cariad", "Seaglass", "Mermaid", "Waves"],
+    style: ["Cariad", "Delicate", "Chunky"],
+    theme: ["Llangrannog", "Cariad", "Seaglass", "Mermaid", "Waves"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2021/01/cariad-cuff-white.jpeg",
+    link: "https://surfergrl.co.uk/product/silver-cariad-hammered-cuff-bangle-68",
   },
   {
-    name: "Seaglass Pendant",
-    category: ["Pendants"],
-    price: 35,
-    gender: ["Unisex", "His", "Hers"],
-    budget: ["Low", "Medium"],
-    style: ["Delicate", "Classic", "Quirky"],
-    theme: ["Seaglass"],
-  },
-  {
-    name: "Anchor and seaglass pendant",
+    name: "Seaglass Pendants",
     category: ["Pendants"],
     price: 25,
     gender: ["Unisex", "His", "Hers"],
-    budget: ["Medium"],
+    budget: ["Low", "Medium"],
+    style: ["Delicate", "Classic", "Quirky"],
+    theme: ["Llangrannog", "Seaglass"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/green-swimg-300x300.jpg",
+    link: "https://surfergrl.co.uk/product/green-seaglass-pendant",
+  },
+  {
+    name: "Dolphin & Seaglass pendant",
+    category: ["Pendants"],
+    price: 26,
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Low", "Medium"],
     style: ["Classic", "Delicate"],
-    theme: ["Mermaid", "Waves"],
+    theme: ["Llangrannog", "Mermaid", "Waves", "Seaglass"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/baby-dolph-swing-300x300.jpg",
+    link: "https://surfergrl.co.uk/product/green-seaglass-and-silver-dolphin-pendan",
   },
   {
     name: "Silver Cariad (Love) Ring",
@@ -48,56 +57,72 @@ var jewelleryItems = [
     price: 35,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Medium", "High"],
-    style: ["Cariad", "Chunky"],
-    theme: ["Cariad"],
+    style: ["Cariad", "Chunky", "Quirky"],
+    theme: ["Llangrannog", "Cariad"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/cariad-ring-2-300x300.jpg",
+    link: "https://surfergrl.co.uk/product/small-silver-cariad-cuff-ring",
   },
   {
-    name: "Wave Ring",
+    name: "Silver Wave Ring",
     category: ["Rings"],
     price: 20,
     gender: ["Unisex", "His", "Hers"],
-    budget: ["Medium"],
+    budget: ["Low", "Medium"],
     style: ["Delicate", "Classic", "Quirky"],
-    theme: ["Waves", "Mermaid"],
+    theme: ["Llangrannog", "Waves", "Mermaid"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2021/01/silver-stacker-ring-boxed.jpeg",
+    link: "https://surfergrl.co.uk/product/silver-wave-ring",
   },
   {
     name: "Charm Bracelet",
     category: ["Bracelets"],
-    price: 15,
+    price: 25,
     gender: ["Hers"],
     budget: ["Medium"],
     style: ["Chunky", "Quirky"],
-    theme: ["Seaglass", "Mermaid"],
+    theme: ["Llangrannog", "Seaglass", "Mermaid"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/starfish-charm-b-150x150.jpg",
+    link: "https://surfergrl.co.uk/product/silver-plated-charm-bracelet-with-seaglass-25",
   },
   {
     name: "Shell & Sand Keyring",
     category: ["Keyrings"],
-    price: 6.5,
+    price: 7,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Low"],
-    style: ["Quirky"],
-    theme: ["Waves", "Seaglass"],
+    style: ["Quirky", "Classic"],
+    theme: ["Llangrannog", "Waves", "Seaglass"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2021/01/mermaid-keyring-1.jpeg",
+    link: "https://surfergrl.co.uk/product/llangrannog-sand-keyring",
   },
   {
     name: "Seaglass Keyring",
     category: ["Keyrings"],
-    price: 6.5,
+    price: 7,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Low"],
-    style: ["Quirky"],
-    theme: ["Seaglass"],
+    style: ["Quirky", "Classic"],
+    theme: ["Llangrannog", "Waves", "Seaglass"],
+    image: "https://surfergrl.co.uk/wp-content/uploads/2021/01/keyring-3.jpeg",
+    link: "https://surfergrl.co.uk/product/llangrannog-sand-keyring",
   },
   // Catch-all product for if the chosen combo does not return a result
-  // Temp fix!
-  // This needs to be done via an if statement later, not sneaky like this
+  // This would be better done via an if statement to pick 2 random products
   {
-    name: "Catch All Product",
+    name: "White Seaglass Earrings",
     category: ["Keyrings", "Bracelets", "Rings", "Pendants"],
-    price: 6.5,
+    price: 35,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Low", "High", "Medium"],
     style: ["Quirky", "Chunky", "Classic", "Delicate"],
     theme: ["Seaglass", "Llangrannog", "Waves", "Cariad"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/huggies-600x600.jpg",
+    link: "https://surfergrl.co.uk/product/silver-claw-earrings-with-white-seaglass",
   },
 ];
 
@@ -107,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultsElement = document.getElementById("results");
   const form = document.querySelector("#questionForm");
 
-  // Reset button clears results area (if needed later)
+  // Reset button clears results area
   function resetAnswer() {
     resultsElement.innerHTML = "Your result will show up here!";
   }
@@ -123,11 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
       style: form.elements.style.value,
       budget: form.elements.budget.value,
     };
-
-    // // Debugging logs
-    console.log(form);
-    console.log(form.elements.category.value);
-    console.log("Jewellery Items:", jewelleryItems);
 
     // Call the filterItems function with the formData
     const filteredItems = filterItems(formData);
@@ -150,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Create a span element for the price
       const priceEl = document.createElement("span");
-      priceEl.textContent = ` - Price: £ ${item.price}`;
+      priceEl.textContent = ` - Price: £${item.price}`;
       priceEl.classList.add("product-price");
 
       // Create a line break element
@@ -179,12 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
       li.appendChild(br2);
       li.appendChild(imgEl);
 
-      // Finally, append the list item to the unordered list
+      // Append the list item to the unordered list
       ul.appendChild(li);
+
+      // Append the unordered list to the results element
+      resultsElement.appendChild(ul);
     });
   });
-
-  resultsElement.appendChild(ul);
 });
 
 // Filter items from the form (hoisting means this declaration is okay here)
