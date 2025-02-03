@@ -1,34 +1,60 @@
+/* Push footer to bottom of page leaving some whitespace under content */
 body {
-    background-image: url("/assets/images/bg-blue-geo.jpg");
-    background-color: white;
-    max-width: 1300px;
+    min-height: 100vh;
 }
 
-/* Headings  */
+/* Hero image and logo */
+#hero-image {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-color: cadetblue;
+    background: url("../images/SGS-header-2.jpeg") no-repeat left center;
+  } 
+  /* logo will float over header image if viewport is < header image width */
+#logo {
+      height: 50px;
+      padding-left: 30px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      background-position: center;
+      position: absolute;
+    }
+
+/* Headings */
 h1 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 50px;
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h2 {
-    font-family: "Six Hands Web Rough";
-    font-size: 45px;
+    font-family: "Great Vibes", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-h3 {
-    font-family: "Six Hands Web Rough";
-    font-size: 40px;
+/* Styling the form */
+legend {
+    font-family: 'Six Hands Rough', cursive;
+    font-weight: 300;
 }
 
-h4 {
-    font-family: "Six Hands Web Rough";
-    font-size: 35px;
+fieldset {
+    background-color:cornflowerblue;
+    position: relative;
+    max-width: 500px;
 }
 
-/* Styles for results including image sizes */
+footer {
+    background-color: #bdc1d7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
 
+/* Styles for results area */
 .product-name {
-    font-family: "Six Hands Web Rough";
+    font-family: "Great Vibes", serif;
     font-size: 45px;
 }
 
@@ -42,16 +68,6 @@ h4 {
     height: auto;
     display: block;
     margin: 10px auto;
-    border-radius: 50px;
+    border-radius: 40px;
 }
 
-/* Styling the form */
-legend {
-    font-family: 'Six Hands Rough', cursive;
-}
-
-fieldset {
-    background-color: #bdc1d7;
-    position: relative;
-    max-width: 600px;
-}
