@@ -128,14 +128,9 @@ var jewelleryItems = [
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Now that the DOM is loaded, these elements should be available
+  // Now that the DOM is loaded, these elements will be available
   const resultsElement = document.getElementById("results");
   const form = document.querySelector("#questionForm");
-
-  // Reset button clears results area
-  function resetAnswer() {
-    resultsElement.innerHTML = "Your result will show up here!";
-  }
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -152,9 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Call the filterItems function with the formData
     const filteredItems = filterItems(formData);
 
-    // Update results in the DOM
-    resultsElement.innerHTML = "Here are some suggestions";
-
     // Create an unordered list to display the results
     const ul = document.createElement("ul");
 
@@ -168,22 +160,23 @@ document.addEventListener("DOMContentLoaded", () => {
       nameEl.textContent = item.name;
       nameEl.classList.add("product-name"); // Add a class for styling
 
-      // Create a span element for the price
-      const priceEl = document.createElement("span");
-      priceEl.textContent = ` - Price: £${item.price}`;
-      priceEl.classList.add("product-price");
-
       // Create a line break element
       const br1 = document.createElement("br");
 
-      // Create the link element
+      // Create a span element for the price
+      const priceEl = document.createElement("span");
+      priceEl.textContent = ` Price: £${item.price}`;
+      priceEl.classList.add("product-price");
+
+      // Create a line break element
+      const br2 = document.createElement("br");
+
+      // Create link element for text link
       const linkEl = document.createElement("a");
       linkEl.href = item.link;
       linkEl.textContent = "See More";
+      linkEl.target = "_blank";
       linkEl.classList.add("product-link");
-
-      // Create another line break element
-      const br2 = document.createElement("br");
 
       // Create the image element
       const imgEl = document.createElement("img");
@@ -191,13 +184,23 @@ document.addEventListener("DOMContentLoaded", () => {
       imgEl.alt = item.name;
       imgEl.classList.add("product-image");
 
+      // Wrap the image inside a clickable link
+      const imgLinkEl = document.createElement("a");
+      imgLinkEl.href = item.link;
+      imgLinkEl.target = "_blank";
+      imgLinkEl.appendChild(imgEl);
+
+      // Create a line break element
+      const br3 = document.createElement("p");
+
       // Append all the elements to the list item
       li.appendChild(nameEl);
-      li.appendChild(priceEl);
       li.appendChild(br1);
-      li.appendChild(linkEl);
+      li.appendChild(priceEl);
       li.appendChild(br2);
-      li.appendChild(imgEl);
+      li.appendChild(imgLinkEl);
+      li.appendChild(linkEl);
+      li.appendChild(br3);
 
       // Append the list item to the unordered list
       ul.appendChild(li);

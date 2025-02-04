@@ -37,7 +37,7 @@ h1 {
 /* Intro and results intro text */
 h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     font-style: normal;
 }
@@ -60,6 +60,10 @@ h4 {
 a {
     text-decoration: none;
     color:black; 
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Mobile-first design: 1 column for mobile up to 800px wide 
@@ -150,13 +154,24 @@ select {
 
 /* Styles for results area */
 .product-name {
-    font-family: "Great Vibes", serif;
-    font-size: 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
 }
 
-.product-price .product-link {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+.product-price {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.product-link {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .product-image {
@@ -187,11 +202,14 @@ select {
         position: relative; 
       }
 
-    /* Keep titles floating neatly under header */
+    /* Keep everything floating neatly under header */
     #titles {
-        max-width: 800px;
+        max-width: 600px;
         margin: 0 auto;
         position: relative;
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
     }
 
     #columns {
@@ -199,13 +217,12 @@ select {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: flex-start;
-        max-width: 600px; /* Avoid line width exceeding header on wider screens */
+        max-width: 900px; 
     }
 
     #questionForm,
     #results {
-        width: 45%;
-        margin: 10px;
+        width: 100%;
     }
 
 }
