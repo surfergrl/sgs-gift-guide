@@ -54,6 +54,15 @@ h4 {
     font-style: normal;
 }
 
+/* Mobile-first design: 1 column for mobile up to 800px wide 
+Avoid horizontal scroll for minimum screen width 320px */
+#questionForm, #results {
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column;
+  }
+
 /* Styling the form */
 legend {
     font-family: "Cormorant Garamond", serif;
@@ -61,15 +70,29 @@ legend {
     font-weight: 700;
     font-style: italic;
 }
+
 fieldset {
     background-color:antiquewhite;
     position: relative;
     max-width: 500px;
 }
-/* Buttons from CSS Scan.com */
-.button-8 {
+
+select {
+    width: 80%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    position: relative;
+    text-align: center;
+}
+
+/* Button code from CSS Scan.com */
+.button {
     background-color: #e1ecf4;
-    border-radius: 3px;
+    border-radius: 20px;
     border: 1px solid #7aa7c7;
     box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
     box-sizing: border-box;
@@ -93,32 +116,21 @@ fieldset {
     white-space: nowrap;
   }
   
-  .button-8:hover,
-  .button-8:focus {
+  .button:hover,
+  .button:focus {
     background-color: #b3d3ea;
     color: #2c5777;
   }
   
-  .button-8:focus {
+  .button:focus {
     box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
   }
   
-  .button-8:active {
+  .button:active {
     background-color: #a0c7e4;
     box-shadow: none;
     color: #2c5777;
   }
-
-/* Footer to stay centered */
-#footer {
-    background-color: antiquewhite;
-    max-width: 510px;
-    padding: 10px;
-    display: flex;
-    justify-content: center; /* centers items horizontally */
-    align-items: center;    /* centers items vertically */
-    margin: 0 auto; /* centers footer container */
-}
 
 /* Styles for results area */
 .product-name {
@@ -137,5 +149,25 @@ fieldset {
     display: block;
     margin: 10px auto;
     border-radius: 40px;
+}
+
+/* Responsive design - two columns for larger screens */
+@media (min-width: 800px) {
+    #questionForm, #results {
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-evenly;
+      max-width: 600px; /* Avoid line width exceeding header on wider screens */
+    }
+
+/* Footer to float center*/
+#footer {
+    background-color: antiquewhite;
+    max-width: 510px;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0 auto; 
 }
 
