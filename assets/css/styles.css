@@ -9,7 +9,7 @@ body {
     width: 100%;
     background-size: cover;
     background-color: cadetblue;
-    background: url("../images/SGS-header-2.jpeg") no-repeat left center;
+    background: url("../images/SGS-header.jpeg") no-repeat left center;
   } 
   /* logo will float over header image if viewport is < header image width */
 #logo {
