@@ -427,13 +427,23 @@ Colour palettes from [canva.com/colours](http://canva.com/colours)
 
 # Bugs and issues
 
-The app does not (yet) work as planned. The scipt is not returning the initial results as expected.
+### Deployment Note
 
-The logic to pick a result (or two) to present to the user with name, price etc. has not been written.
+As currently deployed, the site is marooned on its own page. It has been designed to sit within the existing surfergrl.co.uk site, where it will eventually move to.
 
-The CSS styling is unfinished and the app does not look attractive.
+### Product combinations
 
-As such, the ReadMe does not yet reflect the app in its current form.
+The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
+
+With all the options available, there are over 500 possible combinations a user could pick. These cannot be coded in by hand. They would also require a lot more products to be available. This would be best done by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. If there is no, or only one, suitable product, another 'bestseller' according to the database could be inserted. Linking to and querying this database is beyond the scope of this project.
+
+### Clearing the form and results area
+
+When the Submit button is clicked, the innerHTML for the results area loses its heading. The Reset button preserves the heading, but once Submit has been clicked, it's gone until there is a page refresh. I would look at this with more time.
+
+### Updating products
+
+Because the product details are in a static array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
 
 ---
 

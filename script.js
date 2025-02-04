@@ -132,8 +132,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultsElement = document.getElementById("results");
   const form = document.querySelector("#questionForm");
 
+  // Clear the list in the results area if the Reset button is clicked
+  form.addEventListener("reset", () => {
+    // Find the existing <ul> inside #results and remove it, but keep the heading
+    const ul = resultsElement.querySelector("ul");
+    if (ul) {
+      ul.remove();
+    }
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    // Clear anything that is already in the results area
+    // This also clears the area's heading - see Bugs
+    resultsElement.innerHTML = "";
 
     // Get the form data
     let formData = {
@@ -165,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Create a span element for the price
       const priceEl = document.createElement("span");
-      priceEl.textContent = ` Price: £${item.price}`;
+      priceEl.textContent = `Price: £${item.price}`;
       priceEl.classList.add("product-price");
 
       // Create a line break element
@@ -190,8 +202,11 @@ document.addEventListener("DOMContentLoaded", () => {
       imgLinkEl.target = "_blank";
       imgLinkEl.appendChild(imgEl);
 
-      // Create a line break element
+      // Create a p element
       const br3 = document.createElement("p");
+
+      // Create a horizontal line element
+      const hr = document.createElement("hr");
 
       // Append all the elements to the list item
       li.appendChild(nameEl);
@@ -201,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.appendChild(imgLinkEl);
       li.appendChild(linkEl);
       li.appendChild(br3);
+      li.appendChild(hr);
 
       // Append the list item to the unordered list
       ul.appendChild(li);
@@ -222,6 +238,5 @@ function filterItems(formData) {
       v.style.includes(formData.style) &&
       v.theme.includes(formData.theme)
   );
-  console.log(filtered);
   return filtered;
 }

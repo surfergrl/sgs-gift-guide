@@ -66,6 +66,10 @@ ul {
     list-style-type: none;
 }
 
+hr {
+    border: 2px dotted grey;
+}
+
 /* Mobile-first design: 1 column for mobile up to 800px wide 
 Avoid horizontal scroll for minimum screen width 320px */
 
