@@ -6,8 +6,10 @@ body {
 
 /* Style hero image and logo in header section */
 #header {
-    position: relative; 
-  }
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
 
 #hero-image {
     height: 200px;
@@ -165,6 +167,17 @@ select {
     border-radius: 40px;
 }
 
+/* Footer to float center */
+#footer {
+        background-color: antiquewhite;
+        max-width: 510px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+}
+
 /* Responsive design - two columns for larger screens */
 @media (min-width: 800px) {
     /* Keep header div and children center */
@@ -173,6 +186,13 @@ select {
         margin: 0 auto;
         position: relative; 
       }
+
+    /* Keep titles floating neatly under header */
+    #titles {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
 
     #columns {
         display: flex;
@@ -186,17 +206,6 @@ select {
     #results {
         width: 45%;
         margin: 10px;
-    }
-
-    /* Footer to float center*/
-    #footer {
-        background-color: antiquewhite;
-        max-width: 510px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
     }
 
 }
