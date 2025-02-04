@@ -4,24 +4,25 @@ body {
     background-color: aliceblue;
 }
 
-/* Hero image and logo */
+/* Style hero image and logo in header section */
+#header {
+    position: relative; 
+  }
+
 #hero-image {
     height: 200px;
     width: 100%;
     background-size: cover;
     background-color: cadetblue;
-    background: url("../images/SGS-header.jpeg") no-repeat left center;
+    background: url("../images/SGS-header.jpeg") no-repeat center center;
   } 
 
-  /* logo will float over header image if viewport is < header image width */
 #logo {
-      height: 50px;
-      padding-left: 30px;
-      padding-top: 30px;
-      padding-bottom: 20px;
-      background-position: center;
-      position: absolute;
-    }
+    position: absolute; 
+    top: 30px;
+    left: 30px;
+    z-index: 10; /* Ensure logo stays on top */
+  }
 
 /* --Headings-- */
  /* Main header */
@@ -56,12 +57,18 @@ h4 {
 
 /* Mobile-first design: 1 column for mobile up to 800px wide 
 Avoid horizontal scroll for minimum screen width 320px */
-#questionForm, #results {
-    font-family: 'Nunito', Arial, sans-serif;
+#columns {
     margin: 0 auto; 
     display: flex; 
     flex-direction: column;
+    align-items: center;
   }
+
+#questionForm, #results {
+  width: 100%;
+  max-width: 320px; 
+  margin: 10px 0;
+}
 
 /* Styling the form */
 legend {
@@ -85,8 +92,9 @@ select {
 }
 
 .buttons {
-    position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 /* Button code from CSS Scan.com */
@@ -153,21 +161,28 @@ select {
 
 /* Responsive design - two columns for larger screens */
 @media (min-width: 800px) {
-    #questionForm, #results {
-      display: flex; 
-      flex-direction: row;
-      justify-content: space-evenly;
-      max-width: 600px; /* Avoid line width exceeding header on wider screens */
+    #columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        max-width: 600px; /* Avoid line width exceeding header on wider screens */
     }
 
-/* Footer to float center*/
-#footer {
-    background-color: antiquewhite;
-    max-width: 510px;
-    padding: 10px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin: 0 auto; 
-}
+    #questionForm,
+    #results {
+        width: 45%;
+        margin: 10px;
+    }
+
+    /* Footer to float center*/
+    #footer {
+        background-color: antiquewhite;
+        max-width: 510px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 
