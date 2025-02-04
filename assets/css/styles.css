@@ -12,6 +12,7 @@ body {
     background-color: cadetblue;
     background: url("../images/SGS-header.jpeg") no-repeat left center;
   } 
+
   /* logo will float over header image if viewport is < header image width */
 #logo {
       height: 50px;
@@ -23,7 +24,7 @@ body {
     }
 
 /* --Headings-- */
-/* Main header */
+ /* Main header */
 h1 {
     font-family: "Great Vibes", serif;
     font-size: 36px;
@@ -37,10 +38,18 @@ h2 {
     font-weight: 400;
     font-style: normal;
 }
-/* Form question headings */
+ /* Form question headings */
 h3 {
     font-family: "Cormorant Garamond", serif;
     font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+}
+
+ /* Footer text and other minor headings */
+h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
     font-weight: 200;
     font-style: normal;
 }
@@ -57,14 +66,58 @@ fieldset {
     position: relative;
     max-width: 500px;
 }
-/* Buttons */
-
-/* Footer styles */
-#footer {
-    background-color:antiquewhite;
+/* Buttons from CSS Scan.com */
+.button-8 {
+    background-color: #e1ecf4;
+    border-radius: 3px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
     position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  
+  .button-8:hover,
+  .button-8:focus {
+    background-color: #b3d3ea;
+    color: #2c5777;
+  }
+  
+  .button-8:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .button-8:active {
+    background-color: #a0c7e4;
+    box-shadow: none;
+    color: #2c5777;
+  }
+
+/* Footer to stay centered */
+#footer {
+    background-color: antiquewhite;
     max-width: 510px;
-    padding-left: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* centers items horizontally */
+    align-items: center;    /* centers items vertically */
+    margin: 0 auto; /* centers footer container */
 }
 
 /* Styles for results area */
