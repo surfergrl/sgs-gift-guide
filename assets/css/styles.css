@@ -11,7 +11,7 @@ body {
 
 #hero-image {
     height: 200px;
-    width: 100%;
+    width: 900px;
     background-size: cover;
     background-color: cadetblue;
     background: url("../images/SGS-header.jpeg") no-repeat center center;
@@ -55,8 +55,14 @@ h4 {
     font-style: normal;
 }
 
+a {
+    text-decoration: none;
+    color:black; 
+}
+
 /* Mobile-first design: 1 column for mobile up to 800px wide 
 Avoid horizontal scroll for minimum screen width 320px */
+
 #columns {
     margin: 0 auto; 
     display: flex; 
@@ -66,7 +72,7 @@ Avoid horizontal scroll for minimum screen width 320px */
 
 #questionForm, #results {
   width: 100%;
-  max-width: 320px; 
+  max-width: 400px; 
   margin: 10px 0;
 }
 
@@ -161,6 +167,13 @@ select {
 
 /* Responsive design - two columns for larger screens */
 @media (min-width: 800px) {
+    /* Keep header div and children center */
+    #header {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative; 
+      }
+
     #columns {
         display: flex;
         flex-direction: row;
@@ -186,3 +199,4 @@ select {
         margin: 0 auto;
     }
 
+}
