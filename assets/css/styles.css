@@ -60,8 +60,11 @@ fieldset {
 /* Buttons */
 
 /* Footer styles */
-footer {
-    background: url("../images/SGS-header.jpeg") no-repeat left center;
+#footer {
+    background-color:antiquewhite;
+    position: relative;
+    max-width: 510px;
+    padding-left: 20px;
 }
 
 /* Styles for results area */
