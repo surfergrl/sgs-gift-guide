@@ -1,11 +1,12 @@
 /* Push footer to bottom of page leaving some whitespace under content */
 body {
     min-height: 100vh;
+    background-color: aliceblue;
 }
 
 /* Hero image and logo */
 #hero-image {
-    height: 250px;
+    height: 200px;
     width: 100%;
     background-size: cover;
     background-color: cadetblue;
@@ -21,35 +22,46 @@ body {
       position: absolute;
     }
 
-/* Headings */
+/* --Headings-- */
+/* Main header */
 h1 {
     font-family: "Great Vibes", serif;
+    font-size: 36px;
     font-weight: 400;
     font-style: normal;
 }
-
+/* Intro and results intro text */
 h2 {
-    font-family: "Great Vibes", serif;
-    font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Form question headings */
+h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 200;
     font-style: normal;
 }
 
 /* Styling the form */
 legend {
-    font-family: 'Six Hands Rough', cursive;
-    font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
 }
-
 fieldset {
-    background-color:cornflowerblue;
+    background-color:antiquewhite;
     position: relative;
     max-width: 500px;
 }
+/* Buttons */
 
+/* Footer styles */
 footer {
-    background-color: #bdc1d7;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    background: url("../images/SGS-header.jpeg") no-repeat left center;
 }
 
 /* Styles for results area */
