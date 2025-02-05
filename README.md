@@ -24,28 +24,27 @@ The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is 
 - [Project Development & Planning](#project-development--planning)
   - [Background](#background)
   - [Project Goals](#project-goals)
-  - [User Stories](#user-stories)
+- [Research](#research)
   - [Market Review](#market-review)
+  - [Market Research Conclusions](#market-research-conclusions)
+  - [User Stories](#user-stories)
 - [Design & Layout](#design-layout-colours)
-  - [Colours and fonts](#colours)
-  - [Wireframes – Skeleton](#wireframes-skeleton-plane)
-- [Scope and Structure](#scope--structure-of-the-site)
-  - [Scope](#scope)
-  - [Structure](#navigation-and-layout--structure)
-  - [JavaScript functionality](#javascript)
+  - [Current Website](#current-website)
+  - [Desired Features](#desired-features---rated-1-5-in-order-of-importance)
   - [Future developments](#future-developments)
+  - [Content](#content---elements-to-include)
+  - [Colours](#colours)
+  - [Typography](#typography)
+  - [Wireframes – Skeleton](#wireframes-skeleton-plane)
+- [Structure](#scope-and-structure)
+  - [JavaScript functionality](#javascript)
+  - [Page Structure](#page-structure)
 - [Technologies Used](#technologies-used)
 - [Validation & Testing](#validation-and-testing)
+- [Bugs and Issues](#bugs-and-issues)
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Thanks](#thanks-to)
-
-#### Technologies Used
-
-- [HTML](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449)
 
 ---
 
@@ -71,33 +70,9 @@ The purpose of the Gift Guide application is to provide a quiz-type interface to
 
 ---
 
-### User Stories
-
-The user stories are based on previous market research in the field – meeting customers at local stockists and craft markets, and contact via email/social media accounts of the business.
-
-#### Customer profiles:
-
-- Spouse/partner with no idea what their partner would like
-- Previous visitor to shop or online presence, now at the website and curious
-- Bride searching for bridesmaid gifts
-- Christmas shopper in a hurry with limited idea of what someone might want
-- Undecided purchaser who has seen items but isn't sure what they want
-
-#### Customer goals:
-
-- Be led to suitable product/s for the giftee (or themselves)
-- Select according to their budget
-- Get a better idea of what the brand is about
-- Be confident that they have selected something suitable
-- Be able to backtrack if they want to see something else
-- Achieve their goal quickly and easily if required
-- Browse products in a unique, interesting way
-- Be confident that the website is genuine and sells quality products
-- Be able to see more details then buy quickly and easily
-
----
-
 ## Research
+
+[Top](#table-of-contents)
 
 ### Market Review
 
@@ -184,7 +159,7 @@ I particularly liked the insertion of a random product or two to showcase someth
 
 </details>
 
-### Market research general notes:
+### Market Research Conclusions
 
 - Gift Guides were often just pages of products in no particular order
 - Often little or no guidance to help customers
@@ -208,7 +183,39 @@ I also looked at interactive gift guides for other products: https://blog.dot.vu
 
 ---
 
-## Current Website
+### User Stories
+
+[Top](#table-of-contents)
+
+The user stories are based on previous market research in the field – meeting customers at local stockists and craft markets, and contact via email/social media accounts of the business.
+
+#### Customer profiles:
+
+- Spouse/partner with no idea what their partner would like
+- Previous visitor to shop or online presence, now at the website and curious
+- Bride searching for bridesmaid gifts
+- Christmas shopper in a hurry with limited idea of what someone might want
+- Undecided purchaser who has seen items but isn't sure what they want
+
+#### Customer goals:
+
+- Be led to suitable product/s for the giftee (or themselves)
+- Select according to their budget
+- Get a better idea of what the brand is about
+- Be confident that they have selected something suitable
+- Be able to backtrack if they want to see something else
+- Achieve their goal quickly and easily if required
+- Browse products in a unique, interesting way
+- Be confident that the website is genuine and sells quality products
+- Be able to see more details then buy quickly and easily
+
+---
+
+## Design & Layout
+
+### Current Website
+
+[Top](#table-of-contents)
 
 The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled smooth and opaque by the ocean.)
 
@@ -252,7 +259,7 @@ The finished application allows all of these except the final one, which cannot 
 
 ---
 
-## Design, layout, colours
+[Top](#table-of-contents)
 
 ### Content - elements to include
 
@@ -268,7 +275,7 @@ To reflect the products on the SGS site (but not match, as they are not fixed).
 
 ![shop-menu.png](/assets/images/shop-menu.png)
 
-## Colours
+### Colours
 
 The Surfergrl site uses black and white for the main content (white space and black text).
 The sunset-themed header is mostly orange.
@@ -297,7 +304,9 @@ I kept the colour-scheme minimal, so if there is a main site redesign, the gift 
 
 ---
 
-## Typography
+### Typography
+
+[Top](#table-of-contents)
 
 #### Legibility, accessibility, contrast
 
@@ -326,6 +335,8 @@ Submit button shown in hover state; Reset button default state:
 
 ### Wireframes
 
+[Top](#table-of-contents)
+
 I first sketched (on paper) the basic layout for the HTML page with landing page, questions page and results page. In the end I decided to have these all on one pages and use divs to show the relevant part of the guide.
 
 I kept the guide small and simple, so it can be deployed into pages with other content. This means it can be flexible with the changing needs of the site and any redesigns, and can also be adapted for use on other sites if required.
@@ -336,11 +347,13 @@ Keeping the design clean and simple was also a priority both for UX and responsi
 
 ![Desktop Desgin - columns](/assets/images/SGS-gift-guide-desktop.png)
 
-### Structure
+## Structure
+
+[Top](#table-of-contents)
 
 The app is contained on one page. It is designed to be deployed to a WordPress page ['Gift Guide']("https://surfergrl.co.uk/gift-guide") which handles all the navigation and page elements for the main site. The page can be visited but the deployment is not complete - see [Deployment](#deployment) section.
 
-#### JavaScript structure
+### JavaScript functionality
 
 - Data Definition: Defined an array of jewellery items with various properties.
 - DOMContentLoaded Event: Ensures that the code only runs after the page has fully loaded.
@@ -351,7 +364,7 @@ The app is contained on one page. It is designed to be deployed to a WordPress p
 
 ---
 
-#### Page structure
+### Page structure
 
 Banner and logo - for GitHub Pages deployment; will be removed on WordPress page. Does not contain any navigation options for this reason.
 
@@ -394,33 +407,56 @@ _For each result:_
 
 Standard products - many of the items on the SGS store are one-off pieces due to the unique nature of seaglass. I have therefore chosen to only present established pieces from the main collections in the results.
 
-I have added ten products to the JavaScript array to show the tool working. More products would give better results, however keeping the guide updated by directly using the products in the WooCommerce database would be a far more efficient and useful way to do this. This is beyond the scope of this project.
+I added ten products to the JavaScript array to show the tool working. More products would give better results, however keeping the guide updated by directly using the products in the WooCommerce database would be a far more efficient and useful way to do this. This is beyond the scope of this project.
 
 ---
 
-# Bugs and issues
+## Technologies Used
 
-### Product combinations
+[Top](#table-of-contents)
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449)
+
+---
+
+---
+
+## Validation and Testing
+
+[Top](#table-of-contents)
+
+---
+
+## Bugs and issues
+
+[Top](#table-of-contents)
+
+#### Product combinations
 
 The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
 
 With all the options available, there are over 500 possible combinations a user could pick. These cannot be coded in by hand. They would also require a lot more products to be available. This would be best done by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. If there is no, or only one, suitable product, another 'bestseller' according to the database could be inserted. Linking to and querying this database is beyond the scope of this project.
 
-### Submit button issue
+#### Submit button issue
 
 If the submit button was clicked more than once, the same results stacked up on top of each other. I went back and coded the button to clear the results area when it was clicked, before populating it with the latest results.
 
-### Clearing the form and results area
+#### Clearing the form and results area
 
 When the Submit button is clicked, the innerHTML for the results area loses its heading. The Reset button preserves the heading, but once Submit has been clicked, it's gone until there is a page refresh. I would look at this with more time.
 
-### Updating products
+#### Updating products
 
-Because the product details are in a static array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
+Because the product details are in an array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
 
 ---
 
 ## Deployment
+
+[Top](#table-of-contents)
 
 The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/
 
@@ -462,5 +498,10 @@ Mentor Richard Wells
 CI tutors Oisin and Gemma
 
 Kera Cudmore's [ReadMe resources]("https://github.com/kera-cudmore/readme-examples")
+
+![seaglass](/assets/images/seaglass-finds.jpeg)
+Seaglass Finds
+
+[Top](#table-of-contents)
 
 ---
