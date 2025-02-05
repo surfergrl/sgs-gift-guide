@@ -7,11 +7,9 @@ https://surfergrl.github.io/sgs-gift-guide/
 ![Validator](assets/images/validhtml.png)
 
 - A rogue link in the meta tags was removed.
-- Trailing slashes in void tags were being added by Prettier e.g. <br /> . This threw an 'info' in the validator: 'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values'. I attempted configuring Prettier to stop this but was not successful as this affects other files badly e.g. Markdown files. It is a known issue with Prettier.
+- Trailing slashes in void tags were being added by Prettier. This threw an 'info' in the validator: 'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values'. I attempted configuring Prettier to stop this but was not successful as this affects other files badly e.g. Markdown files. It is a known issue with Prettier.
 
 Validates with no warnings.
-
-![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fsurfergrl.github.io%2Fsgs-gift-guide%2F)
 
 ## CSS run through Jigsaw
 
@@ -39,9 +37,11 @@ The CSS still validates.
 ![Wave report](/assets/images/wave-valid.png)
 
 - Select elements in my form did not have labels. Fixed.
-- Low contrast on Submit and Reset buttons. Fixed.
+- Low contrast on Submit and Reset buttons. Fixed by increasing font weight and darkening colour.
 - Warning of a skipped header level. Only heading in the Footer is a H4; left as is.
 - Alert for no page regions. There is header,footer and fieldset. The app is designed to run inside another page with all of this information so this works as expected here.
+
+![Wave report 2](/assets/images/wave2.png)
 
 ## Tested on
 
@@ -56,6 +56,7 @@ Works as expected on:
 - MacBook Air 13"
 - MacBook Pro 16"
 - iPhone ProMax 12, Google and Safari
+- iPhone 14
 
 I used DevTools to check the appearance of the page for screen sizes 320px and above, and the media queries work as expected to create the intended layout.
 

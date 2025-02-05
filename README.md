@@ -41,7 +41,6 @@ The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is 
   - [Page Structure](#page-structure)
 - [Technologies Used](#technologies-used)
 - [Validation & Testing](#validation-and-testing)
-- [Bugs and Issues](#bugs-and-issues)
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Thanks](#thanks-to)
