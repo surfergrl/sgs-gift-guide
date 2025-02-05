@@ -60,7 +60,25 @@ Works as expected on:
 - iPhone ProMax 12, Google and Safari
 - iPhone 14
 
-I used DevTools to check the appearance of the page for screen sizes 320px and above, and the media queries work as expected to create the intended layout.
+I used Firefox's DevTools to check the appearance of the page for screen sizes 320px and above, and the media queries work as expected to create the intended layout.
+
+### Lighthouse
+
+I tested the app using Lighthouse from the Chrome Developer Tools panel.
+
+![Lighthouse report](/assets/images/light-info.png)
+
+![Lighthouse report](/assets/images/light-results.png)
+
+![Lighthouse report](/assets/images/light-perf.png)
+
+![Lighthouse report](/assets/images/light-diag.png)
+
+- I was happy with the results, but would like to optimise some of my image sizes to improve load time.
+- The header and logo took the most time to load.
+- In the final deployment, the header and logo will be taken care of by the WordPress page which hosts the application, so I am not too worried about this.
+
+---
 
 ### Screenshots
 
@@ -137,21 +155,18 @@ I used DevTools to check the appearance of the page for screen sizes 320px and a
 
 Each interactive part of the site was tested against the design
 
-| **Element**         | **Function**           | **Action**             | **Result**                   |
-| ------------------- | ---------------------- | ---------------------- | ---------------------------- |
-| Question 1          | Dropdown               | Select category        | Works as expected            |
-| Question 2          | Dropdown               | Select budget          | Works as expected            |
-| Question 3          | Dropdown               | Select theme           | Works as expected            |
-| Question 4          | Dropdown               | Select style           | Works as expected            |
-| Question 5          | Dropdown               | Select gender          | Works as expected            |
-| Submit              | Click to run app       | Shows products         | Works as expected            |
-| Reset               | Click to clear form    | Clear form             | Works as expected            |
-| Click product image | Link to product page   | View full product page | Works as expected            |
-| Click See More      | Link to product page   | View full product page | Works as expected            |
-| Click Home          | Link to Surfergrl home | View Home page         | Works as expected - see note |
-
-When the link in the footer is clicked, it currently throws a 404 page not found error.
-The link will work correctly once the Guide is embedded in the Surfergrl site, so I want to leave this as it is for now.
+| **Element**         | **Function**           | **Action**             | **Result**        |
+| ------------------- | ---------------------- | ---------------------- | ----------------- |
+| Question 1          | Dropdown               | Select category        | Works as expected |
+| Question 2          | Dropdown               | Select budget          | Works as expected |
+| Question 3          | Dropdown               | Select theme           | Works as expected |
+| Question 4          | Dropdown               | Select style           | Works as expected |
+| Question 5          | Dropdown               | Select gender          | Works as expected |
+| Submit              | Click to run app       | Shows products         | Works as expected |
+| Reset               | Click to clear form    | Clear form             | Works as expected |
+| Click product image | Link to product page   | View full product page | Works as expected |
+| Click See More      | Link to product page   | View full product page | Works as expected |
+| Click Home          | Link to Surfergrl home | View Home page         | Works as expected |
 
 ### Conclusion
 
