@@ -21,23 +21,23 @@ The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is 
 
 ## Table of Contents
 
-- [Project Development & Planning](#project-development--planning)
+- [Project Development & Planning](#project-development-and-planning)
   - [Background](#background)
   - [Project Goals](#project-goals)
 - [Research](#research)
   - [Market Review](#market-review)
   - [Market Research Conclusions](#market-research-conclusions)
   - [User Stories](#user-stories)
-- [Design & Layout](#design-layout-colours)
+- [Design & Layout](#design--layout)
   - [Current Website](#current-website)
   - [Desired Features](#desired-features---rated-1-5-in-order-of-importance)
   - [Future developments](#future-developments)
   - [Content](#content---elements-to-include)
   - [Colours](#colours)
   - [Typography](#typography)
-  - [Wireframes – Skeleton](#wireframes-skeleton-plane)
-- [Structure](#scope-and-structure)
-  - [JavaScript functionality](#javascript)
+  - [Wireframes](#wireframes)
+- [Structure](#structure)
+  - [JavaScript functionality](#javascript-functionality)
   - [Page Structure](#page-structure)
 - [Technologies Used](#technologies-used)
 - [Validation & Testing](#validation-and-testing)
@@ -458,11 +458,43 @@ Because the product details are in an array, they would be hard to update, espec
 
 [Top](#table-of-contents)
 
-The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/
+#### GitHub Pages
 
-The gift guide will eventually be live on the [Surfergrl.co.uk](http://surfergrl.co.uk) website on a dedicated page https://surfergrl.co.uk/gift-guide
+The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-Within the main site I looked at presenting the Guide
+1. In the GitHub repository, navigate to the Settings tab
+2. From the left hand menu select 'Pages'
+3. From the source select Branch: main
+4. Click 'Save'
+5. A live link will be displayed when published successfully.
+
+#### Forking the GitHub Repository
+
+You can fork the repository by following these steps:
+
+1. Go to the GitHub repository
+1. Click on Fork button in upper right hand corner
+
+#### Cloning the GitHub Repository
+
+You can clone the repository to use locally by following these steps:
+
+1. Navigate to the GitHub Repository you want to clone
+2. Click on the code drop down button
+3. Click on HTTPS
+4. Copy the repository link to the clipboard
+5. Open your IDE of choice (git must be installed for the next steps)
+6. Type git clone copied-git-url into the IDE terminal
+
+The project will now be cloned locally for you to use.
+
+---
+
+#### Future deployment:
+
+The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/, but the gift guide's final home will be on the [Surfergrl.co.uk](http://surfergrl.co.uk) website on a dedicated page https://surfergrl.co.uk/gift-guide
+
+Within the main (Surfergrl) site I looked at presenting the Guide
 
 - On a whole new page within an iFrame
 - As a pop-up overlaid onto the shop Home page.
@@ -475,9 +507,9 @@ I wanted deployment to be
 - Easy to update when necessary
 - Fitted in with WordPress without too much extra code or workarounds which might compromise UX
 
-This work was beyond the scope of the current project, and will be implemented as a next stage. The HTML is within the page on the WordPress site but the JavaScript file has not been added.
+This work was beyond the scope of the current project, and will be implemented as a next stage. The HTML is within the page on the WordPress site, but the JavaScript file has not been added.
 
-This means that the gift guide's links to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab. The idea is to have the Guide embedded in the main website so links will go to products within the same window, but you can still get back to your results easily.
+This means that the gift guide's links (on GitHub Pages) to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab. The idea is to have the Guide embedded in the main website so links will go to products within the same window, but you can still get back to your results easily.
 
 ---
 
@@ -500,6 +532,7 @@ CI tutors Oisin and Gemma
 Kera Cudmore's [ReadMe resources]("https://github.com/kera-cudmore/readme-examples")
 
 ![seaglass](/assets/images/seaglass-finds.jpeg)
+
 Seaglass Finds
 
 [Top](#table-of-contents)
