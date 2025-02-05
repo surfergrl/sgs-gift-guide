@@ -15,7 +15,8 @@ This is the documentation for my web application **Surfergirl's Seaglass Jewelle
 
 The deployed application can be found here: https://surfergrl.github.io/sgs-gift-guide/
 
-Please note that this application is designed to appear on the surfergrl.co.uk site; it is not yet living in its final destination. See the [Deployment](#deployment) section for more details.
+Please note that this application is designed to live on the surfergrl.co.uk site here: https://surfergrl.co.uk/gift-guide
+It has been deployed here but this work is not complete. See [Deployment](#deployment) for more information.
 
 The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
 
@@ -243,7 +244,7 @@ The shop offers products in categories - bracelets, earrings, necklaces/pendants
 - Provide results in a manner that is visually appealing and user-friendly. 1
 - Results can be instantly added to the basket. 3
 
-The finished application allows all of these except the final one, which cannot be implemented until the app is moved to the surfergrl.co.uk site.
+The finished application allows all of these except the final one.
 
 ---
 
@@ -255,6 +256,8 @@ The finished application allows all of these except the final one, which cannot 
 - I would like to design a similar tool in the future to allow people to choose their options for personalised items e.g. stamped inscriptions, engraving and specific charms and colours of seaglass. For now if they end up with this option, it will send them to a contact form on the site so they can enquire personally. 5
 - A 'customers also bought' strip below the guide's results, with some more ideas. 5
 - 'Not sure' option, e.g. if the user doesn't know what style a giftee might prefer. The app will then present an option from any of the styles. 2
+
+For futher developments regarding embedding the app into the main Surfergrl site, please see the [Deployment](#deployment) section.
 
 ---
 
@@ -383,9 +386,12 @@ Note that size is not relevant here as most products are one-size or adjustable.
 
 #### Submit button - Clear any previous results. Submit chosen options.
 
-Reset button - clear the chosen options back to defaults
+#### Reset button - clear the chosen options back to defaults
 
-#### Footer - for the gift guide as currently deployed. Will be removed when the HTML sits within a WordPress page which already contains navigation elements. Links to Home page of surfergrl.co.uk.
+#### Footer - for the gift guide as currently deployed.
+
+- Links to Home page of surfergrl.co.uk.
+- This has been removed from the HTML which sits within the final WordPress page, as the page already contains navigation elements.
 
 #### Results:
 
@@ -415,6 +421,7 @@ I added ten products to the JavaScript array to show the tool working. More prod
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449)
+- [WP Code plugin](https://wpcode.com)
 
 ---
 
@@ -434,7 +441,7 @@ Please see the [Validation and Testing file](testing.md)
 
 #### GitHub Pages
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
+The site was first deployed to GitHub pages. The steps to deploy are as follows:
 
 1. In the GitHub repository, navigate to the Settings tab
 2. From the left hand menu select 'Pages'
@@ -464,15 +471,19 @@ The project will now be cloned locally for you to use.
 
 ---
 
-#### Future deployment:
+#### Future deployment
 
-The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/, but the gift guide's final home will be on the [Surfergrl.co.uk](http://surfergrl.co.uk) website on a dedicated page https://surfergrl.co.uk/gift-guide
+The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/
+The gift guide's final home is the [Surfergrl.co.uk](http://surfergrl.co.uk) website on a dedicated page https://surfergrl.co.uk/gift-guide
 
 Within the main (Surfergrl) site I looked at presenting the Guide
 
 - On a whole new page within an iFrame
-- As a pop-up overlaid onto the shop Home page.
-- As a pop-up available from any page.
+- As a pop-up overlaid onto the shop Home page
+- As a pop-up available from any page
+- Using a WordPress plugin [WP Code plugin](https://wpcode.com) and an HTML code block
+
+This final option was the one recommended by WordPress documentation.
 
 I wanted deployment to be
 
@@ -481,9 +492,11 @@ I wanted deployment to be
 - Easy to update when necessary
 - Fitted in with WordPress without too much extra code or workarounds which might compromise UX
 
-This work was beyond the scope of the current project, and will be implemented as a next stage. The HTML is within the page on the WordPress site, but the JavaScript file has not been added.
+This work was beyond the scope of the current project, but implementation has begun.
+The HTML is within the page on the WordPress site, and the JavaScript and CSS have been added as code snippets using the [WP Code plugin](https://wpcode.com). This create code snippets which can be inserted into the page using a shortcode block.
 
-This means that the gift guide's links (on GitHub Pages) to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab. The idea is to have the Guide embedded in the main website so links will go to products within the same window, but you can still get back to your results easily.
+This means that the gift guide's links (on GitHub Pages) to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab.
+The same behaviour can be seen on the app on the Surfergrl site, and I prefer this because it keeps the Guide tab open so a user can easily return to the results.
 
 ---
 
@@ -496,6 +509,7 @@ This means that the gift guide's links (on GitHub Pages) to products take you ou
 - [Techsini Mockup](https://techsini.com/multi-mockup/) - Creating the mockup images for the README
 - [Vecteezy](https://www.vecteezy.com) - Yin Yang symbol for favicon from Vecteezy.com
 - [Favicon.io](https://favicon.io/favicon-converter/) - Used to create and add the favicon to the browser tab
+- [WP Code plugin](https://wpcode.com) - Create code snippets to use custom CSS and JS on a WordPress page
 
 ## Thanks to
 

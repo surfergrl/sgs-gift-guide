@@ -4,6 +4,10 @@
 
 https://surfergrl.github.io/sgs-gift-guide/
 
+Testing was conducted on the above page.
+
+The guide is also functional at [Surfergrl.co.uk](https://surfergrl.co.uk/gift-guide) but work is not complete and it has not been fully tested.
+
 ## HTML run through W3C validator Errors on index.html:
 
 ![Validator](assets/images/validhtml.png)
@@ -33,6 +37,11 @@ Valid CSS
 
 These warnings refer to external vendor CSS which is not in my control.
 The CSS still validates.
+
+## JavaScript
+
+The javascript passes through https://jshint.com/ with no major issues.
+There are warnings about using 'const' and arrow functions as they are more modern syntax but I am happy with that.
 
 ## Wave Accessibility Tool
 
@@ -142,10 +151,11 @@ I tested the app using Lighthouse from the Chrome Developer Tools panel.
 #### Testing in the wild
 
 - Two people tested the app, on a MacBook Pro and an iPhone 14.
+- They tested the GitHub pages version, not the final deployment on Surfergrl.co.uk, which is not complete.
 - They were broadly positive about the gift guide itself.
 - Comments made mostly related to the main site once they were directed into that via a result from the form.
 - Both users found the transition from the app to the main site seamless, and assumed I was asking for the whole site to be tested. I feel this shows that the Guide's aesthetic fits the main site well.
-- Comment re. 'see more' opening in the same page will be addressed when the gift guide is in its final home. Currently I have products opening in a new tab by design, so that the user can easily go back to the Guide, as the Guide does not work properly on the main site (but will soon).
+- Comment re. 'see more' opening in the same page will be addressed when the gift guide is in its final home. Currently I have products opening in a new tab by design, so that the user can easily go back to the Guide.
 
 ![User test 1](/assets/images/usertest1.png)
 
@@ -153,7 +163,7 @@ I tested the app using Lighthouse from the Chrome Developer Tools panel.
 
 ### Full Testing
 
-Each interactive part of the site was tested against the design
+Each interactive part of the app was tested against the design
 
 | **Element**         | **Function**           | **Action**             | **Result**        |
 | ------------------- | ---------------------- | ---------------------- | ----------------- |
@@ -172,7 +182,8 @@ Each interactive part of the site was tested against the design
 
 The user stories are broadly matched by the functionality of the app.
 More products are needed to increase the appeal - see the Future Developments section of the main README.
-The app is working as expected and when ported into the WordPress site will be a fun and useful feature for customers that will hopefully increase site revenue.
+The app is working as expected on the GitHub Pages deployment.
+It broadly works as expected on the main Surfergrl site but more testing is required.
 
 ---
 
@@ -195,6 +206,12 @@ When the Submit button is clicked, the innerHTML for the results area loses its 
 #### Updating products
 
 Because the product details are in an array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Also, many items are on-offs, so there are a lot of updates to stock on the site. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
+
+#### Final Deployment
+
+Some of the CSS does not work as expected in the final deployment to surfergrl.co.uk, e.g. elements are hanging off the fieldset's edge.
+I would like the guide to spread out horizontally more on the page.
+This will be addressed with further development and testing.
 
 Please see Future Deployment in the main [README file](README.md) for more information.
 
