@@ -11,12 +11,11 @@ By Kat Dawes
 ![GitHub language count](https://img.shields.io/github/languages/count/surfergrl/sgs-gift-guide)
 ![GitHub top language](https://img.shields.io/github/languages/top/surfergrl/sgs-gift-guide?color=red)
 
----
-
 This is the documentation for my web application **Surfergirl's Seaglass Jewellery Gift Guide**.
+
 The deployed application can be found here: https://surfergrl.github.io/sgs-gift-guide/
 
-Please note that this application is designed to appear on the surfergrl.co.uk site; it is not yet living in its final destination. See the Deployment section for more details.
+Please note that this application is designed to appear on the surfergrl.co.uk site; it is not yet living in its final destination. See the [Deployment](#deployment) section for more details.
 
 The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
 
@@ -27,14 +26,14 @@ The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is 
   - [Project Goals](#project-goals)
   - [User Stories](#user-stories)
   - [Market Review](#market-review)
+- [Design & Layout](#design-layout-colours)
+  - [Colours and fonts](#colours)
+  - [Wireframes – Skeleton](#wireframes-skeleton-plane)
 - [Scope and Structure](#scope--structure-of-the-site)
   - [Scope](#scope)
   - [Structure](#navigation-and-layout--structure)
   - [JavaScript functionality](#javascript)
   - [Future developments](#future-developments)
-- [Wireframes – Skeleton](#wireframes-skeleton-plane)
-- [Design & Layout](#design-layout-colours)
-  - [Colours and fonts](#colours)
 - [Technologies Used](#technologies-used)
 - [Validation & Testing](#validation-and-testing)
 - [Deployment](#deployment)
@@ -211,9 +210,13 @@ I also looked at interactive gift guides for other products: https://blog.dot.vu
 
 ## Current Website
 
-The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled smooth and opaque by the ocean.) The site is built on WordPress with WooCommerce.
+The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled smooth and opaque by the ocean.)
 
-The site is basic includes:
+The site is built on WordPress with WooCommerce.
+
+It uses the [Sydney]("https://en-gb.wordpress.org/themes/sydney/") theme.
+
+The site includes:
 
 - About information - brand story
 - A personal blog on aspects of jewellery, surfing, ocean-side living, beauty and more.
@@ -221,7 +224,7 @@ The site is basic includes:
 - Shop page - categories, featured products, image gallery, basic Ts&Cs
 - Item pages - images, price, description, Add to Cart button, reviews section
 
-The shop offers products in broad categories - bracelets, earrings, necklaces/pendants, rings, keyrings and anklets. A customer who comes to the site with little or no knowledge of the brand might struggle to choose something, particularly if they are looking for a gift. The gift guide aims to present compelling options to suit a wide range of customers.
+The shop offers products in categories - bracelets, earrings, necklaces/pendants, rings, keyrings and anklets; and collections such as the 'Cariad' and 'Carreg Bica' collections. A customer who comes to the site with little or no knowledge of the brand might struggle to choose something, particularly if they are looking for a gift. The gift guide aims to present compelling options to suit a wide range of customers.
 
 ---
 
@@ -230,26 +233,22 @@ The shop offers products in broad categories - bracelets, earrings, necklaces/pe
 - Move through a short series of questions about preferences, based on the jewellery available on the site. 1
 - Provide a range of options - category, style, budget, gender and theme. 1
 - Allow the user to move back and change the answer to a question, then carry on. 2
-- Allow the user to start over at any point. 3
-- Option to skip a question if you don't know e.g. ring size. 2
-- Provide results in a manner that is visually appealing and user friendly. 1
+- Allow the user to start over at any point. 2
+- Provide results in a manner that is visually appealing and user-friendly. 1
 - Results can be instantly added to the basket. 3
-- Option provided to request more information or bespoke pieces. 2
+
+The finished application allows all of these except the final one, which cannot be implemented until the app is moved to the surfergrl.co.uk site.
 
 ---
 
-### Further Developments
+### Future Developments
 
-- Options for how to size a ring or what length of necklace do I want. 4
+- Options for how to size a ring or choose length of necklace. 4
 - Results can be emailed/downloaded/saved to a wish list. 4
 - Although the app will present an ideal option, I don't want this to stop people seeing other items, so I could add an 'other ideas' section below the main result with some add-on options or alternatives. 4
-- I would like to design a similar tool in the future to allow people to cchoose their options for personalised items e.g. stamped inscriptions, engraving and specific charms and colours of seaglass. For now if they end up with this option, it will send them to a contact form on the site so they can enquire personally. 5
+- I would like to design a similar tool in the future to allow people to choose their options for personalised items e.g. stamped inscriptions, engraving and specific charms and colours of seaglass. For now if they end up with this option, it will send them to a contact form on the site so they can enquire personally. 5
 - A 'customers also bought' strip below the guide's results, with some more ideas. 5
-- 'Not sure' option, e.g. if the user doesn't know what style a giftee might prefer. The app will then in this case present an option from any of the styles. 2
-
-These options need to conform to the principles of UX in all five different planes.
-
-![Usability](/assets/images/princip-UX.png)
+- 'Not sure' option, e.g. if the user doesn't know what style a giftee might prefer. The app will then present an option from any of the styles. 2
 
 ---
 
@@ -257,23 +256,71 @@ These options need to conform to the principles of UX in all five different plan
 
 ### Content - elements to include
 
+**Banner**
+On the GitHub Pages deployment, I have added a top banner. This is not necessary for the final deployment as the main Surfergrl site will deal with navigation, shop links etc., but is required here to provide context, for aesthetics and to match the main site.
+
 **Headline** - Surfergirl's Seaglass Gift Guide
 
 **Tag-line** - This is a short explanation of what the app does: 'Find the perfect piece of silver and seaglass jewellery for you or a loved one.'
 
 **Categories**
-
-to match the products on the SGS site.
+To reflect the products on the SGS site (but not match, as they are not fixed).
 
 ![shop-menu.png](/assets/images/shop-menu.png)
 
-Categories:
+## Colours
 
-- Bracelets
-- Rings
-- Keyrings
-- Pendants
-- Anklets
+The Surfergrl site uses black and white for the main content (white space and black text).
+The sunset-themed header is mostly orange.
+The colours reflect the ocean and beach theme.
+The site uses a lot of photographs of the Welsh coastline, so blues, greys and greens feature heavily.
+
+I chose colours to complement the header, which shows the beach at Llangrannog at sunset.
+I kept the colour-scheme minimal, so if there is a main site redesign, the gift guide will still fit in with minimal changes.
+
+#### Header
+
+![Surfergrl header](/assets/images/SGS-header.jpeg)
+
+#### Surfergrl.co.uk current colours
+
+![Colours used at surfergrl.co.uk](/assets/images/global-cols.png)
+
+---
+
+#### Gift Guide colours
+
+- Antique White for the form background. Reflects the header colours but still allows good contrast.
+- Alice Blue for the page background. This will change on the main site, but for now complements the other colours and looks better than stark white space. Gives a gentle, sunny-days beach effect.
+
+![Gift guide colours](/assets/images/colours.png)
+
+---
+
+## Typography
+
+#### Legibility, accessibility, contrast
+
+I wanted to ensure readability and consistency throughout the app, maintaining a balance between style and readability. I also wanted to ensure that the fonts complement the beach theme of the main site effectively.
+
+- I used Great Vibes for the main heading.
+- I used Cormorant Garamond for lesser headings and within the form/results areas, as it is easier to read but still reflects the laid-back, beachy yet classy vibe.
+- I varied the font weights to emphasise the questions and the product name in the results.
+- There is no body text within the application.
+
+![Typography](/assets/images/typography.png)
+
+#### Buttons (on the main site)
+
+![Buttons](/assets/images/buttons.png)
+
+I used a button design from CSS Scan which I felt matched the gift guide better than the standard one provided by the WordPress theme.
+
+I wanted something a little more whimsical.
+
+Submit button shown in hover state; Reset button default state:
+
+![Gift Guide buttons](/assets/images/buttons-gg.png)
 
 ---
 
@@ -281,48 +328,40 @@ Categories:
 
 I first sketched (on paper) the basic layout for the HTML page with landing page, questions page and results page. In the end I decided to have these all on one pages and use divs to show the relevant part of the guide.
 
-Keeping the design clean and simple was a priority both for UX and responsiveness.
+I kept the guide small and simple, so it can be deployed into pages with other content. This means it can be flexible with the changing needs of the site and any redesigns, and can also be adapted for use on other sites if required.
 
-- insert scans of drawings
+Keeping the design clean and simple was also a priority both for UX and responsiveness.
+
+![Mobile First Design](/assets/images/SGS-gift-guide-mob.png)
+
+![Desktop Desgin - columns](/assets/images/SGS-gift-guide-desktop.png)
 
 ### Structure
 
-The app is contained on one page.
+The app is contained on one page. It is designed to be deployed to a WordPress page ['Gift Guide']("https://surfergrl.co.uk/gift-guide") which handles all the navigation and page elements for the main site. The page can be visited but the deployment is not complete - see [Deployment](#deployment) section.
 
-#### Basic code structure
+#### JavaScript structure
 
-    Data Definition: Defined an array of jewellery items with various properties.
-
-    Form Submission Handling: Set up an event listener for the form with the ID 'questionForm' to handle form submissions. This listener captures form data and calls the filterItems function.
-
-    Filtering Function: The filterItems function filters the items based on the form data and returns the filtered items as an array. The function returns 'filtered' and logs it to the console.
-
-    Result Display: Creates an ul element and added list items to it based on the filtered items. The resulting list is appended to the 'resultsElement' in HTML.
-
-    DOMContentLoaded Event: Ensures that the code only runs after the page has fully loaded.
+- Data Definition: Defined an array of jewellery items with various properties.
+- DOMContentLoaded Event: Ensures that the code only runs after the page has fully loaded.
+- Form Submission Handling: Set up an event listener for the Submit button on the form with the ID 'questionForm' to handle form submissions. This listener captures form data and calls the filterItems function.
+- Filtering Function: The filterItems function filters the items based on the form data and returns the filtered items as an array of objects.
+- Result Display: Creates an ul element and adds elements for each list item to it based on the filtered items.
+- Reset: Allows the form and results area to reset to original format.
 
 ---
 
-#### Welcome
+#### Page structure
 
-Landing page with title, image and tagline.
-
-Background image: ![Geometric background](/assets/images/bg-blue-geo.jpg)
-
-Logo
+Banner and logo - for GitHub Pages deployment; will be removed on WordPress page. Does not contain any navigation options for this reason.
 
 ![SGS logo](/assets/images/SGS-logo.png)
 
----
+Title and tagline in H1.
 
-#### Questions - Five questions with between 3-5 options each.
+#### Questions
 
-Questions - Five questions with between 3-5 options each.
-
-Submit button
-Reset button
-
-The quiz will consist of five questions with several answer options based on available products:
+The guide will consist of five questions with several answer options based on available products:
 
 1. What type of jewellery does this person wear? Bracelets, rings, anklets, keyrings, necklaces, earrings.
 2. What is the budget? Lower £5-20 Medium £20-35 Higher £35+
@@ -330,122 +369,32 @@ The quiz will consist of five questions with several answer options based on ava
 4. What style might appeal to them? Quirky, classic, delicate, chunky
 5. His, hers or both?
 
-Note that size is not relevant here as most products are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, I will let the main pages take care of this aspect.
+Note that size is not relevant here as most products are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, customisations etc., I will let the main pages take care of this aspect.
+
+Submit button - Clear any previous results. Submit chosen options.
+Reset button - clear the chosen options back to defaults
+
+Footer - for the gift guide as currently deployed. Will be removed when the HTML sits within a WordPress page which already contains navigation elements. Links to Home page of surfergrl.co.uk.
 
 ---
 
 #### Results:
 
-Products matching user preferences are shown with a name, image, prices, 'add to cart' button and 'more info' link (which goes to the main item page with more photos etc.).
+_For each result:_
+
+- Product name
+- Price
+- Image (clickable)
+- Link to main product page - 'See more'
+- Share/save button - not implemented; future development
+- Reset button to reset all choices to default
+- Horizonal rule to separate products
 
 #### Results Options:
 
 Standard products - many of the items on the SGS store are one-off pieces due to the unique nature of seaglass. I have therefore chosen to only present established pieces from the main collections in the results.
 
-_Pendants:_
-
-- Carreg Bica pendant $$$ £30
-- Anchor and seaglass pendant $$ £25
-- Wire-wrapped seafoam pendant $$ £20-25
-- Simple green bail pendant $$ £2-25
-- Cariad bar $$$ £45
-- Half & Half necklace $$$ £35?
-
-_Bracelets:_
-
-- Cariad bracelet $$$ £45
-- Silver-plated Charm bracelet with seashore charms (contact for bespoke) $ £15
-- Silver Charm bracelet $$ £25
-- Silver tone seashore charms bracelet £10 $
-- Cuff copper Carreg Bica coordinates (bespoke option) $ £10
-
-_Earrings:_
-
-- Threader $$ £15
-- Wire-wrapped seaglass drops $ £15
-- Spiral hoops $ £15
-
-_Rings:_
-
-- Wrap silver $$
-- Cuff silver Cariad $$
-- Aluminium stamped with waves £ £5-7
-- Silver wave ring $ £20
-
-_Anklets:_
-
-- Silver charm $$ £20
-- Silver tone bead charm $ £10
-
-_Keyrings:_
-
-- Mermaid $ £6.50
-- 'Shell in your pocket' slogan $ £6.50
-
-_For each result:_
-
-- Product suggestions
-- Price
-- Picture
-- Short description
-- Link to main item page
-- Add to Cart button - an option to quickly add to cart without seeing full item info page e.g.:
-
-![julz-addtocart.png](/assets/images/julz-addtocart.png)
-
-- Share/save button
-- Reset button to reset all choices to default
-
-- 404 error page
-
----
-
-### Colours - Surface plane
-
-The Surfergirl's Seaglass brand uses ocean-themed colours - whites, blues, greens plus sunset and sandy colours feature heavily. The app will reflect this.
-
-Colours needed for:
-
-- Titles
-- subtitles
-- Body text - black
-- Backgrounds
-
-![SGS site colours](/assets/images/SGS-colours.png)
-
-Colours needed for gift guide specifically: same colours but add in some contrasting and highlighting.
-
-![bubblegum-blue.png](/assets/images/bubblegum-blue.png)
-
-![mermaid-lagoon-palette.png](/assets/images/mermaid-lagoon-palette.png)
-
----
-
-### Fonts
-
-#### Legibility, accessibility, contrast
-
-I wanted to ensure readability and consistency throughout the app, maintaining a balance between style and readability. I also wanted to ensure that the fonts complement the beach theme of the main site effectively.
-
-- GoogleFonts
-- FontAwesome?
-- [ezGIF](https://ezgif.com/) - Creating GIFs for the README
-- [Techsini Mockup](https://techsini.com/multi-mockup/) - Creating the mockup images for the README
-- [Favicon.io](https://favicon.io/favicon-converter/) - Used to create and add the favicon to the browser tab
-
-Colour palettes from [canva.com/colours](http://canva.com/colours)
-
-1. [Six Hands Rough](https://www.onlinewebfonts.com/download/f6db36f5c636e2adf912702a4ad751ec) font for headings
-
-2. **Roboto Slab:** To provide a contrast to the script font and give a modern and lcean look, I'll use this for subheadings.
-
-3. **Montserrat:** Montserrat is clean and easy to read. I will use this for body text e.g. product description.
-
-4. **Dancing Script:** Dancing Script is another script font, but it's a bit more formal than Pacifico. It can work well for adding an elegant touch to your beach-themed site.
-
-5. **Nunito:** Nunito is a rounded sans-serif font that can be a good choice for body text. It's friendly and easy on the eyes.
-
-6. **Playfair Display:** If you want to add a touch of sophistication to your headings, Playfair Display is an elegant serif font that can work well in combination with script or sans-serif fonts.
+I have added ten products to the JavaScript array to show the tool working. More products would give better results, however keeping the guide updated by directly using the products in the WooCommerce database would be a far more efficient and useful way to do this. This is beyond the scope of this project.
 
 ---
 
@@ -456,6 +405,10 @@ Colour palettes from [canva.com/colours](http://canva.com/colours)
 The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
 
 With all the options available, there are over 500 possible combinations a user could pick. These cannot be coded in by hand. They would also require a lot more products to be available. This would be best done by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. If there is no, or only one, suitable product, another 'bestseller' according to the database could be inserted. Linking to and querying this database is beyond the scope of this project.
+
+### Submit button issue
+
+If the submit button was clicked more than once, the same results stacked up on top of each other. I went back and coded the button to clear the results area when it was clicked, before populating it with the latest results.
 
 ### Clearing the form and results area
 
@@ -471,7 +424,7 @@ Because the product details are in a static array, they would be hard to update,
 
 The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/
 
-The gift guide will eventually be live on the [Surfergrl.co.uk](http://surfergrl.co.uk) website
+The gift guide will eventually be live on the [Surfergrl.co.uk](http://surfergrl.co.uk) website on a dedicated page https://surfergrl.co.uk/gift-guide
 
 Within the main site I looked at presenting the Guide
 
@@ -486,9 +439,9 @@ I wanted deployment to be
 - Easy to update when necessary
 - Fitted in with WordPress without too much extra code or workarounds which might compromise UX
 
-This work was beyond the scope of the current project, and will be implemented as a next stage.
+This work was beyond the scope of the current project, and will be implemented as a next stage. The HTML is within the page on the WordPress site but the JavaScript file has not been added.
 
-This means that the gift guide's links to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab. The idea is to have the Guide embedded in the website so links will go to products within the same window, but you can still get back to your results easily.
+This means that the gift guide's links to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab. The idea is to have the Guide embedded in the main website so links will go to products within the same window, but you can still get back to your results easily.
 
 ---
 
@@ -496,13 +449,18 @@ This means that the gift guide's links to products take you out of the Guide its
 
 [Top](#table-of-contents)
 
-CSS Scan for stylised buttons
-GoogleFonts
+- [CSS Scan]("https://getcssscan.com/css-buttons-examples") - CSS Scan for stylised buttons
+- GoogleFonts
+- [Techsini Mockup](https://techsini.com/multi-mockup/) - Creating the mockup images for the README
+- [Vecteezy](https://www.vecteezy.com) - Yin Yang symbol for Favicon from Vecteezy.com
+- [Favicon.io](https://favicon.io/favicon-converter/) - Used to create and add the favicon to the browser tab
 
 ## Thanks to
 
 Mentor Richard Wells
 
 CI tutors Oisin and Gemma
+
+Kera Cudmore's [ReadMe resources]("https://github.com/kera-cudmore/readme-examples")
 
 ---
