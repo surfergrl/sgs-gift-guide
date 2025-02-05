@@ -1,5 +1,7 @@
 # Validation and Testing
 
+![Mockup](/assets/images/mockup.png)
+
 https://surfergrl.github.io/sgs-gift-guide/
 
 ## HTML run through W3C validator Errors on index.html:
@@ -60,6 +62,22 @@ Works as expected on:
 
 I used DevTools to check the appearance of the page for screen sizes 320px and above, and the media queries work as expected to create the intended layout.
 
+### Screenshots
+
+#### Minimum screen width tested for was 320px; the app works as expected.
+
+![320 wide](/assets/images/320-wide.png)
+
+![320 wide results](/assets/images/320-wide-results.png)
+
+#### Showing the app on screens over 800px wide.
+
+![800 plus](/assets/images/800-plus.png)
+
+#### Tested using DevTools for big screens; content stays centered as required.
+
+![Big screens](/assets/images/3250-wide.png)
+
 ### Testing against user stories
 
 #### Site owner's goals:
@@ -71,21 +89,14 @@ I used DevTools to check the appearance of the page for screen sizes 320px and a
 - To show that the brand is a polished, quality, reliable entity
 - Increase revenue
 
-| **Feature**                     | **Action**                                                                    | **Expected Result**                                     | **Actual Result**                                                       |
-| ------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Short intro • Welsh and English | Read short intro, click on 'Contact us' link. Read more detail on Events page | Find information about the club and its events          | Works as expected                                                       |
-| Nav Bar - Events Link           | Click on home on nav, read more detail on About Us page                       | Find information about the club                         | Works as expected                                                       |
-| Contact Us link                 | Click the link in the nav bar, fill in the form                               | Contact for more info                                   | Works as expected                                                       |
-| Social media buttons            | Click buttons on footer, see more info                                        | Find information about the club/members                 | Works as expected                                                       |
-| Events                          | Click on Events on nav bar, read more detail                                  | Find information about coach qualifications, costs etc. | Basic information only; more content as club develops constitution etc. |
-
-#### Customer profiles:
-
-- Spouse/partner with no idea what their partner would like
-- Previous visitor to shop or online presence, now at the website and curious
-- Bride searching for bridesmaid gifts
-- Christmas shopper in a hurry with limited idea of what someone might want
-- Undecided purchaser who has seen items but isn't sure what they want
+| **Goal**                         | **Feature**                     | **Expected Result**               | **Actual Result**                                    |
+| -------------------------------- | ------------------------------- | --------------------------------- | ---------------------------------------------------- |
+| Capture buyers                   | Attractive design               | View products with photos         | Works as expected                                    |
+| Showcase products                | Results area                    | Results shows at least 2 products | Works as expected; more products needed              |
+| Customers learn more about brand | Results shows products          | Shows products                    | Works but customer must view main site for full info |
+| Fun                              | Interactive quiz                | Easy to see results               | As expected                                          |
+| Confidence in brand              | Direction to main site          | Use full features of main site    | As expected                                          |
+| Increase revenue ££              | Results area showcases products | More products sold                | To be seen!                                          |
 
 #### Customer goals:
 
@@ -99,30 +110,54 @@ I used DevTools to check the appearance of the page for screen sizes 320px and a
 - Be confident that the website is genuine and sells quality products
 - Be able to see more details then buy quickly and easily
 
-| **Feature**               | **Action**                       | **Expected Result**         | **Actual Result** |
-| ------------------------- | -------------------------------- | --------------------------- | ----------------- |
-| Three event info sections | Read event information           | See event information       | Works as expected |
-| Intro section             | Read intro to club on index page | See information bilingually | Works as expected |
-| Contact form              | Contact the club                 | Contact the club            | Works as expected |
-| Email button on footer    | Click to email                   | Blank email opens           | Works as expected |
+| **Goal**                      | **Feature**                   | **Expected Result**            | **Actual Result**                                    |
+| ----------------------------- | ----------------------------- | ------------------------------ | ---------------------------------------------------- |
+| Find suitable gift            | 5 questions                   | See products                   | Works as expected                                    |
+| Narrow by budget              | One question to define budget | Narrow down results            | Works as expected; more products needed              |
+| Try again for new suggestions | Click Reset                   | Clears the form                | Works as expected                                    |
+| See more information and buy  | Click See More                | Product page opens in new tab  | Customer can buy                                     |
+| Buy immediately               | Add to Cart button            | Not yet implemented            | Customer must view full product page                 |
+| Learn more about brand        | Results shows products        | Shows products                 | Works but customer must view main site for full info |
+| Achieve goal quickly          | Short clear form              | Two products shown at least    | As expected                                          |
+| Confidence                    | Direction to main site        | Use full features of main site | As expected                                          |
 
 #### Testing in the wild
 
-Two people tested the app for me, on a MacBook Pro and an iPhone 14.
-
-They were broadly positive about the gift guide itself.
-Comments made mostly related to the main site once they were directed into that via a result from the form.
-Comment re. 'see more' opening in the same page will be addressed when the gift guide is in its final home.
+- Two people tested the app, on a MacBook Pro and an iPhone 14.
+- They were broadly positive about the gift guide itself.
+- Comments made mostly related to the main site once they were directed into that via a result from the form.
+- Both users found the transition from the app to the main site seamless, and assumed I was asking for the whole site to be tested. I feel this shows that the Guide's aesthetic fits the main site well.
+- Comment re. 'see more' opening in the same page will be addressed when the gift guide is in its final home. Currently I have products opening in a new tab by design, so that the user can easily go back to the Guide, as the Guide does not work properly on the main site (but will soon).
 
 ![User test 1](/assets/images/usertest1.png)
 
 ![User test 2](/assets/images/usertest2.png)
 
+### Full Testing
+
+Each interactive part of the site was tested against the design
+
+| **Element**         | **Function**           | **Action**             | **Result**                   |
+| ------------------- | ---------------------- | ---------------------- | ---------------------------- |
+| Question 1          | Dropdown               | Select category        | Works as expected            |
+| Question 2          | Dropdown               | Select budget          | Works as expected            |
+| Question 3          | Dropdown               | Select theme           | Works as expected            |
+| Question 4          | Dropdown               | Select style           | Works as expected            |
+| Question 5          | Dropdown               | Select gender          | Works as expected            |
+| Submit              | Click to run app       | Shows products         | Works as expected            |
+| Reset               | Click to clear form    | Clear form             | Works as expected            |
+| Click product image | Link to product page   | View full product page | Works as expected            |
+| Click See More      | Link to product page   | View full product page | Works as expected            |
+| Click Home          | Link to Surfergrl home | View Home page         | Works as expected - see note |
+
+When the link in the footer is clicked, it currently throws a 404 page not found error.
+The link will work correctly once the Guide is embedded in the Surfergrl site, so I want to leave this as it is for now.
+
 ### Conclusion
 
-The user stories are broadly matched by the functionality of the site, but some areas do not yet have enough information. As the club develops this information will be created and can be uploaded as relevant. A new page for policies and coach information would be the next step, as well as a gallery for more sponsor visibility and exposure of club members and successful events.
-
-For now, the site is able to give the basic information users require, and allows them to contact the club with any further questions. Future developments will build on this foundation.
+The user stories are broadly matched by the functionality of the app.
+More products are needed to increase the appeal - see the Future Developments section of the main README.
+The app is working as expected and when ported into the WordPress site will be a fun and useful feature for customers that will hopefully increase site revenue.
 
 ---
 
@@ -144,7 +179,7 @@ When the Submit button is clicked, the innerHTML for the results area loses its 
 
 #### Updating products
 
-Because the product details are in an array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
+Because the product details are in an array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Also, many items are on-offs, so there are a lot of updates to stock on the site. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
 
 Please see Future Deployment in the main [README file](README.md) for more information.
 

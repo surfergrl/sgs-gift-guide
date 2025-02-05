@@ -365,11 +365,9 @@ The app is contained on one page. It is designed to be deployed to a WordPress p
 
 ### Page structure
 
-Banner and logo - for GitHub Pages deployment; will be removed on WordPress page. Does not contain any navigation options for this reason.
+#### Banner and logo - for GitHub Pages deployment; will be removed on WordPress page. Does not contain any navigation options for this reason.
 
-![SGS logo](/assets/images/SGS-logo.png)
-
-Title and tagline in H1.
+#### Title and tagline in H1.
 
 #### Questions
 
@@ -383,12 +381,11 @@ The guide will consist of five questions with several answer options based on av
 
 Note that size is not relevant here as most products are one-size or adjustable. Items which need sizing will show options on the main item page. To avoid complicating the tool asking for sizes, customisations etc., I will let the main pages take care of this aspect.
 
-Submit button - Clear any previous results. Submit chosen options.
+#### Submit button - Clear any previous results. Submit chosen options.
+
 Reset button - clear the chosen options back to defaults
 
-Footer - for the gift guide as currently deployed. Will be removed when the HTML sits within a WordPress page which already contains navigation elements. Links to Home page of surfergrl.co.uk.
-
----
+#### Footer - for the gift guide as currently deployed. Will be removed when the HTML sits within a WordPress page which already contains navigation elements. Links to Home page of surfergrl.co.uk.
 
 #### Results:
 
@@ -418,8 +415,6 @@ I added ten products to the JavaScript array to show the tool working. More prod
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [WordPress](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-t4XAqtyAAxUxXEEAHbhkBBQQFnoECBwQAQ&url=https%3A%2F%2Fen-gb.wordpress.org%2F&usg=AOvVaw3_Yh8Jp55SAR0s1nidR2lh&opi=89978449)
-
----
 
 ---
 
@@ -499,7 +494,7 @@ This means that the gift guide's links (on GitHub Pages) to products take you ou
 - [CSS Scan]("https://getcssscan.com/css-buttons-examples") - CSS Scan for stylised buttons
 - GoogleFonts
 - [Techsini Mockup](https://techsini.com/multi-mockup/) - Creating the mockup images for the README
-- [Vecteezy](https://www.vecteezy.com) - Yin Yang symbol for Favicon from Vecteezy.com
+- [Vecteezy](https://www.vecteezy.com) - Yin Yang symbol for favicon from Vecteezy.com
 - [Favicon.io](https://favicon.io/favicon-converter/) - Used to create and add the favicon to the browser tab
 
 ## Thanks to
@@ -508,7 +503,11 @@ Mentor: [Richard Wells](https://github.com/D0nni387)
 
 CI tutors Oisin and Gemma
 
-Kera Cudmore's [ReadMe resources]("https://github.com/kera-cudmore/readme-examples")
+Kera Cudmore's [ReadMe resources](https://github.com/kera-cudmore/readme-examples)
+
+Testers Paul and Paddy
+
+---
 
 ![seaglass](/assets/images/seaglass-finds.jpeg)
 
