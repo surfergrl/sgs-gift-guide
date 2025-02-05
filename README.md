@@ -2,28 +2,44 @@
 
 By Kat Dawes
 
+<img src="assets/images/mockup.png">
+
+---
+
+![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/andrewdempsey2018/Found-In-Translation?color=green&style=for-the-badge)
+
 ---
 
 This is the documentation for my web application **Surfergirl's Seaglass Jewellery Gift Guide**.
+The deployed application can be found here: https://surfergrl.github.io/sgs-gift-guide/
 
-It has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
+Please note that this application is designed to appear on the surfergrl.co.uk site; it is not yet living in its final destination. See the Deployment section for more details.
 
-#### Table of Contents
+The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
 
-- Project Development & Planning
-- Project Goals
-- Research
-- User Stories
-- Content
-- Design, Layout & Structure
-- Colours
-- Technologies Used
-- Features
-- Current Website
-- JavaScript Functionality
-- Deployment
-- Testing & Bugs
-- Credits
+## Table of Contents
+
+- [Project Development & Planning](#project-development--planning)
+  - [Background](#background)
+  - [Project Goals](#project-goals)
+  - [User Stories](#user-stories)
+  - [Market Review](#market-review)
+- [Scope and Structure](#scope--structure-of-the-site)
+  - [Scope](#scope)
+  - [Structure](#navigation-and-layout--structure)
+  - [JavaScript functionality](#javascript)
+  - [Future developments](#future-developments)
+- [Wireframes – Skeleton](#wireframes-skeleton-plane)
+- [Design & Layout](#design-layout-colours)
+  - [Colours and fonts](#colours)
+- [Technologies Used](#technologies-used)
+- [Validation & Testing](#validation-and-testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Thanks](#thanks-to)
 
 #### Technologies Used
 
@@ -36,13 +52,16 @@ It has been built using HTML5, CSS3 & JavaScript and is my second project for Co
 
 ## Project Development and Planning
 
----
+### Background
 
-### Project Details & Goals
+The Surfergirl's Seaglass website sells silver and seaglass jewellery. It is built with WordPress and WooCommerce.
 
-- Title: Surfergirl's Seaglass Jewellery Gift Guide.
-- Purpose: To provide a quiz-type interface to guide the customer to the perfect piece of jewellery.
+The purpose of the Gift Guide application is to provide a quiz-type interface to guide the customer to choosing the perfect piece of jewellery.
+
+### Project Goals
+
 - External user's goal: To gather suggestions for jewellery for themselves or a gift for someone else.
+
 - Site owner's goals:
   - To capture the buyer who is not sure what they want
   - To showcase products and entice buyers to purchase with confidence
@@ -50,19 +69,32 @@ It has been built using HTML5, CSS3 & JavaScript and is my second project for Co
   - Provide a fun way of browsing through items
   - To show that the brand is a polished, quality, reliable entity
   - Increase revenue
-- Required skills: JavaScript, HTML, CSS. Other skills: image manipulation, WordPress, GitHub.
 
 ---
 
 ### User Stories
 
-The user stories are based on previous market research in the field. People who came to the Gallery shop locally or to craft markets and were not sure what to buy were often one of these type of customer:
+The user stories are based on previous market research in the field – meeting customers at local stockists and craft markets, and contact via email/social media accounts of the business.
 
-- Husband/partner with no idea
+#### Customer profiles:
+
+- Spouse/partner with no idea what their partner would like
 - Previous visitor to shop or online presence, now at the website and curious
 - Bride searching for bridesmaid gifts
 - Christmas shopper in a hurry with limited idea of what someone might want
 - Undecided purchaser who has seen items but isn't sure what they want
+
+#### Customer goals:
+
+- Be led to suitable product/s for the giftee (or themselves)
+- Select according to their budget
+- Get a better idea of what the brand is about
+- Be confident that they have selected something suitable
+- Be able to backtrack if they want to see something else
+- Achieve their goal quickly and easily if required
+- Browse products in a unique, interesting way
+- Be confident that the website is genuine and sells quality products
+- Be able to see more details then buy quickly and easily
 
 ---
 
@@ -72,17 +104,20 @@ The user stories are based on previous market research in the field. People who 
 
 I looked at various jewellery sites to see how they use interactivity to encourage browers to buy. I was interested in how the options were presented, the user journey through them and the choices available to save/download/share results. I looked at the overall design in terms of ease of use and attractiveness.
 
-### Pandora
+<details><summary>Pandora</summary>
 
 ![pandora.png](/assets/images/pandora.png)
 
 Has [The Perfect Gift Finder](https://uk.pandora.net/en/gifts/featured-gifting/the-perfect-gift-finder-landing/#navigation) which looks to be an interactive tool, but at the time of testing it did not work.
 
-It also has [GiftMe - Customised by Me](https://uk.pandora.net/en/discover/stories/pandora-me-for-every-me/build-me/?useParentCtaStyle=true&defaultButtonStyle=ci-button-text-black-pink-underlined&customClass=ci-m52-explore-module-btn&customSize=small&trackingData=icid=e:pme:plp:explore:BUILDME&parentCtaStyle=ci-button-filled-white#icid=e:pme:plp:explore:BUILDME) which allows customer to build the ideal gift for a BFF. I found this had very limited functionality; a user chooses from earrings/bracelets/rings and it takes you to the section on the page where they are. I would like something much more interactive and personalised.
+It also has [GiftMe - Customised by Me](https://uk.pandora.net/en/discover/stories/pandora-me-for-every-me/build-me/?useParentCtaStyle=true&defaultButtonStyle=ci-button-text-black-pink-underlined&customClass=ci-m52-explore-module-btn&customSize=small&trackingData=icid=e:pme:plp:explore:BUILDME&parentCtaStyle=ci-button-filled-white#icid=e:pme:plp:explore:BUILDME) which allows customer to build the ideal gift for a BFF. I found this had very limited functionality; a user chooses from earrings/bracelets/rings and it takes you to the section on the page where they are. I planned something much more interactive and personalised.
 
-### Cartier:
+</details>
+
+<details><summary>Cartier</summary>
 
 ![cartier.png](/assets/images/cartier.png)
+
 Offers a [Gifts](https://www.cartier.com/en-gb/collections/gifts) page with links to category pages:
 
 - The Most Iconic Cartier Gifts
@@ -92,9 +127,11 @@ Offers a [Gifts](https://www.cartier.com/en-gb/collections/gifts) page with link
 
 As an immeditely recognisable luxury brand, they provide easy ways to get to the most iconic items such as the Love bracelet and the bestselling fragrance set.
 
-I like the idea of offering a cheaper option (here £100+) as well as the main items (£7,000 bracelets etc.) and will use this in my design.
+I liked the idea of offering a cheaper option (here £100+) as well as the main items (£7,000 bracelets etc.) and have used this in my design.
 
-### Clogau Gold
+</details>
+
+<details><summary>Clogau Gold</summary>
 
 ![clog.png](/assets/images/clog.png)
 
@@ -111,23 +148,25 @@ _Notes:_
 - Option to view the finished design.
 - No way to move backwards through the choices.
 
-### Tiffany
+</details>
+
+<details><summary>Tiffany</summary>
+
+![thomas-sabo.png](/assets/images/tiffany.png)
+
+https://www.tiffany.co.uk/gifts/shop/gifts-for-her/
 
 Doesn't offer anything interactive.
-Offers categories to explore:
+Offers categories to explore such as those shown above in the 'Gifts for Her' section.
 
-- Her
-- Him
-- Baby
-- Home
-- Couple
-- Personalised
-- Graduates
+</details>
 
-### Thomas Sabo
+<details><summary>Thomas Sabo</summary>
 
 ![thomas-sabo.png](/assets/images/thomas-sabo.png)
+
 https://www.thomassabo.com/GB/en_GB/charms-creator
+
 **Charm Club**
 
 - Attractive interface
@@ -142,6 +181,10 @@ https://www.thomassabo.com/GB/en_GB/charms-creator
 ![sabo-charmchoice.png](/assets/images/sabo-charmchoice.png)
 (Target group = choice of For Him or For Her.)
 
+I particularly liked the insertion of a random product or two to showcase something the user might not have considered looking at on their own.
+
+</details>
+
 ### Market research general notes:
 
 - Gift Guides were often just pages of products in no particular order
@@ -151,37 +194,18 @@ https://www.thomassabo.com/GB/en_GB/charms-creator
 - Those that offered choices had about 3 or 4 questions before presenting options.
 - Thomas Sabo and Pandora Me both offered visually appealing landing pages with a title, subtitle and a couple of lines to entice a user in.
 
-In conclusion, I cannot find a jewellery website which does what I am planning to do, but there are some elements that I can use to plan my functionality.
+In conclusion, I could not find a jewellery website which did what I planned to do, but there are some elements that I was able to use to plan my functionality.
 
-_Specifically, I want:_
+_Specifically, I wanted:_
 
 - Attractive interface and landing page to entice users (title, subtitle, image, explanation of purpose)
 - Clear purpose to the tool
-- Four or five questions
-- Options to save/download/share
-- Ability to move backwards and forwards to change choices
+- Four or five questions - ease of use, speed
+- Options to save/download/share - these have not been implemented and are for future development
+- Ability to move backwards and forwards to change choices - reset the form and try again
 
-I also looked at interactive gift guides for other products: https://blog.dot.vu/holiday-gift-guide-examples/ A digital tool that guides your audience toward the products that  would make a perfect gift will increase orders and, thus, sales.
-
----
-
-## Deployment
-
-The gift guide will be live on the [Surfergrl.co.uk](http://surfergrl.co.uk) website
-
-Within the main site I looked at presenting the Guide
-
-- On a whole new page within an iFrame
-- As a pop-up overlaid onto the shop Home page.
-- As a pop-up available from any page.
-
-I want deployment to be
-
-- Easy for me
-- Easily accessible for the user
-- Easy to update when necessary
-- Fits in with WordPress without too much extra code or workarounds which might compromise UX
-- An iFrame seems to be the only way to do this without having to edit WordPress templates or install plugins.
+I also looked at interactive gift guides for other products: https://blog.dot.vu/holiday-gift-guide-examples/
+'A digital tool that guides your audience toward the products that would make a perfect gift will increase orders.'
 
 ---
 
@@ -189,7 +213,7 @@ I want deployment to be
 
 The site for Surfergirl's Seaglass already exists at [www.surfergrl.co.uk](http://www.surfergrl.co.uk) and sells silver and seaglass jewellery on the themes of the ocean and seashore. (Seaglass is pieces of glass tumbled smooth and opaque by the ocean.) The site is built on WordPress with WooCommerce.
 
-The site is basic at present and includes:
+The site is basic includes:
 
 - About information - brand story
 - A personal blog on aspects of jewellery, surfing, ocean-side living, beauty and more.
@@ -427,10 +451,6 @@ Colour palettes from [canva.com/colours](http://canva.com/colours)
 
 # Bugs and issues
 
-### Deployment Note
-
-As currently deployed, the site is marooned on its own page. It has been designed to sit within the existing surfergrl.co.uk site, where it will eventually move to.
-
 ### Product combinations
 
 The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
@@ -447,9 +467,39 @@ Because the product details are in a static array, they would be hard to update,
 
 ---
 
+## Deployment
+
+The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/
+
+The gift guide will eventually be live on the [Surfergrl.co.uk](http://surfergrl.co.uk) website
+
+Within the main site I looked at presenting the Guide
+
+- On a whole new page within an iFrame
+- As a pop-up overlaid onto the shop Home page.
+- As a pop-up available from any page.
+
+I wanted deployment to be
+
+- Easy for me
+- Easily accessible for the user
+- Easy to update when necessary
+- Fitted in with WordPress without too much extra code or workarounds which might compromise UX
+
+This work was beyond the scope of the current project, and will be implemented as a next stage.
+
+This means that the gift guide's links to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab. The idea is to have the Guide embedded in the website so links will go to products within the same window, but you can still get back to your results easily.
+
+---
+
 ## Credits
 
-https://github.com/emmahewson/mp2_travel_quiz ReadMe guidance
+[Top](#table-of-contents)
+
+CSS Scan for stylised buttons
+GoogleFonts
+
+## Thanks to
 
 Mentor Richard Wells
 
