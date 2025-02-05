@@ -6,10 +6,10 @@ By Kat Dawes
 
 ---
 
-![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/andrewdempsey2018/Found-In-Translation?color=green&style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/surfergrl/sgs-gift-guide)
+![GitHub last commit](https://img.shields.io/github/last-commit/surfergrl/sgs-gift-guide)
+![GitHub language count](https://img.shields.io/github/languages/count/surfergrl/sgs-gift-guide)
+![GitHub top language](https://img.shields.io/github/languages/top/surfergrl/sgs-gift-guide?color=red)
 
 ---
 
