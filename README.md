@@ -426,31 +426,11 @@ I added ten products to the JavaScript array to show the tool working. More prod
 
 ## Validation and Testing
 
-[Top](#table-of-contents)
-
----
-
-## Bugs and issues
+## Bugs
 
 [Top](#table-of-contents)
 
-#### Product combinations
-
-The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
-
-With all the options available, there are over 500 possible combinations a user could pick. These cannot be coded in by hand. They would also require a lot more products to be available. This would be best done by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. If there is no, or only one, suitable product, another 'bestseller' according to the database could be inserted. Linking to and querying this database is beyond the scope of this project.
-
-#### Submit button issue
-
-If the submit button was clicked more than once, the same results stacked up on top of each other. I went back and coded the button to clear the results area when it was clicked, before populating it with the latest results.
-
-#### Clearing the form and results area
-
-When the Submit button is clicked, the innerHTML for the results area loses its heading. The Reset button preserves the heading, but once Submit has been clicked, it's gone until there is a page refresh. I would look at this with more time.
-
-#### Updating products
-
-Because the product details are in an array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
+Please see the [Validation and Testing file](testing.md)
 
 ---
 

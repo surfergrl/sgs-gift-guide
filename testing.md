@@ -34,6 +34,15 @@ Valid CSS
 These warnings refer to external vendor CSS which is not in my control.
 The CSS still validates.
 
+## Wave Accessibility Tool
+
+![Wave report](/assets/images/wave-valid.png)
+
+- Select elements in my form did not have labels. Fixed.
+- Low contrast on Submit and Reset buttons. Fixed.
+- Warning of a skipped header level. Only heading in the Footer is a H4; left as is.
+- Alert for no page regions. There is header,footer and fieldset. The app is designed to run inside another page with all of this information so this works as expected here.
+
 ## Tested on
 
 - Chrome Version 131.0.6778.265 renders as expected
@@ -52,17 +61,14 @@ I used DevTools to check the appearance of the page for screen sizes 320px and a
 
 ### Testing against user stories
 
-- **_New potential club member_** (any age/level) who wants to see what's on offer
-  - Information on events and how to join
-  - Background info e.g. who runs it, is it safe, qualifications
-  - Membership costs
-- Parents of kids who are members/want to be members - again to see what's on offer
-  - As above
+#### Site owner's goals:
 
-<details><summary>Screenshots of Home and Events pages</summary>
-<img src="assets/images/readme/events-screenshot.png">
-<img src="assets/images/readme/croeso-screenshot.png">
-</details>
+- To capture the buyer who is not sure what they want
+- To showcase products and entice buyers to purchase with confidence
+- Have potential customers become familiar with the products on offer
+- Provide a fun way of browsing through items
+- To show that the brand is a polished, quality, reliable entity
+- Increase revenue
 
 | **Feature**                     | **Action**                                                                    | **Expected Result**                                     | **Actual Result**                                                       |
 | ------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -72,48 +78,25 @@ I used DevTools to check the appearance of the page for screen sizes 320px and a
 | Social media buttons            | Click buttons on footer, see more info                                        | Find information about the club/members                 | Works as expected                                                       |
 | Events                          | Click on Events on nav bar, read more detail                                  | Find information about coach qualifications, costs etc. | Basic information only; more content as club develops constitution etc. |
 
-- **_Official bodies_** - governing bodies e.g. Welsh Surfing Federation or insurance company, funding organisations e.g. Council
-  - In the future, information on policies, member qualifications to run events
+#### Customer profiles:
 
-This content is not yet available from the club; it will be supplied and loaded in the future.
+- Spouse/partner with no idea what their partner would like
+- Previous visitor to shop or online presence, now at the website and curious
+- Bride searching for bridesmaid gifts
+- Christmas shopper in a hurry with limited idea of what someone might want
+- Undecided purchaser who has seen items but isn't sure what they want
 
-- **_Sponsors_**
-  - Space for their logo
-  - Images of club events with logos/banners etc.
+#### Customer goals:
 
-| **Feature**                     | **Action**                                    | **Expected Result**           | **Actual Result**   |
-| ------------------------------- | --------------------------------------------- | ----------------------------- | ------------------- |
-| Clickable logos                 | Click to open the sponsor's site in a new tab | See the sponsor's information | Works as expected   |
-| More images - not yet available | See club images using sponsor logos           | See the sponsor's information | Not yet implemented |
-
-<details><summary>Screenshot - Sponsors area</summary>
-Appears on all pages above the footer. 
-<img src="assets/images/readme/sponnos-screenshot.png">
-</details>
-
-- **_Current and potential volunteers/coaches_**
-  - Info on dates and times of events
-- Visitors who might not become a member but might book a lesson/kids' session/other event
-  - Event information for visitors
-
-<details><summary>Screenshot of Events page</summary>
-<img src="assets/images/readme/events-screenshot.png">
-</details>
-
-| **Feature**               | **Action**             | **Expected Result**   | **Actual Result** |
-| ------------------------- | ---------------------- | --------------------- | ----------------- |
-| Three event info sections | Read event information | See event information | Works as expected |
-
-- **_Current club members_**
-  - Event information
-  - How to get in touch
-  - Background of club and members
-
-<details><summary>Screenshots of events, welcome intro and contact form </summary>
-<img src="assets/images/readme/events-screenshot.png">
-<img src="assets/images/readme/croeso-screenshot.png">
-<img src="assets/images/readme/contact-screenshot.png">
-</details>
+- Be led to suitable product/s for the giftee (or themselves)
+- Select according to their budget
+- Get a better idea of what the brand is about
+- Be confident that they have selected something suitable
+- Be able to backtrack if they want to see something else
+- Achieve their goal quickly and easily if required
+- Browse products in a unique, interesting way
+- Be confident that the website is genuine and sells quality products
+- Be able to see more details then buy quickly and easily
 
 | **Feature**               | **Action**                       | **Expected Result**         | **Actual Result** |
 | ------------------------- | -------------------------------- | --------------------------- | ----------------- |
@@ -122,10 +105,46 @@ Appears on all pages above the footer.
 | Contact form              | Contact the club                 | Contact the club            | Works as expected |
 | Email button on footer    | Click to email                   | Blank email opens           | Works as expected |
 
+#### Testing in the wild
+
+Two people tested the app for me, on a MacBook Pro and an iPhone 14.
+
+They were broadly positive about the gift guide itself.
+Comments made mostly related to the main site once they were directed into that via a result from the form.
+Comment re. 'see more' opening in the same page will be addressed when the gift guide is in its final home.
+
+![User test 1](/assets/images/usertest1.png)
+
+![User test 2](/assets/images/usertest2.png)
+
 ### Conclusion
 
 The user stories are broadly matched by the functionality of the site, but some areas do not yet have enough information. As the club develops this information will be created and can be uploaded as relevant. A new page for policies and coach information would be the next step, as well as a gallery for more sponsor visibility and exposure of club members and successful events.
 
 For now, the site is able to give the basic information users require, and allows them to contact the club with any further questions. Future developments will build on this foundation.
+
+---
+
+## Bugs and issues
+
+#### Product combinations
+
+The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
+
+With all the options available, there are over 500 possible combinations a user could pick. These cannot be coded in by hand. They would also require a lot more products to be available. This would be best done by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. If there is no, or only one, suitable product, another 'bestseller' according to the database could be inserted. Linking to and querying this database is beyond the scope of this project.
+
+#### Submit button issue
+
+If the submit button was clicked more than once, the same results stacked up on top of each other. I went back and coded the button to clear the results area when it was clicked, before populating it with the latest results.
+
+#### Clearing the form and results area
+
+When the Submit button is clicked, the innerHTML for the results area loses its heading. The Reset button preserves the heading, but once Submit has been clicked, it's gone until there is a page refresh. I would look at this with more time.
+
+#### Updating products
+
+Because the product details are in an array, they would be hard to update, especially for someone working on the site who cannot amend JavaScript with confidence. Again, the product list should be drawn from the WooCommerce products in the main site. For now, the application is not as flexible as it could be – this would be a great next step.
+
+Please see Future Deployment in the main [README file](README.md) for more information.
 
 ---
