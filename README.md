@@ -525,7 +525,7 @@ This means that the gift guide's links (on GitHub Pages) to products take you ou
 
 ## Thanks to
 
-Mentor Richard Wells
+Mentor: [Richard Wells](https://github.com/D0nni387)
 
 CI tutors Oisin and Gemma
 

@@ -1,40 +1,54 @@
 # Validation and Testing
 
-## HTML run through W3C validator
+https://surfergrl.github.io/sgs-gift-guide/
 
-Errors on index.html:
-![Validator](assets/images/readme/valid-index.png)
+## HTML run through W3C validator Errors on index.html:
 
-- Widths for the logo and main image had px specified when that was not needed. Deleted.
-- Section for the logo was changed into a div element at the validator's suggestion.
-- Span links were removed as not necessary.
-- Added closing tags for links in the correct place (footer).
-- The validator threw errors for the code copied from the CSS validator to display the 'Valid CSS' image. I deleted this altogether.
-  Now validates.
+![Validator](assets/images/validhtml.png)
 
-Similar errors showed up on the Contact Us and Events page as Index was used as a template for the other pages.
+- A rogue link in the meta tags was removed.
+- Trailing slashes in void tags were being added by Prettier e.g. <br /> . This threw an 'info' in the validator: 'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values'. I attempted configuring Prettier to stop this but was not successful as this affects other files badly e.g. Markdown files. It is a known issue with Prettier.
 
-### CSS run through Jigsaw
+Validates with no warnings.
 
-One error was found with text-wrap property given a pixels value; this was changed to 'wrap'.
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fsurfergrl.github.io%2Fsgs-gift-guide%2F)
+
+## CSS run through Jigsaw
+
+Valid CSS
+
+![Valid CSS](/assets/images/valid-css.png)
 
 <p>
-    <a href="http://jigsaw.w3.org/css-validator">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!" />
-    </a>
+  <a href="http://jigsaw.w3.org/css-validator">
+    <img
+      style="border: 0; width: 88px; height: 31px"
+      src="http://jigsaw.w3.org/css-validator/images/vcss"
+      alt="Valid CSS!"
+    />
+  </a>
 </p>
 
-### JavaScript tested on
+![Warnings](/assets/images/warn.png)
 
-### Tested on
+These warnings refer to external vendor CSS which is not in my control.
+The CSS still validates.
+
+## Tested on
 
 - Chrome Version 131.0.6778.265 renders as expected
 - Firefox 134.0.1 renders as expected
 - Safari 17.6 renders as expected
 - Microsoft Edge renders as expected
 - Internet Explorer via Edge IE mode poor (as expected)
+
+Works as expected on:
+
+- MacBook Air 13"
+- MacBook Pro 16"
+- iPhone ProMax 12, Google and Safari
+
+I used DevTools to check the appearance of the page for screen sizes 320px and above, and the media queries work as expected to create the intended layout.
 
 ### Testing against user stories
 
@@ -113,3 +127,5 @@ Appears on all pages above the footer.
 The user stories are broadly matched by the functionality of the site, but some areas do not yet have enough information. As the club develops this information will be created and can be uploaded as relevant. A new page for policies and coach information would be the next step, as well as a gallery for more sponsor visibility and exposure of club members and successful events.
 
 For now, the site is able to give the basic information users require, and allows them to contact the club with any further questions. Future developments will build on this foundation.
+
+---
