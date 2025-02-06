@@ -6,7 +6,7 @@ https://surfergrl.github.io/sgs-gift-guide/
 
 Testing was conducted on the above page.
 
-The guide is also functional at [Surfergrl.co.uk](https://surfergrl.co.uk/gift-guide) but work is not complete and it has not been fully tested.
+The guide is also functional at [Surfergrl.co.uk](https://surfergrl.co.uk/gift-guide); the code is the same.
 
 ## HTML run through W3C validator Errors on index.html:
 
@@ -85,7 +85,7 @@ I tested the app using Lighthouse from the Chrome Developer Tools panel.
 
 - I was happy with the results, but would like to optimise some of my image sizes to improve load time.
 - The header and logo took the most time to load.
-- In the final deployment, the header and logo will be taken care of by the WordPress page which hosts the application, so I am not too worried about this.
+- In the final deployment, the header and logo are taken care of by the WordPress page which hosts the application, so I am not too worried about this.
 
 ---
 
@@ -209,10 +209,10 @@ Because the product details are in an array, they would be hard to update, espec
 
 #### Final Deployment
 
-Some of the CSS does not work as expected in the final deployment to surfergrl.co.uk, e.g. elements are hanging off the fieldset's edge.
+Some of the CSS does not work as expected in the final deployment to surfergrl.co.uk.
 I would like the guide to spread out horizontally more on the page.
 This will be addressed with further development and testing.
 
-Please see Future Deployment in the main [README file](README.md) for more information.
+Please see Deployment in the main [README file](README.md) for more information.
 
 ---
