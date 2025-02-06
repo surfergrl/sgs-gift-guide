@@ -491,34 +491,44 @@ I wanted this final deployment to be
 - Easy to update when necessary
 - Fitted in with WordPress without too much extra code or workarounds which might compromise UX
 
-I decided to use the final option with code snippets, as recommended by [WordPress documentation]("https://wordpress.com/go/website-building/how-to-properly-add-javascript-to-wordpress-3-top-methods/"). The Guide has been successfully deployed using this method.
+I decided to use the final option with code snippets, as recommended by [WordPress documentation](https://wordpress.com/go/website-building/how-to-properly-add-javascript-to-wordpress-3-top-methods/) The Guide has been successfully deployed using this method.
 
 #### To use the Gift Guide on any WordPress site page, follow these steps.
 
 1. Log in to your WordPress installation and create a new Page
 2. Give the page a title etc. as normal
 3. Insert a Custom HTML block
+
    ![Custom HTML](/assets/images/wp-html.png)
-4. Cut and paste the html from [index.html]("https://github.com/surfergrl/sgs-gift-guide/blob/main/index.html") in the Guift Guide repo
+
+4. Cut and paste the html from [index.html](https://github.com/surfergrl/sgs-gift-guide/blob/main/index.html) in the Guift Guide repo
 5. Remove meta, header, logo and footer code as required; your WordPress template should provide most of this
 6. Change the headers, questions, answers and results area to suit your end use
 7. Save and check the page
-8. Install the ['WP Code']("https://wordpress.com/plugins/insert-headers-and-footers") plugin via the Plugins menu on your WordPress dashboard
+8. Install the [WP Code](https://wordpress.com/plugins/insert-headers-and-footers) plugin via the Plugins menu on your WordPress dashboard
+
    ![Custom HTML](/assets/images/wpcode.png)
+
 9. Add a new Custom Code snippet; choose Code Type CSS Snippet
-10. Cut and paste the CSS from the [Gift Guide repo]("https://github.com/surfergrl/sgs-gift-guide/blob/main/assets/css/styles.css")
+10. Cut and paste the CSS from the [Gift Guide repo](https://github.com/surfergrl/sgs-gift-guide/blob/main/assets/css/styles.css)
 11. Edit the CSS as required to fit your page/form aesthetics
 12. Activate and save the snippet (Don't forget to activate!)
+
     ![Custom HTML](/assets/images/wp-activate.png)
+
 13. Select Insert Method > Shortcode. Update the snippet (i.e. save it again)
+
     ![Custom HTML](/assets/images/wp-insert.png)
+
 14. Copy the shortcode
 15. Back on the WordPress page, insert a shortcode block
+
     ![Shortcode block](/assets/images/wp-shortcode.png)
-16. Paste the shortcode into the shorcode block and save the page
-17. Repeat creating a code snippet (Steps 9-16) for the [JavaScript file]("https://github.com/surfergrl/sgs-gift-guide/blob/main/script.js")
+
+16. Paste the shortcode into the shortcode block and save the page
+17. Repeat creating a code snippet (Steps 9-16) for the [JavaScript file](https://github.com/surfergrl/sgs-gift-guide/blob/main/script.js)
 18. Save and view the page
-19. Adjust the array in the JavaScript file to reflect your own products.
+19. Adjust the array in the JavaScript file to reflect your own products
 20. Adjust CSS as required via the Code Snippets editing panel.
 
 ---
@@ -527,7 +537,7 @@ I decided to use the final option with code snippets, as recommended by [WordPre
 
 [Top](#table-of-contents)
 
-- [CSS Scan]("https://getcssscan.com/css-buttons-examples") - CSS Scan for stylised buttons
+- [CSS Scan](https://getcssscan.com/css-buttons-examples) - CSS Scan for stylised buttons
 - GoogleFonts
 - [Techsini Mockup](https://techsini.com/multi-mockup/) - Creating the mockup images for the README
 - [Vecteezy](https://www.vecteezy.com) - Yin Yang symbol for favicon from Vecteezy.com
