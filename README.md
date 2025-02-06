@@ -15,10 +15,9 @@ This is the documentation for my web application **Surfergirl's Seaglass Jewelle
 
 The deployed application can be found here: https://surfergrl.github.io/sgs-gift-guide/
 
-Please note that this application is designed to live on the surfergrl.co.uk site here: https://surfergrl.co.uk/gift-guide
-It has been deployed here but this work is not complete. See [Deployment](#deployment) for more information.
+This application is designed to live inside a WordPress page. Its final home is on the surfergrl.co.uk site here: https://surfergrl.co.uk/gift-guide
 
-The Gift Guide application has been built using HTML5, CSS3 & JavaScript and is my second project for Code Institute’s Diploma in Web Application Development.
+The Gift Guide application has been built using HTML5, CSS3, JavaScript and WordPress and is my second project for Code Institute’s Diploma in Web Application Development.
 
 ## Table of Contents
 
@@ -256,8 +255,7 @@ The finished application allows all of these except the final one.
 - I would like to design a similar tool in the future to allow people to choose their options for personalised items e.g. stamped inscriptions, engraving and specific charms and colours of seaglass. For now if they end up with this option, it will send them to a contact form on the site so they can enquire personally. 5
 - A 'customers also bought' strip below the guide's results, with some more ideas. 5
 - 'Not sure' option, e.g. if the user doesn't know what style a giftee might prefer. The app will then present an option from any of the styles. 2
-
-For futher developments regarding embedding the app into the main Surfergrl site, please see the [Deployment](#deployment) section.
+- Some animation fade in and out of images. 5
 
 ---
 
@@ -353,7 +351,7 @@ Keeping the design clean and simple was also a priority both for UX and responsi
 
 [Top](#table-of-contents)
 
-The app is contained on one page. It is designed to be deployed to a WordPress page ['Gift Guide']("https://surfergrl.co.uk/gift-guide") which handles all the navigation and page elements for the main site. The page can be visited but the deployment is not complete - see [Deployment](#deployment) section.
+The app is contained on one page. It is designed to be deployed to a WordPress page ['Gift Guide']("https://surfergrl.co.uk/gift-guide") which handles all the navigation and page elements for the main site.
 
 ### JavaScript functionality
 
@@ -368,9 +366,11 @@ The app is contained on one page. It is designed to be deployed to a WordPress p
 
 ### Page structure
 
-#### Banner and logo - for GitHub Pages deployment; will be removed on WordPress page. Does not contain any navigation options for this reason.
+#### Banner and logo
 
-#### Title and tagline in H1.
+For GitHub Pages deployment; removed on WordPress page. Does not contain any navigation options for this reason.
+
+#### Title and tagline in H1
 
 #### Questions
 
@@ -388,7 +388,7 @@ Note that size is not relevant here as most products are one-size or adjustable.
 
 #### Reset button - clear the chosen options back to defaults
 
-#### Footer - for the gift guide as currently deployed.
+#### Footer
 
 - Links to Home page of surfergrl.co.uk.
 - This has been removed from the HTML which sits within the final WordPress page, as the page already contains navigation elements.
@@ -439,7 +439,9 @@ Please see the [Validation and Testing file](testing.md)
 
 [Top](#table-of-contents)
 
-#### GitHub Pages
+The application is deployed at https://surfergrl.github.io/sgs-gift-guide/
+
+### GitHub Pages Deployment
 
 The site was first deployed to GitHub pages. The steps to deploy are as follows:
 
@@ -469,12 +471,11 @@ You can clone the repository to use locally by following these steps:
 
 The project will now be cloned locally for you to use.
 
----
+### Deployment to a WordPress page
 
-#### Future deployment
-
-The application is currently deployed at https://surfergrl.github.io/sgs-gift-guide/
 The gift guide's final home is the [Surfergrl.co.uk](http://surfergrl.co.uk) website on a dedicated page https://surfergrl.co.uk/gift-guide
+
+![Gift Guide](/assets/images/wp-final.png)
 
 Within the main (Surfergrl) site I looked at presenting the Guide
 
@@ -483,20 +484,42 @@ Within the main (Surfergrl) site I looked at presenting the Guide
 - As a pop-up available from any page
 - Using a WordPress plugin [WP Code plugin](https://wpcode.com) and an HTML code block
 
-This final option was the one recommended by WordPress documentation.
-
-I wanted deployment to be
+I wanted this final deployment to be
 
 - Easy for me
-- Easily accessible for the user
+- Easily accessible for other website admin
 - Easy to update when necessary
 - Fitted in with WordPress without too much extra code or workarounds which might compromise UX
 
-This work was beyond the scope of the current project, but implementation has begun.
-The HTML is within the page on the WordPress site, and the JavaScript and CSS have been added as code snippets using the [WP Code plugin](https://wpcode.com). This create code snippets which can be inserted into the page using a shortcode block.
+I decided to use the final option with code snippets, as recommended by [WordPress documentation]("https://wordpress.com/go/website-building/how-to-properly-add-javascript-to-wordpress-3-top-methods/"). The Guide has been successfully deployed using this method.
 
-This means that the gift guide's links (on GitHub Pages) to products take you out of the Guide itself at present, and into the main site. You can return to the Guide tab as the links all open in a new tab.
-The same behaviour can be seen on the app on the Surfergrl site, and I prefer this because it keeps the Guide tab open so a user can easily return to the results.
+#### To use the Gift Guide on any WordPress site page, follow these steps.
+
+1. Log in to your WordPress installation and create a new Page
+2. Give the page a title etc. as normal
+3. Insert a Custom HTML block
+   ![Custom HTML](/assets/images/wp-html.png)
+4. Cut and paste the html from [index.html]("https://github.com/surfergrl/sgs-gift-guide/blob/main/index.html") in the Guift Guide repo
+5. Remove meta, header, logo and footer code as required; your WordPress template should provide most of this
+6. Change the headers, questions, answers and results area to suit your end use
+7. Save and check the page
+8. Install the ['WP Code']("https://wordpress.com/plugins/insert-headers-and-footers") plugin via the Plugins menu on your WordPress dashboard
+   ![Custom HTML](/assets/images/wpcode.png)
+9. Add a new Custom Code snippet; choose Code Type CSS Snippet
+10. Cut and paste the CSS from the [Gift Guide repo]("https://github.com/surfergrl/sgs-gift-guide/blob/main/assets/css/styles.css")
+11. Edit the CSS as required to fit your page/form aesthetics
+12. Activate and save the snippet (Don't forget to activate!)
+    ![Custom HTML](/assets/images/wp-activate.png)
+13. Select Insert Method > Shortcode. Update the snippet (i.e. save it again)
+    ![Custom HTML](/assets/images/wp-insert.png)
+14. Copy the shortcode
+15. Back on the WordPress page, insert a shortcode block
+    ![Shortcode block](/assets/images/wp-shortcode.png)
+16. Paste the shortcode into the shorcode block and save the page
+17. Repeat creating a code snippet (Steps 9-16) for the [JavaScript file]("https://github.com/surfergrl/sgs-gift-guide/blob/main/script.js")
+18. Save and view the page
+19. Adjust the array in the JavaScript file to reflect your own products.
+20. Adjust CSS as required via the Code Snippets editing panel.
 
 ---
 
