@@ -188,7 +188,6 @@ select {
 
 /* Footer to float center */
 #footer {
-    border: 2px solid red; /* temporary debug border */
         width: 100%;
         background-color: antiquewhite;
         max-width: 510px;
@@ -199,10 +198,10 @@ select {
         margin: 0 auto;
 }
 
-#footer h4 {
+/* #footer h4 {
     width: 100%;
     text-align: center;
-  }  
+  }   */
 
 /* Responsive design - two columns for larger screens */
 @media (min-width: 800px) {
