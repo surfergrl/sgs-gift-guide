@@ -3,7 +3,7 @@
 // This cuts down on amount of objects needed in array order to have most combos work
 // Eventually this info will be pulled from the existing WooCommerce database
 // This array wants to go in its own script file to keep things tidy and not so long
-var jewelleryItems = [
+const jewelleryItems = [
   {
     name: "Carreg Bica Pendant",
     category: ["Pendants"],
@@ -227,16 +227,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Filter items from the form (hoisting means this declaration is okay here)
+// code help via assessor - base price filtering on prices not categories
 function filterItems(formData) {
-  const filtered = jewelleryItems.filter(
-    // Using .includes for v.category and formData.category instead of strict equality ensures accurate filtering
+  const budgetRanges = {
+    "Lower (5-15)": { min: 5, max: 15 },
+    "Medium (15-30)": { min: 15, max: 30 },
+    "High (30+)": { min: 30, max: Infinity },
+  };
+
+  return jewelleryItems.filter(
     (v) =>
       v.category.includes(formData.category) &&
       v.gender.includes(formData.gender) &&
-      v.budget.includes(formData.budget) &&
       v.style.includes(formData.style) &&
-      v.theme.includes(formData.theme)
+      v.theme.includes(formData.theme) &&
+      v.price >= budgetRanges[formData.budget].min &&
+      v.price <= budgetRanges[formData.budget].max
   );
-  return filtered;
 }
