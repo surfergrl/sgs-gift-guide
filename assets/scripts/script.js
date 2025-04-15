@@ -182,34 +182,30 @@ const jewelleryItems = [
   },
 ];
 
-// create resultsElement globally for the 'no products match' message to appear in
-let resultsElement = document.getElementById("results");
-let resultsHeader = resultsElement.querySelector("h1");
+let form;
+let resultsElement;
+let headingElement;
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Now that the DOM is loaded, the form will be available
-  const form = document.querySelector("#questionForm");
+  form = document.querySelector("#questionForm");
+  resultsElement = document.getElementById("results");
+  headingElement = resultsElement.querySelector("h1");
 
-  // Clear the list in the results area if the Reset button is clicked
   form.addEventListener("reset", () => {
-    // Remove only the elements that were added dynamically
-    // i.e. the message about no products matching & the products shown
-    // But put the Your Suggestions heading back
+    const dynamicElements = resultsElement.querySelectorAll(".dynamic");
+    dynamicElements.forEach((el) => el.remove());
+
+    resultsHeader.style.display = "block"; // show again on reset
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
 
     resultsHeader.style.display = "block"; // Show the header again
   });
-});
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  // Remove only dynamic elements, preserving the header
-  const dynamicElements = resultsElement.querySelectorAll(".dynamic");
-  dynamicElements.forEach((el) => el.remove());
-
-  resultsHeader.style.display = "none";
 
   // Get the form data
   let formData = {
