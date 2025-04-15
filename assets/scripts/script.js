@@ -196,100 +196,99 @@ document.addEventListener("DOMContentLoaded", () => {
     // Remove only the elements that were added dynamically
     // i.e. the message about no products matching & the products shown
     // But put the Your Suggestions heading back
-      const dynamicElements = resultsElement.querySelectorAll(".dynamic");
-      dynamicElements.forEach((el) => el.remove());
-      
-      resultsHeader.style.display = "block"; // Show the header again
-    });
-  });
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // Remove only dynamic elements, preserving the header
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
 
-    resultsHeader.style.display = "none";
+    resultsHeader.style.display = "block"; // Show the header again
+  });
+});
 
-    // Get the form data
-    let formData = {
-      category: form.elements.category.value,
-      gender: form.elements.gender.value,
-      theme: form.elements.theme.value,
-      style: form.elements.style.value,
-      budget: form.elements.budget.value,
-    };
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // Remove only dynamic elements, preserving the header
+  const dynamicElements = resultsElement.querySelectorAll(".dynamic");
+  dynamicElements.forEach((el) => el.remove());
 
-    // Call the filterItems function with the formData
-    const filteredItems = filterItems(formData);
+  resultsHeader.style.display = "none";
 
-    // Create an unordered list to display the results
-    const ul = document.createElement("ul");
-    ul.classList.add("dynamic"); //tag so that can be removed on Reset event
+  // Get the form data
+  let formData = {
+    category: form.elements.category.value,
+    gender: form.elements.gender.value,
+    theme: form.elements.theme.value,
+    style: form.elements.style.value,
+    budget: form.elements.budget.value,
+  };
 
-    // Create elements for the list so they can be styled individually
-    filteredItems.forEach((item) => {
-      // Create the list item container
-      const li = document.createElement("li");
-      li.classList.add("dynamic"); //tag so that can be removed on Reset event
+  // Call the filterItems function with the formData
+  const filteredItems = filterItems(formData);
 
-      // Create and configure a strong element for the product name
-      const nameEl = document.createElement("strong");
-      nameEl.textContent = item.name;
-      nameEl.classList.add("product-name"); // Add a class for styling
+  // Create an unordered list to display the results
+  const ul = document.createElement("ul");
+  ul.classList.add("dynamic"); //tag so that can be removed on Reset event
 
-      // Create a line break element
-      const br1 = document.createElement("br");
+  // Create elements for the list so they can be styled individually
+  filteredItems.forEach((item) => {
+    // Create the list item container
+    const li = document.createElement("li");
+    li.classList.add("dynamic"); //tag so that can be removed on Reset event
 
-      // Create a span element for the price
-      const priceEl = document.createElement("span");
-      priceEl.textContent = `Price: £${item.price}`;
-      priceEl.classList.add("product-price");
+    // Create and configure a strong element for the product name
+    const nameEl = document.createElement("strong");
+    nameEl.textContent = item.name;
+    nameEl.classList.add("product-name"); // Add a class for styling
 
-      // Create a line break element
-      const br2 = document.createElement("br");
+    // Create a line break element
+    const br1 = document.createElement("br");
 
-      // Create link element for text link
-      const linkEl = document.createElement("a");
-      linkEl.href = item.link;
-      linkEl.textContent = "See More";
-      linkEl.target = "_blank";
-      linkEl.classList.add("product-link");
+    // Create a span element for the price
+    const priceEl = document.createElement("span");
+    priceEl.textContent = `Price: £${item.price}`;
+    priceEl.classList.add("product-price");
 
-      // Create the image element
-      const imgEl = document.createElement("img");
-      imgEl.src = item.image;
-      imgEl.alt = item.name;
-      imgEl.classList.add("product-image");
+    // Create a line break element
+    const br2 = document.createElement("br");
 
-      // Wrap the image inside a clickable link
-      const imgLinkEl = document.createElement("a");
-      imgLinkEl.href = item.link;
-      imgLinkEl.target = "_blank";
-      imgLinkEl.appendChild(imgEl);
+    // Create link element for text link
+    const linkEl = document.createElement("a");
+    linkEl.href = item.link;
+    linkEl.textContent = "See More";
+    linkEl.target = "_blank";
+    linkEl.classList.add("product-link");
 
-      // Create a p element
-      const br3 = document.createElement("p");
+    // Create the image element
+    const imgEl = document.createElement("img");
+    imgEl.src = item.image;
+    imgEl.alt = item.name;
+    imgEl.classList.add("product-image");
 
-      // Create a horizontal line element
-      const hr = document.createElement("hr");
+    // Wrap the image inside a clickable link
+    const imgLinkEl = document.createElement("a");
+    imgLinkEl.href = item.link;
+    imgLinkEl.target = "_blank";
+    imgLinkEl.appendChild(imgEl);
 
-      // Append all the elements to the list item
-      li.appendChild(nameEl);
-      li.appendChild(br1);
-      li.appendChild(priceEl);
-      li.appendChild(br2);
-      li.appendChild(imgLinkEl);
-      li.appendChild(linkEl);
-      li.appendChild(br3);
-      li.appendChild(hr);
+    // Create a p element
+    const br3 = document.createElement("p");
 
-      // Append the list item to the unordered list
-      ul.appendChild(li);
+    // Create a horizontal line element
+    const hr = document.createElement("hr");
 
-      // Append the unordered list to the results element
-      resultsElement.appendChild(ul);
-    });
+    // Append all the elements to the list item
+    li.appendChild(nameEl);
+    li.appendChild(br1);
+    li.appendChild(priceEl);
+    li.appendChild(br2);
+    li.appendChild(imgLinkEl);
+    li.appendChild(linkEl);
+    li.appendChild(br3);
+    li.appendChild(hr);
+
+    // Append the list item to the unordered list
+    ul.appendChild(li);
+
+    // Append the unordered list to the results element
+    resultsElement.appendChild(ul);
   });
 });
 
