@@ -184,6 +184,7 @@ const jewelleryItems = [
 
 // create resultsElement globally for the 'no products match' message to appear in
 let resultsElement = document.getElementById("results");
+let resultsHeader = resultsElement.querySelector("h1");
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -195,8 +196,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Remove only the elements that were added dynamically
     // i.e. the message about no products matching & the products shown
     // But put the Your Suggestions heading back
-    const dynamicElements = resultsElement.querySelectorAll(".dynamic");
-    dynamicElements.forEach((el) => el.remove());
+      const dynamicElements = resultsElement.querySelectorAll(".dynamic");
+      dynamicElements.forEach((el) => el.remove());
+      
+      resultsHeader.style.display = "block"; // Show the header again
+    });
   });
 
   form.addEventListener("submit", (event) => {
@@ -204,6 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Remove only dynamic elements, preserving the header
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
+
+    resultsHeader.style.display = "none";
 
     // Get the form data
     let formData = {
@@ -310,13 +316,21 @@ function filterItems(formData) {
   });
 
   // If no matches, return fallback items
+
   if (results.length === 0) {
-    // Display a message in the results area (in a dynamic class)
+    const fallbackItems = jewelleryItems.filter((item) =>
+      ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
+    );
+
+    // Display a message
     const fallbackMessage = document.createElement("p");
     fallbackMessage.textContent =
       "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
-    fallbackMessage.classList.add("dynamic"); // Tag message as dynamic
+    fallbackMessage.classList.add("dynamic");
     resultsElement.appendChild(fallbackMessage);
+
+    const ul = document.createElement("ul");
+    ul.classList.add("dynamic");
 
     fallbackItems.forEach((item) => {
       const li = document.createElement("li");
@@ -366,11 +380,6 @@ function filterItems(formData) {
     });
 
     resultsElement.appendChild(ul);
-
-    // Define fallback product
-    const fallbackItems = jewelleryItems.filter((item) =>
-      ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
-    );
 
     return fallbackItems;
   }
