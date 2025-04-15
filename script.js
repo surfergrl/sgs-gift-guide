@@ -11,7 +11,7 @@ const jewelleryItems = [
     gender: ["His", "Hers", "Unisex"],
     budget: ["High", "Medium"],
     style: ["Classic", "Quirky", "Delicate"],
-    theme: ["Llangrannog", "Seaglass"],
+    theme: ["Llangrannog", "Seaglass", "Waves"],
     image: "https://surfergrl.co.uk/wp-content/uploads/2020/12/CB-green.jpg",
     link: "https://surfergrl.co.uk/carreg-bica-collection",
   },
@@ -34,13 +34,13 @@ const jewelleryItems = [
     gender: ["Unisex", "His", "Hers"],
     budget: ["Low", "Medium"],
     style: ["Delicate", "Classic", "Quirky"],
-    theme: ["Llangrannog", "Seaglass"],
+    theme: ["Llangrannog", "Seaglass", "Mermaid"],
     image:
       "https://surfergrl.co.uk/wp-content/uploads/2020/12/green-swimg-300x300.jpg",
     link: "https://surfergrl.co.uk/product/green-seaglass-pendant",
   },
   {
-    name: "Dolphin & Seaglass pendant",
+    name: "Dolphin & Seaglass Pendant",
     category: ["Pendants"],
     price: 26,
     gender: ["Unisex", "His", "Hers"],
@@ -57,7 +57,7 @@ const jewelleryItems = [
     price: 35,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Medium", "High"],
-    style: ["Cariad", "Chunky", "Quirky"],
+    style: ["Cariad", "Chunky", "Quirky", "Classic"],
     theme: ["Llangrannog", "Cariad"],
     image:
       "https://surfergrl.co.uk/wp-content/uploads/2020/12/cariad-ring-2-300x300.jpg",
@@ -110,11 +110,9 @@ const jewelleryItems = [
     image: "https://surfergrl.co.uk/wp-content/uploads/2021/01/keyring-3.jpeg",
     link: "https://surfergrl.co.uk/product/llangrannog-sand-keyring",
   },
-  // Catch-all product for if the chosen combo does not return a result
-  // This would be better done via an if statement to pick 2 random products
   {
     name: "White Seaglass Earrings",
-    category: ["Keyrings", "Bracelets", "Rings", "Pendants"],
+    category: ["Earrings"],
     price: 35,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Low", "High", "Medium"],
@@ -124,10 +122,60 @@ const jewelleryItems = [
       "https://surfergrl.co.uk/wp-content/uploads/2020/12/huggies-600x600.jpg",
     link: "https://surfergrl.co.uk/product/silver-claw-earrings-with-white-seaglass",
   },
+  {
+    name: "Mermaid Dreams Bracelet",
+    category: ["Bracelets"],
+    price: 45,
+    gender: ["Hers", "Unisex"],
+    budget: ["High", "Medium"],
+    style: ["Delicate", "Mermaid"],
+    theme: ["Mermaid", "Seaglass", "Waves"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/starfish-charm-b-150x150.jpg",
+    link: "https://surfergrl.co.uk/product/silver-plated-charm-bracelet-with-seaglass-25",
+  },
+  {
+    name: "Chunky Seaglass Ring",
+    category: ["Rings"],
+    price: 48,
+    gender: ["His", "Unisex"],
+    budget: ["High"],
+    style: ["Chunky", "Classic"],
+    theme: ["Seaglass", "Waves"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2021/01/silver-stacker-ring-boxed.jpeg",
+    link: "https://surfergrl.co.uk/product/silver-wave-ring",
+  },
+  {
+    name: "Minimalist Seaglass Wave Pendant",
+    category: ["Pendants"],
+    price: 22,
+    gender: ["His"],
+    budget: ["Low"],
+    style: ["Classic", "Delicate"],
+    theme: ["Waves", "Seaglass"],
+    image:
+      "https://surfergrl.co.uk/wp-content/uploads/2020/12/green-swimg-300x300.jpg",
+    link: "https://surfergrl.co.uk/product/green-seaglass-pendant",
+  },
+  {
+    name: "Cariad Charm Pendant",
+    category: ["Pendants"],
+    price: 40,
+    gender: ["Hers", "Unisex"],
+    budget: ["Medium", "High"],
+    style: ["Cariad", "Quirky", "Delicate"],
+    theme: ["Cariad", "Llangrannog"],
+    image: "https://surfergrl.co.uk/wp-content/uploads/2020/12/CB-green.jpg",
+    link: "https://surfergrl.co.uk/carreg-bica-collection",
+  },
 ];
 
+// create resultsElement globally for the 'no products match' message to appear in
+let resultsElement = document.getElementById("results");
+
 // Wait for the DOM to be fully loaded
-// document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Now that the DOM is loaded, these elements will be available
   const resultsElement = document.getElementById("results");
   const form = document.querySelector("#questionForm");
