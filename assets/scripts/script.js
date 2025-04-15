@@ -219,11 +219,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create an unordered list to display the results
     const ul = document.createElement("ul");
+    ul.classList.add("dynamic"); //tag so that can be removed on Reset event
 
     // Create elements for the list so they can be styled individually
     filteredItems.forEach((item) => {
       // Create the list item container
       const li = document.createElement("li");
+      li.classList.add("dynamic"); //tag so that can be removed on Reset event
 
       // Create and configure a strong element for the product name
       const nameEl = document.createElement("strong");
@@ -316,14 +318,53 @@ function filterItems(formData) {
     fallbackMessage.classList.add("dynamic"); // Tag message as dynamic
     resultsElement.appendChild(fallbackMessage);
 
-    // Create <ul> for items
-    const ul = document.createElement("ul");
-    ul.classList.add("dynamic"); // Tag as dynamic
-    filteredItems.forEach((item) => {
+    fallbackItems.forEach((item) => {
       const li = document.createElement("li");
-      li.classList.add("dynamic"); //to make sure list items are def dynamic
+      li.classList.add("dynamic");
+
+      const nameEl = document.createElement("strong");
+      nameEl.textContent = item.name;
+      nameEl.classList.add("product-name");
+
+      const br1 = document.createElement("br");
+
+      const priceEl = document.createElement("span");
+      priceEl.textContent = `Price: £${item.price}`;
+      priceEl.classList.add("product-price");
+
+      const br2 = document.createElement("br");
+
+      const linkEl = document.createElement("a");
+      linkEl.href = item.link;
+      linkEl.textContent = "See More";
+      linkEl.target = "_blank";
+      linkEl.classList.add("product-link");
+
+      const imgEl = document.createElement("img");
+      imgEl.src = item.image;
+      imgEl.alt = item.name;
+      imgEl.classList.add("product-image");
+
+      const imgLinkEl = document.createElement("a");
+      imgLinkEl.href = item.link;
+      imgLinkEl.target = "_blank";
+      imgLinkEl.appendChild(imgEl);
+
+      const br3 = document.createElement("p");
+      const hr = document.createElement("hr");
+
+      li.appendChild(nameEl);
+      li.appendChild(br1);
+      li.appendChild(priceEl);
+      li.appendChild(br2);
+      li.appendChild(imgLinkEl);
+      li.appendChild(linkEl);
+      li.appendChild(br3);
+      li.appendChild(hr);
+
       ul.appendChild(li);
     });
+
     resultsElement.appendChild(ul);
 
     // Define fallback product
