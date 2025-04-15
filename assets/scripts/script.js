@@ -93,7 +93,7 @@ const jewelleryItems = [
     price: 7,
     gender: ["Unisex", "His", "Hers"],
     budget: ["Low"],
-    style: ["Quirky", "Classic"],
+    style: ["Quirky", "Chunky", "Classic", "Delicate"],
     theme: ["Llangrannog", "Waves", "Seaglass"],
     image:
       "https://surfergrl.co.uk/wp-content/uploads/2021/01/mermaid-keyring-1.jpeg",
@@ -107,6 +107,17 @@ const jewelleryItems = [
     budget: ["Low"],
     style: ["Quirky", "Classic"],
     theme: ["Llangrannog", "Waves", "Seaglass"],
+    image: "https://surfergrl.co.uk/wp-content/uploads/2021/01/keyring-3.jpeg",
+    link: "https://surfergrl.co.uk/product/llangrannog-sand-keyring",
+  },
+  {
+    name: "Silver 925 Bag Charm",
+    category: ["Keyrings"],
+    price: 30,
+    gender: ["Unisex", "His", "Hers"],
+    budget: ["Medium", "High"],
+    style: ["Quirky", "Chunky", "Classic", "Delicate"],
+    theme: ["Llangrannog", "Waves", "Seaglass", "Cariad"],
     image: "https://surfergrl.co.uk/wp-content/uploads/2021/01/keyring-3.jpeg",
     link: "https://surfergrl.co.uk/product/llangrannog-sand-keyring",
   },
@@ -182,11 +193,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Clear the list in the results area if the Reset button is clicked
   form.addEventListener("reset", () => {
-    // Find the existing <ul> inside #results and remove it, but keep the heading
-    const ul = resultsElement.querySelector("ul");
-    if (ul) {
-      ul.remove();
-    }
+    // Remove only the elements that were added dynamically
+    // Removes the message about no products matching
+    // But keeps the Your Suggestions heading
+    const dynamicElements = resultsElement.querySelectorAll(".dynamic");
+    dynamicElements.forEach((el) => el.remove());
   });
 
   form.addEventListener("submit", (event) => {
@@ -300,23 +311,24 @@ function filterItems(formData) {
 
   // If no matches, return fallback items
   if (results.length === 0) {
-    // Display a message in the results area
+    // Display a message in the results area (in a dynamic class)
     const fallbackMessage = document.createElement("p");
     fallbackMessage.textContent =
       "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
+    fallbackMessage.classList.add("dynamic"); // Tag message as dynamic
     resultsElement.appendChild(fallbackMessage);
+
+    // Create <ul> for items
+    const ul = document.createElement("ul");
+    ul.classList.add("dynamic"); // Tag as dynamic
+    resultsElement.appendChild(ul);
 
     // Define fallback product
     const fallbackItems = jewelleryItems.filter((item) =>
-      [
-        "Seaglass Pendants",
-        "Carreg Bica Pendant",
-        "Charm Bracelet",
-        "Shell & Sand Keyring",
-      ].includes(item.name)
+      ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
     );
 
-    return fallbackItems.slice(0, 2); // just the top 2
+    return fallbackItems;
   }
 
   return results;
