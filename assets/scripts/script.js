@@ -187,24 +187,23 @@ let resultsElement = document.getElementById("results");
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Now that the DOM is loaded, these elements will be available
-  const resultsElement = document.getElementById("results");
+  // Now that the DOM is loaded, the form will be available
   const form = document.querySelector("#questionForm");
 
   // Clear the list in the results area if the Reset button is clicked
   form.addEventListener("reset", () => {
     // Remove only the elements that were added dynamically
-    // Removes the message about no products matching
-    // But keeps the Your Suggestions heading
+    // i.e. the message about no products matching & the products shown
+    // But put the Your Suggestions heading back
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
   });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    // Clear anything that is already in the results area
-    // This also clears the area's heading - see Bugs
-    resultsElement.innerHTML = "";
+    // Remove only dynamic elements, preserving the header
+    const dynamicElements = resultsElement.querySelectorAll(".dynamic");
+    dynamicElements.forEach((el) => el.remove());
 
     // Get the form data
     let formData = {
@@ -286,8 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Advice via assessor - base price filtering on prices not named high/med/low categories
-// This avoids products from incorrect price categories being shown
+// Base price filtering avoids products from incorrect price categories being shown
 function filterItems(formData) {
   const budgetRanges = {
     "Lower (5-15)": { min: 5, max: 15 },
@@ -321,6 +319,11 @@ function filterItems(formData) {
     // Create <ul> for items
     const ul = document.createElement("ul");
     ul.classList.add("dynamic"); // Tag as dynamic
+    filteredItems.forEach((item) => {
+      const li = document.createElement("li");
+      li.classList.add("dynamic"); //to make sure list items are def dynamic
+      ul.appendChild(li);
+    });
     resultsElement.appendChild(ul);
 
     // Define fallback product
