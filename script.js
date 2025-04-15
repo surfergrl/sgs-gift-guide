@@ -227,7 +227,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// code help via assessor - base price filtering on prices not categories
+// Code advice via assessor - base price filtering on prices not named high/med/low categories
+// This avoids products from incorrect price categories being shown
 function filterItems(formData) {
   const budgetRanges = {
     "Lower (5-15)": { min: 5, max: 15 },
@@ -235,13 +236,35 @@ function filterItems(formData) {
     "High (30+)": { min: 30, max: Infinity },
   };
 
-  return jewelleryItems.filter(
-    (v) =>
-      v.category.includes(formData.category) &&
-      v.gender.includes(formData.gender) &&
-      v.style.includes(formData.style) &&
-      v.theme.includes(formData.theme) &&
-      v.price >= budgetRanges[formData.budget].min &&
-      v.price <= budgetRanges[formData.budget].max
-  );
+  const selectedRange = budgetRanges[formData.budget];
+
+  // Your main filter logic
+  const results = jewelleryItems.filter((item) => {
+    return (
+      item.category.includes(formData.category) &&
+      item.gender.includes(formData.gender) &&
+      item.style.includes(formData.style) &&
+      item.theme.includes(formData.theme) &&
+      item.price >= selectedRange.min &&
+      item.price <= selectedRange.max
+    );
+  });
+
+  // If no matches, return fallback items
+  if (results.length === 0) {
+    // Display a message in the results area
+    const fallbackMessage = document.createElement("p");
+    fallbackMessage.textContent =
+      "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
+    resultsElement.appendChild(fallbackMessage);
+
+    // Define fallback product
+    const fallbackItems = jewelleryItems.filter((item) =>
+      ["Seaglass Pendants", "Carreg Bica Pendant"].includes(item.name)
+    );
+
+    return fallbackItems.slice(0, 2); // just the top 2
+  }
+
+  return results;
 }
