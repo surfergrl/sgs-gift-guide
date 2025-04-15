@@ -127,7 +127,7 @@ const jewelleryItems = [
 ];
 
 // Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
   // Now that the DOM is loaded, these elements will be available
   const resultsElement = document.getElementById("results");
   const form = document.querySelector("#questionForm");
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Code advice via assessor - base price filtering on prices not named high/med/low categories
+// Advice via assessor - base price filtering on prices not named high/med/low categories
 // This avoids products from incorrect price categories being shown
 function filterItems(formData) {
   const budgetRanges = {
@@ -238,7 +238,7 @@ function filterItems(formData) {
 
   const selectedRange = budgetRanges[formData.budget];
 
-  // Your main filter logic
+  // Main filter logic
   const results = jewelleryItems.filter((item) => {
     return (
       item.category.includes(formData.category) &&
@@ -260,7 +260,12 @@ function filterItems(formData) {
 
     // Define fallback product
     const fallbackItems = jewelleryItems.filter((item) =>
-      ["Seaglass Pendants", "Carreg Bica Pendant"].includes(item.name)
+      [
+        "Seaglass Pendants",
+        "Carreg Bica Pendant",
+        "Charm Bracelet",
+        "Shell & Sand Keyring",
+      ].includes(item.name)
     );
 
     return fallbackItems.slice(0, 2); // just the top 2

@@ -42,7 +42,7 @@ h2 {
     font-style: normal;
 }
  /* Form question headings */
-h3 {
+label {
     font-family: "Cormorant Garamond", serif;
     font-size: 18px;
     font-weight: 200;
