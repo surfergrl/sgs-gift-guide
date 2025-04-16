@@ -358,8 +358,8 @@ The app is contained on one page. It is designed to be deployed to a WordPress p
 - Data Definition: Defined an array of jewellery items with various properties.
 - DOMContentLoaded Event: Ensures that the code only runs after the page has fully loaded.
 - Form Submission Handling: Set up an event listener for the Submit button on the form with the ID 'questionForm' to handle form submissions. This listener captures form data and calls the filterItems function.
-- Filtering Function: The filterItems function filters the items based on the form data and returns the filtered items as an array of objects.
-- Result Display: Creates an ul element and adds elements for each list item to it based on the filtered items.
+- Filtering Function: The filterItems function filters the items based on the form data and returns the filtered items as an array of objects. Fallback logic displays two products (the bestsellers) from the array if the filter returns nothing.
+- Rendering Function: The renderItems function creates an ul list and adds elements for each li list item to it based on the filtered items.
 - Reset: Allows the form and results area to reset to original format.
 
 ---
@@ -409,7 +409,7 @@ _For each result:_
 
 Standard products - many of the items on the SGS store are one-off pieces due to the unique nature of seaglass. I have therefore chosen to only present established pieces from the main collections in the results.
 
-I added ten products to the JavaScript array to show the tool working. More products would give better results, however keeping the guide updated by directly using the products in the WooCommerce database would be a far more efficient and useful way to do this. This is beyond the scope of this project.
+I added a limited number of products to the JavaScript array to show the tool working. More products would give better results, however keeping the guide updated by directly using the products in the WooCommerce database would be a far more efficient and useful way to do this. This is beyond the scope of this project.
 
 ---
 
