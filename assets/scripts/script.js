@@ -2,7 +2,6 @@
 // Properties in arrays of their own as most products have multiple properties
 // This cuts down on amount of objects needed in array order to have most combos work
 // Eventually this info will be pulled from the existing WooCommerce database
-// This array wants to go in its own script file to keep things tidy and not so long
 const jewelleryItems = [
   {
     name: "Carreg Bica Pendant",
@@ -182,95 +181,106 @@ const jewelleryItems = [
   },
 ];
 
-let form;
-let resultsElement;
-let headingElement;
-
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   form = document.querySelector("#questionForm");
   resultsElement = document.getElementById("results");
-  headingElement = resultsElement.querySelector("h1");
+  resultsHeader = resultsElement.querySelector("h1");
 
+  // Reset event
   form.addEventListener("reset", () => {
+    // Remove dynamic content but leave the header
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
-
-    resultsHeader.style.display = "block"; // show again on reset
+    resultsHeader.style.display = "block"; // Show header on reset
   });
 
+  // Submit event
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    // Remove previously rendered dynamic elements.
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
 
-    resultsHeader.style.display = "block"; // Show the header again
+    // Hide the header when showing results.
+    resultsHeader.style.display = "none";
+
+    // Get the form data.
+    const formData = {
+      category: form.elements.category.value,
+      gender: form.elements.gender.value,
+      theme: form.elements.theme.value,
+      style: form.elements.style.value,
+      budget: form.elements.budget.value,
+    };
+
+    // Get the filtered items.
+    const filteredItems = filterItems(formData);
+
+    if (filteredItems.length === 0) {
+      // Fallback if no matches found.
+      const fallbackItems = jewelleryItems.filter((item) =>
+        ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
+      );
+
+      // Render fallback message.
+      const fallbackMessage = document.createElement("p");
+      fallbackMessage.textContent =
+        "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
+      fallbackMessage.classList.add("dynamic");
+      resultsElement.appendChild(fallbackMessage);
+
+      // Render fallback items.
+      renderItems(fallbackItems);
+    } else {
+      // Render the filtered results.
+      renderItems(filteredItems);
+    }
   });
+});
 
-  // Get the form data
-  let formData = {
-    category: form.elements.category.value,
-    gender: form.elements.gender.value,
-    theme: form.elements.theme.value,
-    style: form.elements.style.value,
-    budget: form.elements.budget.value,
-  };
-
-  // Call the filterItems function with the formData
-  const filteredItems = filterItems(formData);
-
-  // Create an unordered list to display the results
+// Create elements to show items or fallback items
+function renderItems(items) {
+  // Create a UL to hold the product items.
   const ul = document.createElement("ul");
-  ul.classList.add("dynamic"); //tag so that can be removed on Reset event
+  ul.classList.add("dynamic");
 
-  // Create elements for the list so they can be styled individually
-  filteredItems.forEach((item) => {
-    // Create the list item container
+  items.forEach((item) => {
     const li = document.createElement("li");
-    li.classList.add("dynamic"); //tag so that can be removed on Reset event
+    li.classList.add("dynamic");
 
-    // Create and configure a strong element for the product name
     const nameEl = document.createElement("strong");
     nameEl.textContent = item.name;
-    nameEl.classList.add("product-name"); // Add a class for styling
+    nameEl.classList.add("product-name");
 
-    // Create a line break element
     const br1 = document.createElement("br");
 
-    // Create a span element for the price
     const priceEl = document.createElement("span");
     priceEl.textContent = `Price: £${item.price}`;
     priceEl.classList.add("product-price");
 
-    // Create a line break element
     const br2 = document.createElement("br");
 
-    // Create link element for text link
     const linkEl = document.createElement("a");
     linkEl.href = item.link;
     linkEl.textContent = "See More";
     linkEl.target = "_blank";
     linkEl.classList.add("product-link");
 
-    // Create the image element
     const imgEl = document.createElement("img");
     imgEl.src = item.image;
     imgEl.alt = item.name;
     imgEl.classList.add("product-image");
 
-    // Wrap the image inside a clickable link
     const imgLinkEl = document.createElement("a");
     imgLinkEl.href = item.link;
     imgLinkEl.target = "_blank";
     imgLinkEl.appendChild(imgEl);
 
-    // Create a p element
     const br3 = document.createElement("p");
-
-    // Create a horizontal line element
     const hr = document.createElement("hr");
 
-    // Append all the elements to the list item
     li.appendChild(nameEl);
     li.appendChild(br1);
     li.appendChild(priceEl);
@@ -280,15 +290,13 @@ document.addEventListener("DOMContentLoaded", () => {
     li.appendChild(br3);
     li.appendChild(hr);
 
-    // Append the list item to the unordered list
     ul.appendChild(li);
-
-    // Append the unordered list to the results element
-    resultsElement.appendChild(ul);
   });
-});
 
-// Base price filtering avoids products from incorrect price categories being shown
+  resultsElement.appendChild(ul);
+}
+
+// Price filtering by number avoids products from incorrect price categories being shown
 function filterItems(formData) {
   const budgetRanges = {
     "Lower (5-15)": { min: 5, max: 15 },
@@ -298,8 +306,8 @@ function filterItems(formData) {
 
   const selectedRange = budgetRanges[formData.budget];
 
-  // Main filter logic
-  const results = jewelleryItems.filter((item) => {
+  // Filter the items based on the criteria.
+  return jewelleryItems.filter((item) => {
     return (
       item.category.includes(formData.category) &&
       item.gender.includes(formData.gender) &&
@@ -309,75 +317,21 @@ function filterItems(formData) {
       item.price <= selectedRange.max
     );
   });
+}
 
-  // If no matches, return fallback items
+// Function to return fallback items if no products match selections
+if (results.length === 0) {
+  const fallbackItems = jewelleryItems.filter((item) =>
+    ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
+  );
 
-  if (results.length === 0) {
-    const fallbackItems = jewelleryItems.filter((item) =>
-      ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
-    );
+  // Display a message
+  const fallbackMessage = document.createElement("p");
+  fallbackMessage.textContent =
+    "Sorry, nothing matched all your criteria — but here are some of our bestsellers";
+  fallbackMessage.classList.add("dynamic");
+  resultsElement.appendChild(fallbackMessage);
 
-    // Display a message
-    const fallbackMessage = document.createElement("p");
-    fallbackMessage.textContent =
-      "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
-    fallbackMessage.classList.add("dynamic");
-    resultsElement.appendChild(fallbackMessage);
-
-    const ul = document.createElement("ul");
-    ul.classList.add("dynamic");
-
-    fallbackItems.forEach((item) => {
-      const li = document.createElement("li");
-      li.classList.add("dynamic");
-
-      const nameEl = document.createElement("strong");
-      nameEl.textContent = item.name;
-      nameEl.classList.add("product-name");
-
-      const br1 = document.createElement("br");
-
-      const priceEl = document.createElement("span");
-      priceEl.textContent = `Price: £${item.price}`;
-      priceEl.classList.add("product-price");
-
-      const br2 = document.createElement("br");
-
-      const linkEl = document.createElement("a");
-      linkEl.href = item.link;
-      linkEl.textContent = "See More";
-      linkEl.target = "_blank";
-      linkEl.classList.add("product-link");
-
-      const imgEl = document.createElement("img");
-      imgEl.src = item.image;
-      imgEl.alt = item.name;
-      imgEl.classList.add("product-image");
-
-      const imgLinkEl = document.createElement("a");
-      imgLinkEl.href = item.link;
-      imgLinkEl.target = "_blank";
-      imgLinkEl.appendChild(imgEl);
-
-      const br3 = document.createElement("p");
-      const hr = document.createElement("hr");
-
-      li.appendChild(nameEl);
-      li.appendChild(br1);
-      li.appendChild(priceEl);
-      li.appendChild(br2);
-      li.appendChild(imgLinkEl);
-      li.appendChild(linkEl);
-      li.appendChild(br3);
-      li.appendChild(hr);
-
-      ul.appendChild(li);
-    });
-
-    resultsElement.appendChild(ul);
-
-    return fallbackItems;
-  }
-
-  return results;
+  // const ul = document.createElement("ul");
+  // ul.classList.add("dynamic");
 }
