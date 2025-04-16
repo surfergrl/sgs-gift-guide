@@ -8,17 +8,17 @@ Testing was conducted on the above page.
 
 The guide is also functional at [Surfergrl.co.uk](https://surfergrl.co.uk/gift-guide); the code is the same.
 
-## HTML run through W3C validator
+## HTML run through W3C validator https://validator.w3.org/
 
 ![Validator](assets/images/validhtml.png)
 
-Errors on index.html:
+Errors addressed on index.html:
 
 - A rogue link in the meta tags was removed.
 - Trailing slashes in void tags were being added by Prettier. This threw an 'info' in the validator: 'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values'. I attempted configuring Prettier to stop this but was not successful as this affects other files badly e.g. Markdown files. It is a known issue with Prettier.
 - H3 elements inside labels were removed, with the labels themselves styled in the CSS instead.
 
-Validates with no warnings.
+Validates with no other warnings.
 
 ## CSS run through Jigsaw
 
@@ -34,7 +34,7 @@ The CSS still validates.
 ## JavaScript
 
 The javascript passes through https://jshint.com/ with no major issues.
-There are warnings about using 'const' and arrow functions as they are more modern syntax but I am happy with that.
+There are warnings about using 'const' and arrow functions as they are more modern syntax, but I am happy with that.
 
 ## Wave Accessibility Tool
 
