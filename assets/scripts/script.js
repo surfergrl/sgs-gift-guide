@@ -183,30 +183,21 @@ const jewelleryItems = [
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  form = document.querySelector("#questionForm");
-  resultsElement = document.getElementById("results");
-  resultsHeader = resultsElement.querySelector("h1");
+  const form = document.querySelector("#questionForm");
+  const resultsElement = document.getElementById("results");
+  const resultsHeader = resultsElement.querySelector("h1");
 
-  // Reset event
-  form.addEventListener("reset", () => {
-    // Remove dynamic content but leave the header
+  // Helper function to clear dynamic content on submit or reset
+  function clearDynamicContent(resultsElement) {
     const dynamicElements = resultsElement.querySelectorAll(".dynamic");
     dynamicElements.forEach((el) => el.remove());
-    resultsHeader.style.display = "block"; // Show header on reset
-  });
+  }
 
-  // Submit event
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-
-    // Remove previously rendered dynamic elements.
-    const dynamicElements = resultsElement.querySelectorAll(".dynamic");
-    dynamicElements.forEach((el) => el.remove());
-
-    // Hide the header when showing results.
+    clearDynamicContent(resultsElement);
     resultsHeader.style.display = "none";
 
-    // Get the form data.
     const formData = {
       category: form.elements.category.value,
       gender: form.elements.gender.value,
@@ -215,34 +206,36 @@ document.addEventListener("DOMContentLoaded", () => {
       budget: form.elements.budget.value,
     };
 
-    // Get the filtered items.
+    // Reset event
+    form.addEventListener("reset", () => {
+      // Remove dynamic content but show the header
+      clearDynamicContent(resultsElement);
+      resultsHeader.style.display = "block";
+    });
+
+    // Filtering logic here so it runs on form submission (not after DOM load)
     const filteredItems = filterItems(formData);
 
     if (filteredItems.length === 0) {
-      // Fallback if no matches found.
-      const fallbackItems = jewelleryItems.filter((item) =>
-        ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
-      );
-
-      // Render fallback message.
       const fallbackMessage = document.createElement("p");
       fallbackMessage.textContent =
         "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
       fallbackMessage.classList.add("dynamic");
       resultsElement.appendChild(fallbackMessage);
 
-      // Render fallback items.
-      renderItems(fallbackItems);
+      const fallbackItems = jewelleryItems.filter((item) =>
+        ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
+      );
+
+      renderItems(fallbackItems, resultsElement); // Pass in resultsElement here
     } else {
-      // Render the filtered results.
-      renderItems(filterItems);
+      renderItems(filteredItems, resultsElement);
     }
   });
 });
 
-// Create elements to show items or fallback items
-function renderItems(items) {
-  // Create a UL to hold the product items.
+// Function to create elements for the items on page
+function renderItems(items, resultsElement) {
   const ul = document.createElement("ul");
   ul.classList.add("dynamic");
 
@@ -292,11 +285,10 @@ function renderItems(items) {
 
     ul.appendChild(li);
   });
-
   resultsElement.appendChild(ul);
 }
 
-// Price filtering by number avoids products from incorrect price categories being shown
+// Filter items by price as a number; avoid products from incorrect price categories being shown
 function filterItems(formData) {
   const budgetRanges = {
     "Lower (5-15)": { min: 5, max: 15 },
@@ -317,22 +309,4 @@ function filterItems(formData) {
       item.price <= selectedRange.max
     );
   });
-}
-
-// If no items match, use fallback function
-if (filterItems.length === 0) {
-  // Fallback message
-  const fallbackMessage = document.createElement("p");
-  fallbackMessage.textContent =
-    "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
-  fallbackMessage.classList.add("dynamic");
-  resultsElement.appendChild(fallbackMessage);
-
-  // Fallback items
-  const fallbackItems = jewelleryItems.filter((item) =>
-    ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
-  );
-  renderItems(fallbackItems);
-} else {
-  renderItems(filterItems);
 }
