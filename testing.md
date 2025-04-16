@@ -8,12 +8,15 @@ Testing was conducted on the above page.
 
 The guide is also functional at [Surfergrl.co.uk](https://surfergrl.co.uk/gift-guide); the code is the same.
 
-## HTML run through W3C validator Errors on index.html:
+## HTML run through W3C validator
 
 ![Validator](assets/images/validhtml.png)
 
+Errors on index.html:
+
 - A rogue link in the meta tags was removed.
 - Trailing slashes in void tags were being added by Prettier. This threw an 'info' in the validator: 'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values'. I attempted configuring Prettier to stop this but was not successful as this affects other files badly e.g. Markdown files. It is a known issue with Prettier.
+- H3 elements inside labels were removed, with the labels themselves styled in the CSS instead.
 
 Validates with no warnings.
 
@@ -181,17 +184,20 @@ It broadly works as expected on the main Surfergrl site but more testing is requ
 
 #### Product combinations
 
-The main issue with the application itself is that if there is no product available for the combination chosen, a 'catch-all' product appears. This means the results section is never empty, but also means that the user will be presented with a product that does not match the selections they made on the form.
+The main issue with the application itself is that if there is no product available for the combination chosen, two fallback bestseller products appear with a message. This means the results section is never empty, but also means that the user might be presented with products that do not match the selections they made on the form.
 
-With all the options available, there are over 500 possible combinations a user could pick. These cannot be coded in by hand. They would also require a lot more products to be available. This would be best done by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. If there is no, or only one, suitable product, another 'bestseller' according to the database could be inserted. Linking to and querying this database is beyond the scope of this project.
+The total number of possible combinations is:
+5 (Category)×3 (Gender)×5 (Theme)×6 (Style)×3 (Budget)=5×3×5×6×3= **1350**.
+
+Not all of the possible combinations will yield a product, as the product array is limited, which is why there is a fallback function to display bestsellers.
+
+The products available would be better served by linking to the full product catalogue in the WordPress/WooCommerce site which hosts the products. Linking to and querying this database is beyond the scope of this project. I have instead extended the array to include some extra products which will match lots of critera in each price range.
+
+In the future, I would like to test the javascript with a testing framework such as Jest to specifically check that filtering by budget strictly adheres to the defined ranges, as manual testing would not be feasible on 1350 combinations.
 
 #### Submit button issue
 
-If the submit button was clicked more than once, the same results stacked up on top of each other. I went back and coded the button to clear the results area when it was clicked, before populating it with the latest results.
-
-#### Clearing the form and results area
-
-When the Submit button is clicked, the innerHTML for the results area loses its heading. The Reset button preserves the heading, but once Submit has been clicked, it's gone until there is a page refresh. I would look at this with more time.
+If the submit button was clicked more than once, the same results stacked up on top of each other. I went back and coded the button to clear the results area when it was clicked, before populating it with the latest results. I also coded the Reset button to do the same, and reinstate the 'Your Suggestions will appear here' message.
 
 #### Updating products
 
