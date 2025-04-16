@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderItems(fallbackItems);
     } else {
       // Render the filtered results.
-      renderItems(filteredItems);
+      renderItems(filterItems);
     }
   });
 });
@@ -319,19 +319,20 @@ function filterItems(formData) {
   });
 }
 
-// Function to return fallback items if no products match selections
-if (results.length === 0) {
-  const fallbackItems = jewelleryItems.filter((item) =>
-    ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
-  );
-
-  // Display a message
+// If no items match, use fallback function
+if (filterItems.length === 0) {
+  // Fallback message
   const fallbackMessage = document.createElement("p");
   fallbackMessage.textContent =
-    "Sorry, nothing matched all your criteria — but here are some of our bestsellers";
+    "Sorry, nothing matched all your criteria — but here are some of our bestsellers!";
   fallbackMessage.classList.add("dynamic");
   resultsElement.appendChild(fallbackMessage);
 
-  // const ul = document.createElement("ul");
-  // ul.classList.add("dynamic");
+  // Fallback items
+  const fallbackItems = jewelleryItems.filter((item) =>
+    ["Seaglass Pendants", "Shell & Sand Keyring"].includes(item.name)
+  );
+  renderItems(fallbackItems);
+} else {
+  renderItems(filterItems);
 }
